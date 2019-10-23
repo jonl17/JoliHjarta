@@ -5,7 +5,6 @@ import ExitBTN from "../ExitBTN"
 import { triggerDagurPopup } from "../../state/action"
 
 const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
-  console.log(dagurPopup)
   return (
     <Container display={dagurPopup === "open" ? "grid" : "none"}>
       <PopupGluggi>

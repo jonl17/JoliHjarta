@@ -5,7 +5,10 @@ import Snjokoma from "../components/Snjokoma"
 import Dagur from "../components/Dagur"
 
 const index = ({ weather }) => {
-  console.log(weather)
+  if (weather.lysing !== undefined)
+    console.log("Veðurlýsing: " + weather.lysing)
+
+  if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
   return (
     <>
       <Snjokoma></Snjokoma>
