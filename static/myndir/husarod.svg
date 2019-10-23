@@ -47,39 +47,39 @@
 	C1094.6,767,1074.2,746.6,1049,746.6z"/>
 <polyline class="st10" points="590,894.8 590,742.4 681.2,742.4 681.2,894.7 "/>
 <g>
-	<rect x="149.5" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur3" x="149.5" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="325" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur4" x="325" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="729" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur6" x="729" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="729" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur5" x="729" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="325" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur2" x="325" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="149.5" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur1" x="149.5" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <polygon class="st4" points="233.8,578.4 269.4,578.1 233.8,670 "/>
 <polygon class="st4" points="409.3,578.4 444.9,578.1 409.3,670 "/>
 <g>
-	<rect x="1222.5" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur9" x="1222.5" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1490.8" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur11" x="1490.8" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1009" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur7" x="1009" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1222.5" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur8" x="1222.5" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1490.8" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur10" x="1490.8" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <polygon class="st13" points="1608.9,437.2 1702.1,516.6 1622.3,539.5 "/>
 <polygon class="st3" points="1962.3,635.9 1897.1,674.6 1897.1,519.5 1962.3,480.8 "/>
@@ -118,43 +118,43 @@
 <circle class="st19" cx="3664.2" cy="529.5" r="63"/>
 <polygon class="st3" points="2431.4,578.4 2467,578.1 2431.4,670 "/>
 <g>
-	<rect x="1739.8" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur15" x="1739.8" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2085.7" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur16" x="2085.7" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2347" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur18" x="2347" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2562.2" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur20" x="2562.2" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1739.8" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur12" x="1739.8" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="1915" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur13" x="1915" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2085.7" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur14" x="2085.7" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2347" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur17" x="2347" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="2562.2" y="578.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur19" x="2562.2" y="578.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <rect x="2904" y="672.5" class="st9" width="467.9" height="231.8"/>
 <polygon class="st3" points="3372.5,672.5 2904,672.5 2996,477.3 3392.8,477.3 "/>
 <polygon class="st10" points="3371.9,672.6 3371.9,904.4 3482.8,824.6 3482.8,627.1 "/>
 <g>
-	<rect x="2951.3" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur21" x="2951.3" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="3093.9" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur22" x="3093.9" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>
-	<rect x="3236.6" y="744.4" class="st12" width="84.3" height="91.5"/>
+	<rect id="dagur23" x="3236.6" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <polygon class="st4" points="3392.8,477.3 3372,672.6 3482.9,627.1 "/>
 </svg>

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { getWeather } from "../state/action"
 
 const url =
-  "https://apis.is/weather/observations/is?stations=1,422&time=1h&anytime=0]"
+  "https://apis.is/weather/observations/is?stations=1,422&time=1h&anytime=0"
 
 class Client extends React.Component {
   componentDidMount() {

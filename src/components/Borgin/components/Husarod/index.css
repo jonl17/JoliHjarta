@@ -11,3 +11,6 @@ svg {
     #1b1464 100%
   );
 }
+.gluggi:hover {
+  cursor: pointer;
+}

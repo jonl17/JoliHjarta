@@ -17,6 +17,8 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   transition: 3s;
+  background: transparent;
+  pointer-events: none;
 `
 export const Snow = styled.div`
   background: url(${props => props.image});

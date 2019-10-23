@@ -1,4 +1,11 @@
-import { SET_DEVICE, GET_WEATHER, MAKE_IT_SNOW } from "./action"
+import {
+  SET_DEVICE,
+  GET_WEATHER,
+  MAKE_IT_SNOW,
+  GET_GLUGGAR,
+  SELECT_DAY,
+  TRIGGER_DAGUR_POPUP,
+} from "./action"
 
 const initialState = {
   device: undefined,
@@ -8,6 +15,9 @@ const initialState = {
     snjolysing: undefined,
   },
   makeItSnow: false,
+  gluggar: undefined,
+  selectedDay: undefined,
+  dagurPopup: "closed",
 }
 
 export default (state = initialState, action) => {
@@ -35,6 +45,15 @@ export default (state = initialState, action) => {
       }
     case MAKE_IT_SNOW:
       return { ...state, makeItSnow: !state.makeItSnow }
+    case GET_GLUGGAR:
+      return { ...state, gluggar: action.gluggar }
+    case SELECT_DAY:
+      return {
+        ...state,
+        selectedDay: action.day,
+      } /** select the day and open window */
+    case TRIGGER_DAGUR_POPUP:
+      return { ...state, dagurPopup: action.trigger }
     default:
       return state
   }
