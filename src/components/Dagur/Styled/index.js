@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { layer } from "../../../constants"
 
 export const Container = styled.div`
   position: fixed;
@@ -7,6 +8,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   display: ${props => props.display};
+  z-index: ${layer.zero};
 `
 export const PopupGluggi = styled.div`
   height: 65%;

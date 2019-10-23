@@ -7,10 +7,11 @@ import Husarod from "./components/Husarod"
 
 const Borgin = () => {
   return (
-    <Background>
-      <Mani></Mani>
+    <>
+      <Background></Background>
       <Husarod></Husarod>
-    </Background>
+      <Mani></Mani>
+    </>
   )
 }
 

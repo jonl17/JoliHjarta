@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from "styled-components"
+import { layer } from "../../../constants"
 
 const makeitsnowOne = keyframes`
   0% {
@@ -19,6 +20,7 @@ export const Container = styled.div`
   transition: 3s;
   background: transparent;
   pointer-events: none;
+  z-index: ${layer.one};
 `
 export const Snow = styled.div`
   background: url(${props => props.image});
