@@ -1,6 +1,7 @@
 svg {
   height: 100%;
   position: absolute;
+  bottom: -55px;
 }
 .gluggi:hover {
   cursor: pointer;

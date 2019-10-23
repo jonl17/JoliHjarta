@@ -1,5 +1,13 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+`
+
 export const Background = styled.div`
   position: fixed;
   height: 80%;
