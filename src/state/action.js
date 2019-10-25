@@ -28,3 +28,8 @@ export const triggerDagurPopup = trigger => ({
   type: TRIGGER_DAGUR_POPUP,
   trigger,
 })
+export const GET_ALL_DAYS_INFO = "GET_ALL_DAYS_INFO"
+export const getAllDaysInfo = info => ({
+  type: GET_ALL_DAYS_INFO,
+  info,
+})

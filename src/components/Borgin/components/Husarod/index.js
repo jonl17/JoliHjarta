@@ -7,6 +7,7 @@ import {
   selectDay,
   triggerDagurPopup,
 } from "../../../../state/action"
+import { findDayWithID } from "../../../../methods"
 
 class Husarod extends React.Component {
   constructor(props) {
@@ -35,8 +36,10 @@ class Husarod extends React.Component {
   async dispatchGluggar(gluggar) {
     this.props.dispatch(getGluggar(gluggar))
   }
-  async dispatchDay(day) {
-    this.props.dispatch(selectDay(day))
+  async dispatchDay(dayID) {
+    // search for correct day
+    let correctDay = findDayWithID(dayID, this.props.allDaysInfo)
+    this.props.dispatch(selectDay(correctDay))
   }
   clickCallBack(e) {
     /* open up the popup window for one day in the calender */
@@ -51,6 +54,7 @@ class Husarod extends React.Component {
 
 const mapStateToProps = state => ({
   gluggar: state.reducer.gluggar,
+  allDaysInfo: state.reducer.allDaysInfo,
 })
 
 export default connect(mapStateToProps)(Husarod)

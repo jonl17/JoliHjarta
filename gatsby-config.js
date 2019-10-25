@@ -14,6 +14,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dagar`,
+        path: `${__dirname}/static/dagar`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -22,7 +29,10 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
   ],
 }
