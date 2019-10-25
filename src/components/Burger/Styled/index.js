@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { margins, layer } from "../../../constants"
+import { margins, layer, sizes } from "../../../constants"
 
 export const Container = styled.div`
-  height: 25px;
+  height: 32px;
   width: 32px;
   position: fixed;
   top: ${margins.small};
@@ -11,13 +11,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-between;
+  justify-content: space-around;
   &&:hover {
     cursor: pointer;
   }
 `
 export const Line = styled.span`
-  height: 5px;
+  height: ${sizes.line};
   width: 100%;
   background: white;
 `

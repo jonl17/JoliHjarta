@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import { margins, colors, sizes } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
@@ -7,4 +8,22 @@ export const Container = styled.div`
   &&:hover {
     cursor: pointer;
   }
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: ${margins.small};
+`
+export const Line = styled.span`
+  position: absolute;
+  height: ${sizes.line};
+  width: 100%;
+  background: ${colors.darkgray};
+  transform: rotate(45deg);
+  ${props =>
+    props.second &&
+    css`
+      transform: rotate(-45deg);
+    `}
 `

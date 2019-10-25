@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { layer } from "../../../constants"
+import { layer, sizes } from "../../../constants"
 
 export const Container = styled.div`
   position: fixed;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   z-index: ${layer.zero};
 `
 export const PopupGluggi = styled.div`
+  position: relative;
   height: 65%;
   width: 50%;
   margin: auto;
@@ -19,9 +20,21 @@ export const PopupGluggi = styled.div`
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   display: grid;
-  position: relative;
 `
-export const Texti = styled.p`
-  font-size: 40px;
+export const Dagsetning = styled.p`
+  font-size: ${sizes.paraLarge};
   margin: auto;
+  font-weight: bold;
+`
+export const VideoTitle = styled.p`
+  font-size: ${sizes.paraMed};
+  margin: 0;
+  text-align: center;
+`
+export const SenduInnBTN = styled.button`
+  width: 136px;
+  height: 45px;
+  border-radius: 43px;
+  margin: auto;
+  background: white;
 `
