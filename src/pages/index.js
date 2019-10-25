@@ -12,10 +12,11 @@ const index = ({ weather }) => {
   if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
   return (
     <>
-      <Burger></Burger>
-      <Snjokoma></Snjokoma>
-      <Borgin></Borgin>
-      <Dagur></Dagur>
+      <div style={{ width: "100%", textAlign: "center" }}>
+        <h1>Þessi síðu er í vinnslu...</h1>
+        <h1>Hiti: {weather.hiti}</h1>
+        <h1>{weather.lysing}</h1>
+      </div>
     </>
   )
 }
