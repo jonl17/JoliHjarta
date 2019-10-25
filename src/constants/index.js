@@ -4,4 +4,5 @@ export const margins = {
 export const layer = {
   zero: 10, // closest
   one: 8,
+  two: 6,
 }
