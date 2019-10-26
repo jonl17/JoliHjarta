@@ -1,3 +1,5 @@
+import styled from "styled-components"
+
 export const margins = {
   small: "32px",
 }
@@ -17,3 +19,19 @@ export const sizes = {
   paraMed: "25px",
   paraLarge: "35px",
 }
+
+export const Button = styled.div`
+  font-size: ${sizes.paraSmall};
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 1px 1.5px 1.5spx 1px lightgray;
+  border-radius: 43px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "pnum" on, "onum" on;
+  &&:hover {
+    cursor: pointer;
+  }
+`

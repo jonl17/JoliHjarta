@@ -1,21 +1,16 @@
 import React from "react"
-import {
-  Container,
-  PopupGluggi,
-  Dagsetning,
-  VideoTitle,
-  SenduInnBTN,
-} from "./Styled"
+import { Container, PopupGluggi, Dagsetning, VideoTitle, BTN } from "./Styled"
 import { connect } from "react-redux"
 import ExitBTN from "../ExitBTN"
 import { triggerDagurPopup } from "../../state/action"
 import Video from "../Video"
+import EventarDagsins from "./components/EventarDagsins"
 
 const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
   return (
     <Container
       display={
-        dagurPopup === "open" && selectedDay !== undefined ? "grid" : "none"
+        dagurPopup === "open" && selectedDay !== undefined ? "flex" : "none"
       }
     >
       {selectedDay !== undefined ? (
@@ -26,7 +21,8 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
           <Dagsetning>{selectedDay.title}</Dagsetning>
           <VideoTitle>{selectedDay.video.title}</VideoTitle>
           <Video video={selectedDay.video.url}></Video>
-          <SenduInnBTN>Sendu inn efni</SenduInnBTN>
+          <BTN center>Sendu inn efni</BTN>
+          <EventarDagsins eventar={selectedDay.eventar}></EventarDagsins>
         </PopupGluggi>
       ) : (
         <></>

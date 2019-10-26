@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { layer, sizes } from "../../../constants"
+import { layer, sizes, Button } from "../../../constants"
 
 export const Container = styled.div`
   position: fixed;
@@ -8,11 +8,13 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   display: ${props => props.display};
+  flex-direction: column;
   z-index: ${layer.zero};
 `
 export const PopupGluggi = styled.div`
   position: relative;
   height: 65%;
+  min-height: 550px;
   width: 50%;
   margin: auto;
   background: #e5e5e5;
@@ -31,10 +33,6 @@ export const VideoTitle = styled.p`
   margin: 0;
   text-align: center;
 `
-export const SenduInnBTN = styled.button`
-  width: 136px;
-  height: 45px;
-  border-radius: 43px;
+export const BTN = styled(Button)`
   margin: auto;
-  background: white;
 `

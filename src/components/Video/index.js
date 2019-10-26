@@ -1,14 +1,21 @@
 import React from "react"
-import { Container, Player, Source } from "./Styled"
+import { Container, Player } from "./Styled"
 import Poster from "./postervideo.png"
 
 const Video = ({ video }) => {
   console.log(Poster)
   return (
     <Container>
-      <Player poster={Poster} controls>
-        <Source src={video.publicURL}></Source>
-      </Player>
+      <Player
+        title={video.title}
+        src={video.publicURL}
+        poster={Poster}
+        controls
+        frameBorder="0"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        allowFullScreen
+      ></Player>
     </Container>
   )
 }
