@@ -28,8 +28,6 @@ export const Button = styled.div`
   border-radius: 43px;
   padding: 10px;
   display: flex;
-  align-items: center;
-  text-align: center;
   font-feature-settings: "pnum" on, "onum" on;
   &&:hover {
     cursor: pointer;

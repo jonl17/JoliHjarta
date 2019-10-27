@@ -8,12 +8,10 @@ export const Title = styled.p`
   margin: 0;
 `
 export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 3% 3% 3%;
+  grid-gap: 10px;
 `
 export const BTN = styled(Button)`
   flex: 0 50%;

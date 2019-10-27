@@ -33,6 +33,3 @@ export const VideoTitle = styled.p`
   margin: 0;
   text-align: center;
 `
-export const BTN = styled(Button)`
-  margin: auto;
-`
