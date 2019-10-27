@@ -12,6 +12,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   padding: 0 3% 3% 3%;
   grid-gap: 10px;
+  margin: auto;
 `
 export const BTN = styled(Button)`
   flex: 0 50%;

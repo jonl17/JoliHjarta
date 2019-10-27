@@ -7,7 +7,7 @@ import Video from "../Video"
 import EventarDagsins from "./components/EventarDagsins"
 import SenduInnEfniBTN from "./components/SenduInnEfniBTN"
 
-const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
+const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
   return (
     <Container
       display={
@@ -15,7 +15,7 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
       }
     >
       {selectedDay !== undefined ? (
-        <PopupGluggi>
+        <PopupGluggi device={device}>
           <ExitBTN
             click={() => dispatch(triggerDagurPopup("closed"))}
           ></ExitBTN>
@@ -35,6 +35,7 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch }) => {
 const mapStateToProps = state => ({
   dagurPopup: state.reducer.dagurPopup,
   selectedDay: state.reducer.selectedDay,
+  device: state.reducer.device,
 })
 
 export default connect(mapStateToProps)(Dagur)

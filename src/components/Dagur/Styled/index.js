@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { layer, sizes, Button } from "../../../constants"
+import styled, { css } from "styled-components"
+import { layer, sizes } from "../../../constants"
 
 export const Container = styled.div`
   position: fixed;
@@ -16,6 +16,16 @@ export const PopupGluggi = styled.div`
   height: 65%;
   min-height: 550px;
   width: 50%;
+  ${props =>
+    props.device === "tablet" &&
+    css`
+      width: 75%;
+    `}
+  ${props =>
+    props.device === "mobile" &&
+    css`
+      width: 90%;
+    `}
   margin: auto;
   background: #e5e5e5;
   border: 10px solid #797979;
