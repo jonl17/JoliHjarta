@@ -20,6 +20,7 @@ collections:
       - label: "Eventar fyrir dag"
         name: "eventar"
         required: false
+        multiple: true
         widget: "relation"
         collection: "event"
         searchFields: ["title", "lysing"]
