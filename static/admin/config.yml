@@ -24,7 +24,7 @@ collections:
         widget: "relation"
         collection: "event"
         searchFields: ["title"]
-        valueField: "title"
+        valueField: ["title", "hvenaer"]
         displayFields: ["title", "hvenaer"]
       - label: "Vidjo"
         name: "vidjo"
