@@ -11,9 +11,9 @@ collections:
     create: true
     fields:
       - { label: "Titill", name: "titill", widget: "string" }
-      - label: "Video"
-        name: "video"
+      - label: "Vidjo"
+        name: "vidjo"
         widget: "object"
         fields:
-          - { label: "Titill", name: "vidjo-titill", widget: "string" }
-          - { label: "URL", name: "vidjo-url", widget: "file" }
+          - { label: "Vidjo Titill", name: "vidjo-titill", widget: "string" }
+          - { label: "Vidjo URL", name: "vidjo-url", widget: "file" }
