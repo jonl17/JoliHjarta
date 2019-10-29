@@ -1,6 +1,6 @@
 ---
 title: Eiríkur Laufdal stígur léttan dans
-hvenaer: 2019-12-01T16:00:30.963Z
+hvenaer: 12/01/19
 klukkan: 15-14
 lysing: Já hann Eiríkur dansar og grætur með kassan út!
 ---
