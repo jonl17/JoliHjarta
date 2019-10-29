@@ -11,9 +11,15 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Dagsetning", name: "dagsetning", widget: "date" }
+      - {
+          label: "Dagsetning",
+          name: "dagsetning",
+          widget: "date",
+          hint: "Veldu þann dag í desember sem á við",
+        }
       - label: "Eventar fyrir dag"
         name: "eventar"
+        required: false
         widget: "relation"
         collection: "event"
         searchFields: ["title", "lysing"]
