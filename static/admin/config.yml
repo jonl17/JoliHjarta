@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/myndir"
+public_folder: "myndir"
+
+collections:
+  - name: "dagur"
+    label: "Dagur í desember"
+    folder: "static/content/dagar"
+    create: true
+    fields:
+      - { label: "Titill", name: "titill", widget: "string" }
+      - label: "Video"
+        name: "video"
+        widget: "object"
+        fields:
+          - { label: "Titill", name: "titill", widget: "string" }
+          - { label: "URL", name: "url", widget: "file" }
