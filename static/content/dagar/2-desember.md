@@ -1,6 +1,6 @@
 ---
 title: 2. desember
-dagsetning: 2019-12-02T16:24:57.358Z
+dagsetning: 12/02/19
 eventar:
   - Kalli Bjarni fer á kostum
 vidjo:
