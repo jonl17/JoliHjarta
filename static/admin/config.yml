@@ -15,5 +15,5 @@ collections:
         name: "video"
         widget: "object"
         fields:
-          - { label: "Titill", name: "titill", widget: "string" }
-          - { label: "URL", name: "url", widget: "file" }
+          - { label: "Titill", name: "vidjo-titill", widget: "string" }
+          - { label: "URL", name: "vidjo-url", widget: "file" }
