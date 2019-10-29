@@ -3,14 +3,19 @@
  */
 export const findDayWithID = (id, allDaysInfo) => {
   let recursiveOne = function(arr, x, start, end) {
-    const DEBUG_MODE = false
+    const DEBUG_MODE = true
 
     if (start > end) return -1
 
     let mid = Math.floor((start + end) / 2)
     if (DEBUG_MODE) {
       console.log("LOOKING FOR: " + x)
-      console.log("COMPARING TO: " + arr[mid].node.frontmatter.dagsetning)
+      console.log(
+        "COMPARING TO: " +
+          arr[mid].node.frontmatter.dagsetning
+            .replace("12/", "")
+            .replace("/19", "")
+      )
     }
 
     if (parseInt(arr[mid].node.frontmatter.dagsetning) === parseInt(x)) {

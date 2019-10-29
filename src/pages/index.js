@@ -49,7 +49,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            dagsetning(formatString: "DD")
+            dagsetning
             vidjo {
               vidjotitill
               vidjourl
