@@ -10,10 +10,10 @@ collections:
     folder: "static/content/dagar"
     create: true
     fields:
-      - { label: "Titill", name: "titill", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - label: "Vidjo"
         name: "vidjo"
         widget: "object"
         fields:
-          - { label: "Vidjo Titill", name: "vidjo-titill", widget: "string" }
-          - { label: "Vidjo URL", name: "vidjo-url", widget: "file" }
+          - { label: "Vidjo Titill", name: "vidjotitill", widget: "string" }
+          - { label: "Vidjo URL", name: "vidjourl", widget: "file" }
