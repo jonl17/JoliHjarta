@@ -1,6 +1,6 @@
 ---
 title: 1. desember
-dagsetning: 2019-12-01T15:11:13.161Z
+dagsetning: 12/01/19
 eventar:
   - Eiríkur Laufdal stígur léttan dans
   - Gaman með Sveppa & Audda
