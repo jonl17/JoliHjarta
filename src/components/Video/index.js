@@ -3,7 +3,6 @@ import { Container, Player } from "./Styled"
 import Poster from "./postervideo.png"
 
 const Video = ({ video }) => {
-  console.log(Poster)
   return (
     <Container>
       <Player

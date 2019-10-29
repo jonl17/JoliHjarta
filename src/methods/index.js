@@ -10,15 +10,15 @@ export const findDayWithID = (id, allDaysInfo) => {
     let mid = Math.floor((start + end) / 2)
     if (DEBUG_MODE) {
       console.log("LOOKING FOR: " + x)
-      console.log("COMPARING TO: " + arr[mid].node.frontmatter.id)
+      console.log("COMPARING TO: " + arr[mid].node.frontmatter.dagsetning)
     }
 
-    if (parseInt(arr[mid].node.frontmatter.id) === parseInt(x)) {
+    if (parseInt(arr[mid].node.frontmatter.dagsetning) === parseInt(x)) {
       if (DEBUG_MODE) console.log("FOUND ITEM AT INDEX:" + mid)
       return mid
     }
 
-    if (arr[mid].node.frontmatter.id > x)
+    if (arr[mid].node.frontmatter.dagsetning > x)
       return recursiveOne(arr, x, start, mid - 1)
     else return recursiveOne(arr, x, mid + 1, end)
   }

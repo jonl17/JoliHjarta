@@ -20,10 +20,10 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
             click={() => dispatch(triggerDagurPopup("closed"))}
           ></ExitBTN>
           <Dagsetning>{selectedDay.title}</Dagsetning>
-          <VideoTitle>{selectedDay.video.title}</VideoTitle>
-          <Video video={selectedDay.video.url}></Video>
+          <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
+          <Video video={selectedDay.vidjo.vidjourl}></Video>
           <SenduInnEfniBTN></SenduInnEfniBTN>
-          <EventarDagsins eventar={selectedDay.eventar}></EventarDagsins>
+          {/*  <EventarDagsins eventar={selectedDay.eventar}></EventarDagsins> */}
         </PopupGluggi>
       ) : (
         <></>

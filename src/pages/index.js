@@ -41,22 +41,18 @@ const mapStateToProps = state => ({
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___id, order: ASC }) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___dagsetning, order: ASC }
+      filter: { fileAbsolutePath: { regex: "/content/dagar/" } }
+    ) {
       edges {
         node {
           frontmatter {
             title
-            type
-            id
-            video {
-              title
-              url {
-                publicURL
-              }
-            }
-            eventar {
-              title
-              timi
+            dagsetning(formatString: "MM")
+            vidjo {
+              vidjotitill
+              vidjourl
             }
           }
         }

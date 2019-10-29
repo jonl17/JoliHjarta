@@ -23,7 +23,7 @@ collections:
         multiple: true
         widget: "relation"
         collection: "event"
-        searchFields: ["title", "lysing"]
+        searchFields: ["title"]
         valueField: "title"
       - label: "Vidjo"
         name: "vidjo"
