@@ -38,5 +38,11 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", "string" }
-      - { label: "Hvenær", name: "hvenaer", widget: "datetime" }
+      - { label: "Hvenær", name: "hvenaer", widget: "date" }
+      - {
+          label: "Klukkan",
+          name: "klukkan",
+          widget: "string",
+          hint: "setjið inn á þessu formatti: 16-18",
+        }
       - { label: "Stutt lýsing", name: "lysing", widget: "string" }
