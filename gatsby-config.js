@@ -17,20 +17,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `dagar`,
-        path: `${__dirname}/static/dagar`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `cmsDagar`,
         path: `${__dirname}/static/content/dagar`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `cmsEvents`,
+        name: `events`,
         path: `${__dirname}/static/content/events`,
       },
     },

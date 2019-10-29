@@ -7,7 +7,7 @@ const Video = ({ video }) => {
     <Container>
       <Player
         title={video.title}
-        src={video.publicURL}
+        src={video}
         poster={Poster}
         controls
         frameBorder="0"
