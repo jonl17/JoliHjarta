@@ -2,6 +2,7 @@
 title: 1. desember
 dagsetning: 2019-12-01T15:11:13.161Z
 eventar:
+  - Eiríkur Laufdal stígur léttan dans
   - Gaman með Sveppa & Audda
 vidjo:
   vidjotitill: Nú nálgast jólin óðfluga!
