@@ -1,6 +1,6 @@
 ---
 title: Kalli Bjarni fer á kostum
-hvenaer: 2019-12-02T16:23:49.705Z
+hvenaer: 12/02/19
 klukkan: 12-13
 lysing: Svona er þetta
 ---
