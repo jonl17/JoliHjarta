@@ -1,9 +1,10 @@
 const path = require("path")
+const slugify = require("slugify")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
-    const dagurTemplate = path.resolve(`src/templates/dagur.js`)
+    const dagurTemplate = path.resolve(`src/templates/Dagur/dagur.js`)
     resolve(
       graphql(
         `
@@ -35,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
         // Create pages for each day.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const path = node.frontmatter.title
+          const path = slugify(node.frontmatter.title)
           createPage({
             path,
             component: dagurTemplate,

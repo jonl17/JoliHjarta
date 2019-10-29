@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import { sizes, Button } from "../../../../../constants"
+import { Link } from "gatsby"
 
 export const Title = styled.p`
   font-size: ${sizes.paraMed};
@@ -25,4 +26,8 @@ export const EventText = styled.span`
     css`
       font-weight: bold;
     `}
+`
+export const Anchor = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `
