@@ -17,5 +17,4 @@ const Video = ({ video }) => {
     </Container>
   )
 }
-
 export default Video

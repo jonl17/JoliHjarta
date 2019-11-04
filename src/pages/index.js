@@ -18,9 +18,6 @@ class index extends React.Component {
     /** register all days info available */
     dispatch(getAllDaysInfo(allInfo))
   }
-  isItSnowing(vedurLysing) {
-    return vedurLysing.includes("snjó")
-  }
   render() {
     const { weather } = this.props
     if (weather.lysing !== undefined) {
@@ -41,7 +38,6 @@ class index extends React.Component {
 
 const mapStateToProps = state => ({
   weather: state.reducer.weather,
-  makeItSnow: state.reducer.makeItSnow,
 })
 
 export const query = graphql`

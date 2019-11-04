@@ -5,4 +5,11 @@
 }
 .gluggi:hover {
   cursor: pointer;
+  z-index: 4;
+}
+.tolur {
+  pointer-events: none;
+}
+.tolur:hover {
+  cursor: pointer;
 }

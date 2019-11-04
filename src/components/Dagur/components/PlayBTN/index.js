@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const PlayBTN = () => {
   return (
-    <Container onClick={() => console.log("CUNTS")}>
+    <Container>
       <PlaySVG></PlaySVG>
     </Container>
   )

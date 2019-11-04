@@ -1,20 +1,17 @@
 import React from "react"
-import { Container, Title } from "./Styled"
+import { Container, Title, EventTable } from "./Styled"
+import Event from "./components/Event"
 
 const Events = ({ events, title }) => {
   return (
-    <>
+    <Container>
       <Title>Viðburðir {title}</Title>
-      <Container>
-        {events.map((event, index) => (
-          <p key={index} style={{ fontSize: "20px" }}>
-            {event.node.frontmatter.title +
-              ", klukkan " +
-              event.node.frontmatter.klukkan}
-          </p>
+      <EventTable>
+        {events.map((vidburdur, index) => (
+          <Event vidburdur={vidburdur} key={index}></Event>
         ))}
-      </Container>
-    </>
+      </EventTable>
+    </Container>
   )
 }
 

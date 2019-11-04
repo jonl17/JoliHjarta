@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const margins = {
   small: "32px",
+  large: "64px",
 }
 export const layer = {
   zero: 10, // closest
@@ -15,7 +16,7 @@ export const colors = {
 }
 export const sizes = {
   line: "6px",
-  paraSmall: "18px",
+  paraSmall: "20px",
   paraMed: "25px",
   paraLarge: "35px",
 }

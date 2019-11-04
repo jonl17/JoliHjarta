@@ -2,10 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Container } from "./Styled"
 import Events from "./components/Events"
+import Burger from "../../components/Burger"
+import Title from "./components/Title"
 
 const Dagur = ({ data, pageContext }) => {
   return (
     <Container>
+      <Burger></Burger>
+      <Title></Title>
       <Events
         events={data.allMarkdownRemark.edges}
         title={pageContext.frontmatter.title}

@@ -1,5 +1,5 @@
 import React from "react"
-import HusSVG from "../../../../../static/myndir/husarod.svg"
+import HusSVG from "../../../../../static/myndir/husarod3.svg"
 import "./index.css"
 import { connect } from "react-redux"
 import {
@@ -18,6 +18,10 @@ class Husarod extends React.Component {
   }
   componentDidMount() {
     let gluggar = document.getElementsByClassName("gluggi")
+    let tolur = document.getElementById("Tölur")
+    for (var i = 0; i < tolur.children.length; i++) {
+      tolur.children[i].classList += "tolur"
+    }
     this.dispatchGluggar(gluggar).then(() => {
       for (var i = 0; i < gluggar.length; i++) {
         this.props.gluggar[i].addEventListener("click", e =>

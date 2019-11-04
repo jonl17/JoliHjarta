@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    nafn: `Jól í hjarta`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
