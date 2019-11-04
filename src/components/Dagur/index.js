@@ -6,6 +6,7 @@ import { triggerDagurPopup } from "../../state/action"
 import Video from "../Video"
 import EventarDagsins from "./components/EventarDagsins"
 import SenduInnEfniBTN from "./components/SenduInnEfniBTN"
+import PlayBTN from "./components/PlayBTN"
 
 const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
   return (
@@ -21,7 +22,8 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
           ></ExitBTN>
           <Dagsetning>{selectedDay.title}</Dagsetning>
           <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
-          <Video video={selectedDay.vidjo.vidjourl}></Video>
+          {/*<Video video={selectedDay.vidjo.vidjourl}></Video> */}
+          <PlayBTN></PlayBTN>
           <SenduInnEfniBTN></SenduInnEfniBTN>
           <EventarDagsins eventar={selectedDay.eventar}></EventarDagsins>
         </PopupGluggi>

@@ -9,7 +9,6 @@ const Video = ({ video }) => {
         title={video.title}
         src={video}
         poster={Poster}
-        controls
         frameBorder="0"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"

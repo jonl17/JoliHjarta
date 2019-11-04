@@ -6,8 +6,8 @@ const Events = ({ events, title }) => {
     <>
       <Title>Viðburðir {title}</Title>
       <Container>
-        {events.map(event => (
-          <p style={{ fontSize: "20px" }}>
+        {events.map((event, index) => (
+          <p key={index} style={{ fontSize: "20px" }}>
             {event.node.frontmatter.title +
               ", klukkan " +
               event.node.frontmatter.klukkan}
