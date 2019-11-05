@@ -11,9 +11,9 @@ export const layer = {
   two: 6,
 }
 export const colors = {
-  darkgray: "#6B6B59",
+  darkgray: "#f4777c",
   gray: "#797979",
-  lightgray: "#E5E5E5",
+  lightgray: "#181462",
   boxgray: "#C4C4C4",
 }
 export const sizes = {
@@ -64,8 +64,8 @@ export const PopupGluggi = styled.div`
       width: 90%;
     `}
   margin: auto;
-  background: #e5e5e5;
-  border: 10px solid #797979;
+  background: ${colors.lightgray};
+ /* border: 10px solid ${colors.darkgray}; */
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   display: grid;

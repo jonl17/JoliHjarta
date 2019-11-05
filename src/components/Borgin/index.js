@@ -5,6 +5,7 @@ import { Background, Container } from "./Styled"
 import Mani from "./components/Mani"
 import Husarod from "./components/Husarod"
 import HusarodBak from "./components/HusarodBak"
+import GluggaDot from "./components/GluggaDot"
 
 const Borgin = () => {
   return (
@@ -12,6 +13,7 @@ const Borgin = () => {
       <Background></Background>
       <HusarodBak></HusarodBak>
       <Husarod></Husarod>
+      <GluggaDot></GluggaDot>
       <Mani></Mani>
     </Container>
   )
