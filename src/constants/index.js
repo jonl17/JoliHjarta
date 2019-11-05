@@ -14,6 +14,7 @@ export const colors = {
   darkgray: "#6B6B59",
   gray: "#797979",
   lightgray: "#E5E5E5",
+  boxgray: "#C4C4C4",
 }
 export const sizes = {
   line: "6px",

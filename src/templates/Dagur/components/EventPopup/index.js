@@ -32,7 +32,6 @@ const GetTempPic = () => (
 )
 
 const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
-  console.log(selectedEvent)
   return (
     <Container
       display={
@@ -47,8 +46,10 @@ const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
           <InfoContainer>
             <Title>{selectedEvent.title}</Title>
             <DirectionBox>
-              <Klukkan>{selectedEvent.klukkan}</Klukkan>
-              <Hvar>Nesvellir 8B</Hvar>
+              <Hvar>
+                <Klukkan>{"kl. " + selectedEvent.klukkan}</Klukkan>
+                {selectedEvent.hvar}
+              </Hvar>
             </DirectionBox>
           </InfoContainer>
           {GetTempPic()}

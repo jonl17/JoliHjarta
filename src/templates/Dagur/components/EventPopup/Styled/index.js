@@ -14,20 +14,19 @@ export const Title = styled.p`
 `
 export const DirectionBox = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: auto;
 `
-export const Klukkan = styled.p`
+export const Klukkan = styled.span`
   font-weight: bold;
-  text-align: right;
-  padding-right: ${margins.xSmall};
   font-size: ${sizes.paraSmall};
   margin: 0;
+  padding-right: 10px;
 `
 export const Hvar = styled.p`
-  text-align: left;
   width: 100%;
   font-size: ${sizes.paraSmall};
   margin: 0;
+  padding-bottom: 10px;
 `
 export const Image = styled(Img)`
   height: 100%;

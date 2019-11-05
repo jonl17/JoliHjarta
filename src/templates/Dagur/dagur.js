@@ -5,6 +5,7 @@ import Events from "./components/Events"
 import Burger from "../../components/Burger"
 import Title from "./components/Title"
 import EventPopup from "./components/EventPopup"
+import Calender from "./components/Calender"
 
 const Dagur = ({ data, pageContext }) => {
   return (
@@ -16,6 +17,7 @@ const Dagur = ({ data, pageContext }) => {
         title={pageContext.frontmatter.title}
       ></Events>
       <EventPopup></EventPopup>
+      <Calender></Calender>
     </Container>
   )
 }
@@ -36,6 +38,7 @@ export const query = graphql`
             hvenaer
             klukkan
             lysing
+            hvar
           }
         }
       }
