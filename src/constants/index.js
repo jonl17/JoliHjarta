@@ -49,7 +49,7 @@ export const Container = styled.div`
 `
 export const PopupGluggi = styled.div`
   position: relative;
-  height: 65%;
+  height: 90%;
   min-height: 550px;
   width: 50%;
   ${props =>

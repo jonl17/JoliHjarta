@@ -35,6 +35,7 @@ export const query = graphql`
             title
             hvenaer
             klukkan
+            lysing
           }
         }
       }

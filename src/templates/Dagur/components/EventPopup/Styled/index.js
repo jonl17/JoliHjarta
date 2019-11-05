@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 150px;
 `
 export const Title = styled.p`
   font-size: ${sizes.paraLarge};
@@ -26,13 +25,21 @@ export const Klukkan = styled.p`
 `
 export const Hvar = styled.p`
   text-align: left;
-  padding-left: ${margins.xSmall};
   width: 100%;
   font-size: ${sizes.paraSmall};
   margin: 0;
 `
 export const Image = styled(Img)`
-  height: 300px;
-  width: 300px;
-  margin: auto;
+  height: 100%;
+  width: 100%;
+  max-height: 275px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+`
+export const Lysing = styled.p`
+  box-sizing: border-box;
+  padding: 0 ${margins.large} 0 ${margins.large};
+  font-size: ${sizes.paraSmall};
 `

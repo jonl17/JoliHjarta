@@ -10,6 +10,7 @@ import {
   Hvar,
   Image,
   DirectionBox,
+  Lysing,
 } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
 
@@ -31,6 +32,7 @@ const GetTempPic = () => (
 )
 
 const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
+  console.log(selectedEvent)
   return (
     <Container
       display={
@@ -50,6 +52,7 @@ const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
             </DirectionBox>
           </InfoContainer>
           {GetTempPic()}
+          <Lysing>{selectedEvent.lysing}</Lysing>
         </PopupGluggi>
       ) : (
         <></>
