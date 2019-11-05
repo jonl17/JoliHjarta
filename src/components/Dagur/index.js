@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, PopupGluggi, Dagsetning, VideoTitle } from "./Styled"
+import { Dagsetning, VideoTitle } from "./Styled"
 import { connect } from "react-redux"
 import ExitBTN from "../ExitBTN"
 import { triggerDagurPopup } from "../../state/action"
@@ -7,6 +7,7 @@ import { triggerDagurPopup } from "../../state/action"
 import EventarDagsins from "./components/EventarDagsins"
 import SenduInnEfniBTN from "./components/SenduInnEfniBTN"
 import PlayBTN from "./components/PlayBTN"
+import { Container, PopupGluggi } from "../../constants"
 
 const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
   return (

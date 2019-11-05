@@ -33,3 +33,14 @@ export const getAllDaysInfo = info => ({
   type: GET_ALL_DAYS_INFO,
   info,
 })
+export const TRIGGER_EVENT_POPUP = "TRIGGER_EVENT_POPUP"
+export const triggerEventPopup = trigger => ({
+  /** the trigger is either open or closed */
+  type: TRIGGER_EVENT_POPUP,
+  trigger,
+})
+export const SELECT_EVENT = "SELECT_EVENT"
+export const selectEvent = event => ({
+  type: SELECT_EVENT,
+  event,
+})

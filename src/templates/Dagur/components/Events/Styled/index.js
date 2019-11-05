@@ -11,7 +11,6 @@ export const Container = styled.div`
   flex-direction: column;
 `
 export const EventTable = styled.div`
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: ${margins.small};

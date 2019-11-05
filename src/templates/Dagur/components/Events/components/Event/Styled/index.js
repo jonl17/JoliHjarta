@@ -7,6 +7,9 @@ export const Box = styled.div`
   width: 250px;
   display: grid;
   grid-template-rows: 200px auto;
+  &&:hover {
+    cursor: pointer;
+  }
 `
 export const Image = styled(Img)`
   height: 200px;
