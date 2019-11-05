@@ -47,3 +47,5 @@ collections:
           hint: "setjið inn á þessu formatti: 16-18",
         }
       - { label: "Stutt lýsing", name: "lysing", widget: "string" }
+      - { label: "Hvar", name: "hvar", widget: "string" }
+      - { label: "Kort", name: "kort", widget: "map" }
