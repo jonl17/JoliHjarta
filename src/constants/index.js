@@ -11,10 +11,11 @@ export const layer = {
   two: 6,
 }
 export const colors = {
-  darkgray: "#f4777c",
+  darkgray: "#797979",
   gray: "#797979",
-  lightgray: "#181462",
+  blue: "#181462",
   boxgray: "#C4C4C4",
+  lightgray: "#E5E5E5",
 }
 export const sizes = {
   line: "6px",
@@ -27,7 +28,7 @@ export const Button = styled.div`
   font-size: ${sizes.paraSmall};
   background: white;
   box-sizing: border-box;
-  box-shadow: 1px 1.5px 1.5spx 1px lightgray;
+  box-shadow: 1px 1.5px 1.5px 1px lightgray;
   border-radius: 43px;
   padding: 10px;
   display: flex;
@@ -35,6 +36,7 @@ export const Button = styled.div`
   &&:hover {
     cursor: pointer;
   }
+  color: black;
 `
 
 // popup window
@@ -64,9 +66,10 @@ export const PopupGluggi = styled.div`
       width: 90%;
     `}
   margin: auto;
-  background: ${colors.lightgray};
- /* border: 10px solid ${colors.darkgray}; */
+  background: ${colors.blue};
+  border: 10px solid ${colors.boxgray};
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   display: grid;
+  color: white;
 `

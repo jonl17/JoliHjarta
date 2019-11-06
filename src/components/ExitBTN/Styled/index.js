@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { margins, colors, sizes } from "../../../constants"
+import { margins, sizes } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
@@ -19,7 +19,7 @@ export const Line = styled.span`
   position: absolute;
   height: ${sizes.line};
   width: 100%;
-  background: ${colors.darkgray};
+  background: white;
   transform: rotate(45deg);
   ${props =>
     props.second &&

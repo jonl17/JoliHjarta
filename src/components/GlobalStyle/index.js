@@ -12,9 +12,6 @@ export const GlobalStyle = createGlobalStyle`
         background: #FF6347;
         color: white;
     }
-    p {
-        color: white;
-    }
     
    
 `
