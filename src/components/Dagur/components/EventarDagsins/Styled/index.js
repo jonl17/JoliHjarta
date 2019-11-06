@@ -31,3 +31,6 @@ export const Anchor = styled(Link)`
   text-decoration: none;
   color: inherit;
 `
+export const Klukkan = styled.span`
+  font-weight: bold;
+`

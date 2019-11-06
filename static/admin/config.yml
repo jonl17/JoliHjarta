@@ -18,15 +18,6 @@ collections:
           format: "M/D",
           hint: "Veldu þann dag í desember sem á við",
         }
-      - label: "Eventar fyrir dag"
-        name: "eventar"
-        required: false
-        multiple: true
-        widget: "relation"
-        collection: "event"
-        searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title", "hvenaer"]
       - label: "Vidjo"
         name: "vidjo"
         widget: "object"

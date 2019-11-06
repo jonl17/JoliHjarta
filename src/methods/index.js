@@ -29,3 +29,10 @@ export const findDayWithID = (id, allDaysInfo) => {
   if (result !== -1) return allDaysInfo[result].node.frontmatter
   else return undefined
 }
+
+// needs input date on form 12/3, returns 12-3-desember
+export const generateSlugFromDate = date => {
+  let newDate = date.replace("/", "-")
+  newDate += "-desember"
+  return newDate
+}

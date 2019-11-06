@@ -24,10 +24,10 @@ const Dagur = ({ data, pageContext }) => {
 
 /* Query for the events for the day */
 export const query = graphql`
-  query($slug: String) {
+  query($dagsetning: String) {
     allMarkdownRemark(
       filter: {
-        frontmatter: { hvenaer: { eq: $slug } }
+        frontmatter: { hvenaer: { eq: $dagsetning } }
         fileAbsolutePath: { regex: "/events/" }
       }
     ) {

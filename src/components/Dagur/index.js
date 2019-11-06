@@ -26,7 +26,7 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
           {/*<Video video={selectedDay.vidjo.vidjourl}></Video> */}
           <PlayBTN></PlayBTN>
           <SenduInnEfniBTN></SenduInnEfniBTN>
-          <EventarDagsins eventar={selectedDay.eventar}></EventarDagsins>
+          <EventarDagsins dagsetning={selectedDay.dagsetning}></EventarDagsins>
         </PopupGluggi>
       ) : (
         <></>
