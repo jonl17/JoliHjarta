@@ -22,7 +22,11 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
             click={() => dispatch(triggerDagurPopup("closed"))}
           ></ExitBTN>
           <Dagsetning>{selectedDay.title}</Dagsetning>
-          <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
+          <VideoTitle>
+            {selectedDay.vidjo !== null
+              ? selectedDay.vidjo.vidjotitill
+              : "Vidjó titil vantar"}
+          </VideoTitle>
           {/*<Video video={selectedDay.vidjo.vidjourl}></Video> */}
           <PlayBTN></PlayBTN>
           <SenduInnEfniBTN></SenduInnEfniBTN>
