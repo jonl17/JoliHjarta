@@ -30,6 +30,7 @@ export const query = graphql`
         frontmatter: { hvenaer: { eq: $dagsetning } }
         fileAbsolutePath: { regex: "/events/" }
       }
+      sort: { fields: frontmatter___klukkan }
     ) {
       edges {
         node {

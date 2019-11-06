@@ -8,7 +8,10 @@ const GetAllEvents = dagsetning => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/events/" } }) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/events/" } }
+          sort: { fields: frontmatter___klukkan }
+        ) {
           edges {
             node {
               frontmatter {

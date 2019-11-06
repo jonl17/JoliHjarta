@@ -36,8 +36,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
         // Create pages for each day.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          let path = node.frontmatter.dagsetning.replace("/", "-")
-          path += "-desember"
+          let path = node.frontmatter.dagsetning.replace("12/", "")
+          path += "desember"
           createPage({
             path,
             component: dagurTemplate,

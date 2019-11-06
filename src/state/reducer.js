@@ -8,6 +8,7 @@ import {
   GET_ALL_DAYS_INFO,
   TRIGGER_EVENT_POPUP,
   SELECT_EVENT,
+  SELECT_CALENDER_DAY,
 } from "./action"
 
 const initialState = {
@@ -24,6 +25,7 @@ const initialState = {
   allDaysInfo: undefined,
   eventPopup: "closed",
   selectedEvent: undefined,
+  selectedCalenderDay: -1,
 }
 
 export default (state = initialState, action) => {
@@ -66,6 +68,8 @@ export default (state = initialState, action) => {
       return { ...state, eventPopup: action.trigger }
     case SELECT_EVENT:
       return { ...state, selectedEvent: action.event }
+    case SELECT_CALENDER_DAY:
+      return { ...state, selectedCalenderDay: action.number }
     default:
       return state
   }

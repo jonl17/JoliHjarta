@@ -6,6 +6,7 @@ import {
   getGluggar,
   selectDay,
   triggerDagurPopup,
+  selectCalenderDay,
 } from "../../../../state/action"
 import { findDayWithID } from "../../../../methods"
 
@@ -44,6 +45,7 @@ class Husarod extends React.Component {
     // search for correct day
     let correctDay = findDayWithID(dayID, this.props.allDaysInfo)
     this.props.dispatch(selectDay(correctDay))
+    this.props.dispatch(selectCalenderDay(parseInt(dayID.replace("dagur", ""))))
   }
   clickCallBack(e) {
     /* open up the popup window for one day in the calender */

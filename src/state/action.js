@@ -44,3 +44,8 @@ export const selectEvent = event => ({
   type: SELECT_EVENT,
   event,
 })
+export const SELECT_CALENDER_DAY = "SELECT_CALENDER_DAY"
+export const selectCalenderDay = number => ({
+  type: SELECT_CALENDER_DAY,
+  number,
+})

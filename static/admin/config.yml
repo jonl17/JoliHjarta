@@ -20,10 +20,20 @@ collections:
         }
       - label: "Vidjo"
         name: "vidjo"
-        widget: "object"
+        widget: "object",
         fields:
-          - { label: "Vidjo Titill", name: "vidjotitill", widget: "string" }
-          - { label: "Vidjo URL", name: "vidjourl", widget: "file" }
+          - {
+              label: "Vidjo Titill",
+              name: "vidjotitill",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Vidjo URL",
+              name: "vidjourl",
+              widget: "file",
+              required: false,
+            }
   - name: "event"
     label: "Viðburður"
     folder: "static/content/events"

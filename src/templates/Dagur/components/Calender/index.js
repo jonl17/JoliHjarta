@@ -2,6 +2,7 @@ import React from "react"
 import { Container } from "./Styled"
 import Day from "./components/Day"
 import { connect } from "react-redux"
+import { generateSlugFromDate } from "../../../../methods"
 
 const Days = []
 for (var i = 0; i < 24; i++) {
@@ -12,20 +13,12 @@ const findSelectedDay = (date, calenderDay) => {
   return parseInt(date.replace("12/", "")) === calenderDay
 }
 
-const Calender = ({ selectedDay }) => {
+const Calender = (props, { selectedDay }) => {
+  console.log(props)
   return (
     <Container>
       {Days.map((item, index) => (
-        <Day
-          selected={
-            selectedDay !== undefined &&
-            findSelectedDay(selectedDay.dagsetning, item)
-              ? "yes"
-              : "no"
-          }
-          key={index}
-          number={item}
-        ></Day>
+        <Day selected={"no"} key={index} number={item}></Day>
       ))}
     </Container>
   )

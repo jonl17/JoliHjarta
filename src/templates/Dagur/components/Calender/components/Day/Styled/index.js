@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components"
 import { colors, sizes } from "../../../../../../../constants"
+import { Link } from "gatsby"
 
-export const Box = styled.div`
+export const Box = styled(Link)`
   height: 55px;
   width: 55px;
   background: ${colors.boxgray};
@@ -12,6 +13,8 @@ export const Box = styled.div`
     css`
       background: green;
     `}
+  text-decoration: none;
+  color: inherit;
 `
 export const Number = styled.p`
   font-weight: bold;
