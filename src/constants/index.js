@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { Link } from "gatsby"
 
 export const margins = {
   xSmall: "16px",
@@ -37,6 +38,24 @@ export const Button = styled.div`
     cursor: pointer;
   }
   color: black;
+  margin: auto;
+`
+export const LinkButton = styled(Link)`
+  font-size: ${sizes.paraSmall};
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 1px 1.5px 1.5px 1px lightgray;
+  border-radius: 43px;
+  padding: 10px;
+  display: flex;
+  font-feature-settings: "pnum" on, "onum" on;
+  &&:hover {
+    cursor: pointer;
+  }
+  color: black;
+  text-decoration: none;
+  min-width: 250px;
+  margin: auto;
 `
 
 // popup window
@@ -70,6 +89,11 @@ export const PopupGluggi = styled.div`
   border: 10px solid ${colors.boxgray};
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
-  display: grid;
   color: white;
+  ${props =>
+    props.grid &&
+    css`
+      display: grid;
+      grid-template-rows: 125px auto 200px;
+    `}
 `

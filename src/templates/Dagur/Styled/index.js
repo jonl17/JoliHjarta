@@ -2,8 +2,8 @@ import styled from "styled-components"
 import { colors, sizes, margins } from "../../../constants"
 
 export const Container = styled.div`
-  height: 100%;
   min-height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   padding: ${margins.large} ${margins.large} 0 ${margins.large};
   border: ${sizes.line} solid ${colors.darkgray};
