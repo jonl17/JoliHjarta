@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import { sizes } from "../../../../../../../constants"
 
 export const Box = styled.div`
-  height: 250px;
   width: 250px;
   display: grid;
   grid-template-rows: 200px auto;
