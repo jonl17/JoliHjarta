@@ -12,24 +12,6 @@ import {
   DirectionBox,
   Lysing,
 } from "./Styled"
-import { graphql, StaticQuery } from "gatsby"
-
-const GetTempPic = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        file(name: { eq: "temppic" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Image fluid={data.file.childImageSharp.fluid}></Image>}
-  ></StaticQuery>
-)
 
 const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
   console.log(selectedEvent)
@@ -53,7 +35,7 @@ const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
               </Hvar>
             </DirectionBox>
           </InfoContainer>
-          {GetTempPic()}
+          <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
           <Lysing>{selectedEvent.lysing}</Lysing>
         </PopupGluggi>
       ) : (
