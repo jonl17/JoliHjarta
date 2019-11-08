@@ -4,15 +4,13 @@ import { sizes } from "../../../../../../../constants"
 
 export const Box = styled.div`
   width: 250px;
-  display: grid;
-  grid-template-rows: 200px auto;
+  height: 250px;
   &&:hover {
     cursor: pointer;
   }
 `
 export const Image = styled(Img)`
-  height: 200px;
-  width: 250px;
+  width: 100%;
 `
 export const InfoContainer = styled.div`
   display: flex;

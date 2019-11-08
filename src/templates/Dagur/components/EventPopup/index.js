@@ -32,6 +32,7 @@ const GetTempPic = () => (
 )
 
 const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
+  console.log(selectedEvent)
   return (
     <Container
       display={
