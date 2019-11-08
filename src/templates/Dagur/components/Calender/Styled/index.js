@@ -23,5 +23,5 @@ export const Desember = styled.p`
   text-align: center;
   font-size: ${sizes.paraMed};
   padding-bottom: ${margins.xSmall};
-  font-weight: bold;
+  font-style: italic;
 `
