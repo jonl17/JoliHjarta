@@ -12,13 +12,16 @@ export const Box = styled(Link)`
     props.selected === "yes" &&
     css`
       background: green;
+      border: 2px solid black;
     `}
   text-decoration: none;
   color: inherit;
   transition: 0.1s;
+  box-sizing: border-box;
   &&:hover {
     background: ${colors.darkgray};
     color: white;
+    border: 2px solid white;
   }
 `
 export const Number = styled.p`
