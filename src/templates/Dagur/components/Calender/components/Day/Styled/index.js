@@ -15,6 +15,11 @@ export const Box = styled(Link)`
     `}
   text-decoration: none;
   color: inherit;
+  transition: 0.1s;
+  &&:hover {
+    background: ${colors.darkgray};
+    color: white;
+  }
 `
 export const Number = styled.p`
   font-weight: bold;
