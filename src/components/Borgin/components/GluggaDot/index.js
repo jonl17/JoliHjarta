@@ -6,14 +6,6 @@ import "../SVGanimate/animate.css"
 import "./index.css"
 
 class GluggaDot extends React.Component {
-  constructor(props) {
-    super(props)
-    this.hoverCallBack = this.hoverCallBack.bind(this)
-  }
-  componentDidMount() {
-    let mavur = document.getElementById("mavur")
-    mavur.addEventListener("hover", mavur.classList.add("animated bounceOutUp"))
-  }
   hoverCallBack() {}
   render() {
     return (
