@@ -5,12 +5,29 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    nafn: `Jól í hjarta`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `myndir`,
         path: `${__dirname}/static/myndir`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dagar`,
+        path: `${__dirname}/static/content/dagar`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `events`,
+        path: `${__dirname}/static/content/events`,
       },
     },
     {
@@ -22,7 +39,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    //`gatsby-plugin-catch-links`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }

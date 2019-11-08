@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Grunnur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg id="husarod" version="1.1" id="Grunnur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 3908.2 1080" style="enable-background:new 0 0 3908.2 1080;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#29ABE2;}
@@ -46,10 +46,11 @@
 <path class="st7" d="M1049,746.6L1049,746.6c-25.2,0-45.6,20.4-45.6,45.6v110.1l91.2-41.5v41.9l0.1,0V792.2
 	C1094.6,767,1074.2,746.6,1049,746.6z"/>
 <polyline class="st10" points="590,894.8 590,742.4 681.2,742.4 681.2,894.7 "/>
-<g>
+<g id="dagur3-G" class="gluggiCont">
 	<rect id="dagur3" x="149.5" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
+<text width="84.3" height="91.5" fill="white">3</text>
 </g>
-<g>
+<g id="dagur4-G" class="gluggiCont">
 	<rect id="dagur4" x="325" y="744.4" class="st12 gluggi" width="84.3" height="91.5"/>
 </g>
 <g>

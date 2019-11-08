@@ -5,6 +5,10 @@ import {
   GET_GLUGGAR,
   SELECT_DAY,
   TRIGGER_DAGUR_POPUP,
+  GET_ALL_DAYS_INFO,
+  TRIGGER_EVENT_POPUP,
+  SELECT_EVENT,
+  SELECT_CALENDER_DAY,
 } from "./action"
 
 const initialState = {
@@ -18,6 +22,10 @@ const initialState = {
   gluggar: undefined,
   selectedDay: undefined,
   dagurPopup: "closed",
+  allDaysInfo: undefined,
+  eventPopup: "closed",
+  selectedEvent: undefined,
+  selectedCalenderDay: -1,
 }
 
 export default (state = initialState, action) => {
@@ -54,6 +62,14 @@ export default (state = initialState, action) => {
       } /** select the day and open window */
     case TRIGGER_DAGUR_POPUP:
       return { ...state, dagurPopup: action.trigger }
+    case GET_ALL_DAYS_INFO:
+      return { ...state, allDaysInfo: action.info }
+    case TRIGGER_EVENT_POPUP:
+      return { ...state, eventPopup: action.trigger }
+    case SELECT_EVENT:
+      return { ...state, selectedEvent: action.event }
+    case SELECT_CALENDER_DAY:
+      return { ...state, selectedCalenderDay: action.number }
     default:
       return state
   }

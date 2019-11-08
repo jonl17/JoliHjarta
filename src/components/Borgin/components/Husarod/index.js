@@ -1,12 +1,14 @@
 import React from "react"
-import HusSVG from "../../../../../static/myndir/husarod.svg"
+import HusSVG from "../../../../../static/myndir/husarod3.svg"
 import "./index.css"
 import { connect } from "react-redux"
 import {
   getGluggar,
   selectDay,
   triggerDagurPopup,
+  selectCalenderDay,
 } from "../../../../state/action"
+import { findDayWithID } from "../../../../methods"
 
 class Husarod extends React.Component {
   constructor(props) {
@@ -17,6 +19,10 @@ class Husarod extends React.Component {
   }
   componentDidMount() {
     let gluggar = document.getElementsByClassName("gluggi")
+    let tolur = document.getElementById("Tölur")
+    for (var i = 0; i < tolur.children.length; i++) {
+      tolur.children[i].classList += "tolur"
+    }
     this.dispatchGluggar(gluggar).then(() => {
       for (var i = 0; i < gluggar.length; i++) {
         this.props.gluggar[i].addEventListener("click", e =>
@@ -35,8 +41,11 @@ class Husarod extends React.Component {
   async dispatchGluggar(gluggar) {
     this.props.dispatch(getGluggar(gluggar))
   }
-  async dispatchDay(day) {
-    this.props.dispatch(selectDay(day))
+  async dispatchDay(dayID) {
+    // search for correct day
+    let correctDay = findDayWithID(dayID, this.props.allDaysInfo)
+    this.props.dispatch(selectDay(correctDay))
+    this.props.dispatch(selectCalenderDay(parseInt(dayID.replace("dagur", ""))))
   }
   clickCallBack(e) {
     /* open up the popup window for one day in the calender */
@@ -51,6 +60,7 @@ class Husarod extends React.Component {
 
 const mapStateToProps = state => ({
   gluggar: state.reducer.gluggar,
+  allDaysInfo: state.reducer.allDaysInfo,
 })
 
 export default connect(mapStateToProps)(Husarod)

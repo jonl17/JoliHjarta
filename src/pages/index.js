@@ -4,25 +4,63 @@ import Borgin from "../components/Borgin"
 import Snjokoma from "../components/Snjokoma"
 import Dagur from "../components/Dagur"
 import Burger from "../components/Burger"
+import { graphql } from "gatsby"
+import { getAllDaysInfo } from "../state/action"
 
-const index = ({ weather }) => {
-  if (weather.lysing !== undefined)
-    console.log("Veðurlýsing: " + weather.lysing)
+class index extends React.Component {
+  componentDidMount() {
+    const {
+      dispatch,
+      data: {
+        allMarkdownRemark: { edges: allInfo },
+      },
+    } = this.props
+    /** register all days info available */
+    dispatch(getAllDaysInfo(allInfo))
+  }
+  render() {
+    const { weather } = this.props
+    if (weather.lysing !== undefined) {
+      console.log("Veðurlýsing: " + weather.lysing)
+    }
 
-  if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
-  return (
-    <>
-      <div style={{ width: "100%", textAlign: "center" }}>
-        <h1>Þessi síðu er í vinnslu...</h1>
-        <h1>Hiti: {weather.hiti}</h1>
-        <h1>{weather.lysing}</h1>
-      </div>
-    </>
-  )
+    if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
+    return (
+      <>
+        <Burger></Burger>
+        <Snjokoma></Snjokoma>
+        <Borgin></Borgin>
+        <Dagur></Dagur>
+      </>
+    )
+  }
 }
 
 const mapStateToProps = state => ({
   weather: state.reducer.weather,
 })
+
+export const query = graphql`
+  {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___dagsetning, order: ASC }
+      filter: { fileAbsolutePath: { regex: "/content/dagar/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            dagsetning
+            vidjo {
+              vidjotitill
+              vidjourl
+            }
+            eventar
+          }
+        }
+      }
+    }
+  }
+`
 
 export default connect(mapStateToProps)(index)

@@ -1,0 +1,51 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/myndir"
+public_folder: "myndir"
+
+collections:
+  - name: "dagur"
+    label: "Dagur í desember"
+    folder: "static/content/dagar"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Dagsetning",
+          name: "dagsetning",
+          widget: "date",
+          format: "M/D",
+          hint: "Veldu þann dag í desember sem á við",
+        }
+      - label: "Vidjo"
+        name: "vidjo"
+        widget: "object"
+        fields:
+          - {
+              label: "Vidjo Titill",
+              name: "vidjotitill",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Vidjo URL",
+              name: "vidjourl",
+              widget: "file",
+              required: false,
+            }
+  - name: "event"
+    label: "Viðburður"
+    folder: "static/content/events"
+    create: true
+    fields:
+      - { label: "Title", name: "title", "string" }
+      - { label: "Hvenær", name: "hvenaer", widget: "date", format: "M/D" }
+      - {
+          label: "Klukkan",
+          name: "klukkan",
+          widget: "string",
+          hint: "setjið inn á þessu formatti: 16-18",
+        }
+      - { label: "Stutt lýsing", name: "lysing", widget: "string" }
+      - { label: "Hvar", name: "hvar", widget: "string" }
