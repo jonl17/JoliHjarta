@@ -53,7 +53,9 @@ export const query = graphql`
             dagsetning
             vidjo {
               vidjotitill
-              vidjourl
+              vidjourl {
+                relativePath
+              }
             }
             eventar
           }

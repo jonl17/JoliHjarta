@@ -38,12 +38,25 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     //`gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`,
   ],
 }
