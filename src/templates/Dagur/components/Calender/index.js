@@ -1,5 +1,5 @@
 import React from "react"
-import { Container } from "./Styled"
+import { Grid, Container, Desember } from "./Styled"
 import Day from "./components/Day"
 import { connect } from "react-redux"
 
@@ -8,13 +8,15 @@ for (var i = 0; i < 24; i++) {
   Days[i] = i + 1
 }
 
-const Calender = props => {
-  console.log(props)
+const Calender = () => {
   return (
     <Container>
-      {Days.map((item, index) => (
-        <Day selected={"no"} key={index} number={item}></Day>
-      ))}
+      <Desember>Desember</Desember>
+      <Grid>
+        {Days.map((item, index) => (
+          <Day selected={"no"} key={index} number={item}></Day>
+        ))}
+      </Grid>
     </Container>
   )
 }

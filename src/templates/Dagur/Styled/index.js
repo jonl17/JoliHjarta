@@ -12,7 +12,6 @@ export const Container = styled.div`
 `
 export const Grid = styled.div`
   min-height: 100vh;
-
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "events calender";
