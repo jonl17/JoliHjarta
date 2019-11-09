@@ -20,6 +20,6 @@ export const Text = styled.p`
   margin: 0;
   &&:hover {
     cursor: pointer;
-    color: white;
+    color: black;
   }
 `

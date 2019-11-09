@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(229,229,229,.8);
+  background: rgba(46, 49, 146, 0.86);
   z-index: ${layer.zero};
   ${props =>
     props.opacity === 0 &&
@@ -19,4 +19,5 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  color: white;
 `

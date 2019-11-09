@@ -12,10 +12,10 @@ export const Container = styled(Link)`
 `
 export const Text = styled.p`
   font-size: ${sizes.paraLarge};
-  color: black;
+  color: white;
   font-weight: bold;
   margin: ${margins.xLarge} auto;
   &&:hover {
-    color: white;
+    color: black;
   }
 `
