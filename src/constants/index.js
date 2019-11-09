@@ -5,6 +5,7 @@ export const margins = {
   xSmall: "16px",
   small: "32px",
   large: "64px",
+  xLarge: "128px",
 }
 export const layer = {
   zero: 10, // closest

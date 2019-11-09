@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { colors, layer } from "../../../constants"
+import { layer } from "../../../constants"
 
 export const Container = styled.div`
   height: 100vh;
@@ -7,8 +7,8 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: ${colors.lightgray};
-  z-index: ${layer.one};
+  background: rgba(229,229,229,.8);
+  z-index: ${layer.zero};
   ${props =>
     props.opacity === 0 &&
     css`

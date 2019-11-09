@@ -6,7 +6,7 @@ export const Container = styled(Link)`
   position: fixed;
   top: ${margins.small};
   left: ${margins.small};
-  z-index: ${layer.zero};
+  z-index: ${layer.one};
   text-decoration: none;
   color: inherit;
 `

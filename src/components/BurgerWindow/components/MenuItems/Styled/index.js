@@ -8,7 +8,7 @@ export const List = styled.ul`
   list-style: none;
   max-width: 550px;
   margin: auto;
-  margin-top: ${margins.large};
+  margin-top: ${margins.xLarge};
 `
 export const Item = styled(Link)`
   text-decoration: none;
@@ -17,6 +17,7 @@ export const Item = styled(Link)`
 export const Text = styled.p`
   font-size: ${sizes.paraXlarge};
   font-weight: bold;
+  margin: 0;
   &&:hover {
     cursor: pointer;
     color: white;
