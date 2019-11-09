@@ -6,11 +6,13 @@ import Burger from "../../components/Burger"
 import Title from "./components/Title"
 import EventPopup from "./components/EventPopup"
 import Calender from "./components/Calender"
+import BurgerWindow from "../../components/BurgerWindow"
 
 const Dagur = ({ data, pageContext }) => {
   return (
     <Container>
       <Grid>
+        <BurgerWindow></BurgerWindow>
         <Burger></Burger>
         <Title></Title>
         <Events

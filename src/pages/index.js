@@ -4,6 +4,7 @@ import Borgin from "../components/Borgin"
 import Snjokoma from "../components/Snjokoma"
 import Dagur from "../components/Dagur"
 import Burger from "../components/Burger"
+import BurgerWindow from "../components/BurgerWindow"
 import { graphql } from "gatsby"
 import { getAllDaysInfo } from "../state/action"
 
@@ -27,6 +28,7 @@ class index extends React.Component {
     if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
     return (
       <>
+        <BurgerWindow></BurgerWindow>
         <Burger></Burger>
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>

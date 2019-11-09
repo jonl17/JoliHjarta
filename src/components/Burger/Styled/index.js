@@ -8,7 +8,7 @@ export const Container = styled.div`
   top: ${margins.small};
   right: ${margins.small};
   z-index: ${layer.zero};
-  display: flex;
+  display: ${props => props.display};
   flex-direction: column;
   align-content: center;
   justify-content: space-around;

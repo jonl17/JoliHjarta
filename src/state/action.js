@@ -49,3 +49,8 @@ export const selectCalenderDay = number => ({
   type: SELECT_CALENDER_DAY,
   number,
 })
+export const TRIGGER_BURGER_WINDOW = "TRIGGER_BURGER_WINDOW"
+export const triggerBurgerWindow = trigger => ({
+  type: TRIGGER_BURGER_WINDOW,
+  trigger,
+})
