@@ -23,6 +23,7 @@ export const sizes = {
   paraSmall: "20px",
   paraMed: "25px",
   paraLarge: "35px",
+  paraXlarge: "70px",
 }
 
 export const Button = styled.div`

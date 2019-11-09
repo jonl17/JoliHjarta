@@ -2,7 +2,10 @@ import React from "react"
 import { Container, Text } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { triggerDagurPopup } from "../../../../state/action"
+import {
+  triggerDagurPopup,
+  triggerBurgerWindow,
+} from "../../../../state/action"
 
 const GetTitle = () => (
   <StaticQuery
@@ -19,9 +22,14 @@ const GetTitle = () => (
   ></StaticQuery>
 )
 
+const dispatches = dispatch => {
+  dispatch(triggerDagurPopup("close"))
+  dispatch(triggerBurgerWindow("closed"))
+}
+
 const Title = ({ dispatch }) => {
   return (
-    <Container onClick={() => dispatch(triggerDagurPopup("close"))} to={"/"}>
+    <Container onClick={() => dispatches(dispatch)} to={"/"}>
       {GetTitle()}
     </Container>
   )

@@ -54,3 +54,8 @@ export const triggerBurgerWindow = trigger => ({
   type: TRIGGER_BURGER_WINDOW,
   trigger,
 })
+export const GET_TODAYS_CALENDER_DAY = "GET_TODAYS_CALENDER_DAY"
+export const getTodaysCalenderDay = day => ({
+  type: GET_TODAYS_CALENDER_DAY,
+  day,
+})

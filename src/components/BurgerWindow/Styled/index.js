@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { colors, sizes, margins, layer } from "../../../constants"
+import { colors, layer } from "../../../constants"
 
 export const Container = styled.div`
   height: 100vh;
@@ -16,4 +16,7 @@ export const Container = styled.div`
     `}
   opacity: ${props => props.opacity};
   transition: .3s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `

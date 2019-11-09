@@ -10,6 +10,7 @@ import {
   SELECT_EVENT,
   SELECT_CALENDER_DAY,
   TRIGGER_BURGER_WINDOW,
+  GET_TODAYS_CALENDER_DAY,
 } from "./action"
 
 const initialState = {
@@ -27,6 +28,7 @@ const initialState = {
   eventPopup: "closed",
   selectedEvent: undefined,
   selectedCalenderDay: -1,
+  todaysCalenderDay: -1,
   burgerWindow: "closed",
 }
 
@@ -74,6 +76,12 @@ export default (state = initialState, action) => {
       return { ...state, selectedCalenderDay: action.number }
     case TRIGGER_BURGER_WINDOW:
       return { ...state, burgerWindow: action.trigger }
+    case GET_TODAYS_CALENDER_DAY:
+      let day = action.day
+      if (day > 24) {
+        day = 24 // just so it doesn't go over the 24 of desember
+      }
+      return { ...state, todaysCalenderDay: day }
     default:
       return state
   }

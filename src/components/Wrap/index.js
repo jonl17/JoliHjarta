@@ -1,7 +1,7 @@
 import React from "react"
 import { Container } from "./Styled"
 import { connect } from "react-redux"
-import { setDevice } from "../../state/action"
+import { setDevice, getTodaysCalenderDay } from "../../state/action"
 
 class Wrap extends React.Component {
   constructor(props) {
@@ -11,9 +11,15 @@ class Wrap extends React.Component {
   componentDidMount() {
     this.callBack()
     window.addEventListener("resize", this.callBack)
+    this.getToday(this.props.dispatch)
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.callBack)
+  }
+  getToday(dispatch) {
+    let date = new Date()
+    let today = date.getDate()
+    dispatch(getTodaysCalenderDay(today))
   }
   callBack() {
     const { dispatch } = this.props

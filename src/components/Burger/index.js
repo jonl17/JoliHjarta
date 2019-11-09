@@ -9,9 +9,9 @@ const Burger = ({ burgerWindow, dispatch }) => {
       onClick={() => dispatch(triggerBurgerWindow("open"))}
       display={burgerWindow === "open" ? "none" : "flex"}
     >
-      <Line></Line>
-      <Line></Line>
-      <Line></Line>
+      <Line one></Line>
+      <Line two></Line>
+      <Line three></Line>
     </Container>
   )
 }
