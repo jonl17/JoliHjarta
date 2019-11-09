@@ -5,9 +5,43 @@
   pointer-events: none;
   z-index: 4;
 }
-#gluggadot-1 {
+
+/* mavur flug */
+
+@keyframes bounceOutUp {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
 }
-#mavur-thak {
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+#mavurflug {
+  display: none;
+}
+.mavurStay {
+  display: none !important;
+}
+.mavurFly {
+  display: block !important;
+  transform: translate3d(0, -15px, 0);
+  transition: 0.1s;
 }
 @keyframes kerti-logar {
   from {

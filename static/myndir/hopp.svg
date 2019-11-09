@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg class="gluggastuff" version="1.1" id="Gluggarammi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 3908.2 1080" style="enable-background:new 0 0 3908.2 1080;" xml:space="preserve">
+<style type="text/css">
+	.hoppst0{fill:none;stroke:#363636;stroke-width:4.6894;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.hoppst1{fill:#363636;}
+	.hoppst2{fill:#D3D7DF;}
+	.hoppst3{fill:none;stroke:#000000;stroke-width:0.7816;stroke-miterlimit:10;}
+	.hoppst4{fill:none;stroke:#82E3BD;stroke-width:9.3787;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.hoppst5{fill:none;stroke:#363636;stroke-width:2.3447;stroke-miterlimit:10;}
+	.hoppst6{fill:none;stroke:#363636;stroke-width:7.8156;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.hoppst7{fill:#7C8291;}
+	.hoppst8{fill:#82E3BD;}
+</style>
+<g>
+	<polyline class="hoppst0" points="2897.6,909.3 2890.5,926.3 2897.6,926.3 	"/>
+	<g>
+		<g>
+			<path class="hoppst1" d="M2974.1,902.2c-8,0-14.5,6.5-14.5,14.5c0,8,6.5,14.5,14.5,14.5s14.5-6.5,14.5-14.5
+				C2988.5,908.7,2982,902.2,2974.1,902.2z M2974.1,926.3c-5.3,0-9.6-4.3-9.6-9.6c0-5.3,4.3-9.6,9.6-9.6c5.3,0,9.6,4.3,9.6,9.6
+				C2983.7,922,2979.4,926.3,2974.1,926.3z"/>
+		</g>
+		<path class="hoppst2" d="M2896.5,901.5c-0.1-0.2-0.1-0.3-0.2-0.5l-22.9-35.1c-1-1.6-2.7,4.8-4.4,5.9c-1.6,1-2.1,3.2-1.1,4.8l20.4,32.7
+			h-3.2c-0.4,0-0.7,0.3-0.7,0.7v3.8c0,0.4,0.3,0.7,0.7,0.7h89v-13H2896.5z"/>
+		<line class="hoppst4" x1="2867.9" y1="902.3" x2="2878.7" y2="799.4"/>
+		<circle class="hoppst1" cx="2974.1" cy="916.4" r="3"/>
+		<line class="hoppst5" x1="2983.7" y1="926" x2="2964.5" y2="906.8"/>
+		<line class="hoppst5" x1="2983.7" y1="906.8" x2="2964.5" y2="926"/>
+		<circle class="hoppst1" cx="2866.4" cy="916.4" r="3"/>
+		<line class="hoppst5" x1="2876" y1="926" x2="2856.8" y2="906.8"/>
+		<line class="hoppst5" x1="2876" y1="906.8" x2="2856.8" y2="926"/>
+		<g>
+			<path class="hoppst1" d="M2866.4,902.2c-8,0-14.5,6.5-14.5,14.5c0,8,6.5,14.5,14.5,14.5c8,0,14.5-6.5,14.5-14.5
+				C2880.9,908.7,2874.4,902.2,2866.4,902.2z M2866.4,926.3c-5.3,0-9.6-4.3-9.6-9.6c0-5.3,4.3-9.6,9.6-9.6c5.3,0,9.6,4.3,9.6,9.6
+				C2876,922,2871.7,926.3,2866.4,926.3z"/>
+		</g>
+		<path class="hoppst0" d="M2880,799.4c4.1,10.7,19.7,4.9,19.7,4.9"/>
+		<line class="hoppst6" x1="2861.7" y1="804.3" x2="2898.3" y2="791.7"/>
+		<path class="hoppst7" d="M2993.2,916.6c0-10.6-8.6-21.1-19.1-21.1s-19.1,10.6-19.1,21.1"/>
+		<g>
+			<path class="hoppst8" d="M2982.7,911.7h-5.4c0-1.8-1.4-3.2-3.2-3.2c-1.8,0-3.2,1.4-3.2,3.2h-5.4c0-4.8,3.9-8.6,8.6-8.6
+				C2978.8,903.1,2982.7,906.9,2982.7,911.7z"/>
+		</g>
+	</g>
+</g>
+</svg>
