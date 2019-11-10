@@ -6,4 +6,16 @@
 	.kirkja0{fill:#666666;}
 </style>
 <path class="kirkja0" d="M458.6,27.9l-53.8,133.5v141H154.6c-33.9,0-61.4,27.5-61.4,61.4v155.7h416.8l-0.6-358.1L458.6,27.9z"/>
+<g style="opacity: 0; transition: 0.3s" id="time">
+
+<text font-weight="bold" font-size="27px" x="408" y="190" id="hours" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="470" y="185" fill="gold"> klst.</text>
+
+<text font-weight="bold" font-size="27px" x="408" y="240" id="minutes" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="470" y="235" fill="gold"> mín.</text>
+
+<text font-weight="bold" font-size="27px" x="408" y="290" id="seconds" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="470" y="285" fill="gold"> sek.</text>
+
+</g>
 </svg>
