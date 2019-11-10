@@ -6,6 +6,7 @@ import Mani from "./components/Mani"
 import Husarod from "./components/Husarod"
 import HusarodBak from "./components/HusarodBak"
 import GluggaDot from "./components/GluggaDot"
+import Kirkja from "./components/Kirkja"
 
 const Borgin = () => {
   return (
@@ -15,6 +16,7 @@ const Borgin = () => {
       <Husarod></Husarod>
       <GluggaDot></GluggaDot>
       <Mani></Mani>
+      <Kirkja></Kirkja>
     </Container>
   )
 }

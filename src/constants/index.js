@@ -11,6 +11,9 @@ export const layer = {
   zero: 10, // closest
   one: 8,
   two: 6,
+  kirkja: 0,
+  borg: 1,
+  hus: 2,
 }
 export const colors = {
   darkgray: "#797979",

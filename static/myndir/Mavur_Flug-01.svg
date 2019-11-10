@@ -13,9 +13,9 @@
 	.mavurflug7{fill:#DA0100;}
 </style>
 <g>
-	<g id="mavurthak" class="bounceOutUp">
-		<g>
-			<polyline class="mavurflug0" points="2394.4,532.1 2394.4,555.4 2382.2,555.4 			"/>
+	<g id="mavurthak">
+		<g  >
+			<polyline class="mavurflug0 " points="2394.4,532.1 2394.4,555.4 2382.2,555.4 			"/>
 			<path class="mavurflug0" d="M2405,531.3v19.8c0,2.4-1.9,4.3-4.3,4.3h-10.8"/>
 			<g>
 				<g>

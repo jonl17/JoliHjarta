@@ -1,9 +1,8 @@
 import React from "react"
-import SVG from "../../../../../static/myndir/husarod2.svg"
-import "./index.css"
+import { HusSVG } from "./Styled"
 
 const HusarodBak = () => {
-  return <SVG></SVG>
+  return <HusSVG></HusSVG>
 }
 
 export default HusarodBak

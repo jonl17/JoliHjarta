@@ -1,6 +1,6 @@
 import React from "react"
-import HusSVG from "../../../../../static/myndir/husarod3.svg"
 import "./index.css"
+import { Husin } from "./Styled"
 import { connect } from "react-redux"
 import {
   getGluggar,
@@ -59,7 +59,7 @@ class Husarod extends React.Component {
   }
 
   render() {
-    return <HusSVG></HusSVG>
+    return <Husin></Husin>
   }
 }
 
