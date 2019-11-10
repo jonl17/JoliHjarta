@@ -6,6 +6,5 @@ export const KirkjanSVG = styled(KirkjaSVG)`
   height: 100%;
   position: absolute;
   top: 10px;
-  left: 100px;
   z-index: ${layer.kirkja};
 `
