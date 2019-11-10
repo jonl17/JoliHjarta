@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     nafn: `Jól í hjarta`,
-    menuItems: [`Viðburðir í dag`, `Fyrir fjölskylduna`],
+    menuItems: [`Viðburðir í dag`, `Verkefni fyrir fjölskylduna`],
     subMenuItems: [`Hafa samband`, `Jólalistinn`, `Jólasveinarnir`],
   },
   plugins: [
