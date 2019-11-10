@@ -3,8 +3,15 @@ import { colors, sizes } from "../../../../../../../constants"
 import { Link } from "gatsby"
 
 export const Box = styled(Link)`
-  height: 55px;
-  width: 55px;
+  
+  height: 45px;
+  width: 45px;
+  ${props =>
+    props.device === `browserLarge` &&
+    css`
+      height: 55px;
+      width: 55px;
+    `}
   background: ${colors.boxgray};
   margin: auto;
   display: grid;

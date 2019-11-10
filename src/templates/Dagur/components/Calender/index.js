@@ -8,11 +8,11 @@ for (var i = 0; i < 24; i++) {
   Days[i] = i + 1
 }
 
-const Calender = () => {
+const Calender = ({ device }) => {
   return (
     <Container>
       <Desember>Desember</Desember>
-      <Grid>
+      <Grid device={device}>
         {Days.map((item, index) => (
           <Day selected={"no"} key={index} number={item}></Day>
         ))}
@@ -23,6 +23,7 @@ const Calender = () => {
 
 const mapStateToProps = state => ({
   selectedDay: state.reducer.selectedDay,
+  device: state.reducer.device,
 })
 
 export default connect(mapStateToProps)(Calender)

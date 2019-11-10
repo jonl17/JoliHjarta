@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { margins, sizes } from "../../../../../constants"
 
 export const Container = styled.div`
@@ -15,7 +15,14 @@ export const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: ${margins.xSmall};
   margin: 0 auto;
-  grid-template-rows: repeat(8, 55px);
+
+  /** scaling */
+  grid-template-rows: repeat(8, 45px);
+  ${props =>
+    props.device === `browserLarge` &&
+    css`
+      grid-template-rows: repeat(8, 55px);
+    `}
 `
 export const Desember = styled.p`
   margin: 0;

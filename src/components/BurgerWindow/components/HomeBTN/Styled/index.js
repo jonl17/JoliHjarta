@@ -14,7 +14,7 @@ export const Text = styled.p`
   font-size: ${sizes.paraLarge};
   color: white;
   font-weight: bold;
-  margin: ${margins.xLarge} auto;
+  margin: ${margins.xLarge} ${margins.xLarge} auto auto;
   &&:hover {
     color: black;
   }
