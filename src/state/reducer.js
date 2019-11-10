@@ -42,8 +42,11 @@ export default (state = initialState, action) => {
       if (action.width > 750 && action.width <= 1050) {
         device = `tablet`
       }
-      if (action.width > 1050) {
-        device = `browser`
+      if (action.width > 1050 && action.width <= 1250) {
+        device = `browserSmall`
+      }
+      if (action.width > 1250) {
+        device = `browserLarge`
       }
       return { ...state, device: device }
     case GET_WEATHER:

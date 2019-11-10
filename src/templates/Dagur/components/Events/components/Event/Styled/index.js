@@ -3,11 +3,10 @@ import Img from "gatsby-image"
 import { sizes } from "../../../../../../../constants"
 
 export const Box = styled.div`
-  width: 250px;
-  height: 250px;
   &&:hover {
     cursor: pointer;
   }
+  position: relative;
 `
 export const Image = styled(Img)`
   width: 100%;

@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: auto;
   position: fixed;
   right: 10%;
-  top: 10%;
+  top: 5%;
 `
 export const Grid = styled.div`
   box-sizing: border-box;
