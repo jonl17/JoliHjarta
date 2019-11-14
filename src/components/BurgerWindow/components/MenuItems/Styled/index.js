@@ -6,7 +6,6 @@ export const List = styled.ul`
   height: 100%;
   width: 100%;
   list-style: none;
-  max-width: 550px;
   margin: auto;
   margin-top: ${margins.xLarge};
 `
