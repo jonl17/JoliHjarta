@@ -1,66 +1,29 @@
 import React from "react"
+import styled from "styled-components"
 import { connect } from "react-redux"
-import Borgin from "../components/Borgin"
-import Snjokoma from "../components/Snjokoma"
-import Dagur from "../components/Dagur"
-import Burger from "../components/Burger"
-import { graphql } from "gatsby"
-import { getAllDaysInfo } from "../state/action"
 
-class index extends React.Component {
-  componentDidMount() {
-    const {
-      dispatch,
-      data: {
-        allMarkdownRemark: { edges: allInfo },
-      },
-    } = this.props
-    /** register all days info available */
-    dispatch(getAllDaysInfo(allInfo))
-  }
-  render() {
-    const { weather } = this.props
-    if (weather.lysing !== undefined) {
-      console.log("Veðurlýsing er: " + weather.lysing)
-    }
-
-    if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
-    return (
-      <>
-        <Burger></Burger>
-        <Snjokoma></Snjokoma>
-        <Borgin></Borgin>
-        <Dagur></Dagur>
-      </>
-    )
-  }
+const Container = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const Text = styled.p`
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+`
+const index = ({ weather }) => {
+  return (
+    <Container>
+      <Text>Hiti: {weather.hiti} gráður</Text>
+      <Text>{weather.lysing}</Text>
+    </Container>
+  )
 }
-
 const mapStateToProps = state => ({
   weather: state.reducer.weather,
 })
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      sort: { fields: frontmatter___dagsetning, order: ASC }
-      filter: { fileAbsolutePath: { regex: "/content/dagar/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            dagsetning
-            vidjo {
-              vidjotitill
-              vidjourl
-            }
-            eventar
-          }
-        }
-      }
-    }
-  }
-`
-
 export default connect(mapStateToProps)(index)
