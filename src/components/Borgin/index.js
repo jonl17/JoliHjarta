@@ -10,14 +10,16 @@ import Kirkja from "./components/Kirkja"
 
 const Borgin = () => {
   return (
-    <Container>
+    <>
       <Background></Background>
-      <HusarodBak></HusarodBak>
-      <Husarod></Husarod>
-      <GluggaDot></GluggaDot>
-      <Mani></Mani>
-      <Kirkja></Kirkja>
-    </Container>
+      <Container>
+        <HusarodBak></HusarodBak>
+        <Husarod></Husarod>
+        <GluggaDot></GluggaDot>
+        <Mani></Mani>
+        <Kirkja></Kirkja>
+      </Container>
+    </>
   )
 }
 

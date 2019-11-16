@@ -4,6 +4,10 @@
   top: 55px;
   pointer-events: none;
   z-index: 4;
+  /* husin góð */
+  content: " ";
+  transform: translateZ(-2px) scale(3);
+  background-size: 100%;
 }
 
 /* mavur flug */

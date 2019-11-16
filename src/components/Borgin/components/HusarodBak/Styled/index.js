@@ -8,4 +8,8 @@ export const HusSVG = styled(HusarodSVG)`
   position: absolute;
   bottom: -92px;
   z-index: ${layer.borg};
+  /* husin góð */
+  content: " ";
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
 `

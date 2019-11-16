@@ -7,6 +7,8 @@ export const Box = styled.div`
     cursor: pointer;
   }
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
 `
 export const Image = styled(Img)`
   width: 100%;

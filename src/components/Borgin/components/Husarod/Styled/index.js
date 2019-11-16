@@ -7,4 +7,8 @@ export const Husin = styled(HusSVG)`
   position: absolute;
   bottom: -55px;
   z-index: ${layer.hus};
+  /* husin góð */
+  content: " ";
+  transform: translateZ(-2px) scale(3);
+  background-size: 100%;
 `

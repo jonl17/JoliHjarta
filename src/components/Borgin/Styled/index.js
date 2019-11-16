@@ -6,8 +6,8 @@ export const Container = styled.div`
   width: 100%;
   display: inline-block;
   position: absolute;
+  perspective: 1px;
 `
-
 export const Background = styled.div`
   position: fixed;
   height: 80%;
