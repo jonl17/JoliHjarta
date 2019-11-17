@@ -26,7 +26,7 @@ class index extends React.Component {
       console.log("Veðurlýsing er: " + weather.lysing)
     }
 
-    if (weather.hiti !== undefined) console.log("Hiti: " + weather.hiti)
+    if (weather.hiti !== undefined) console.log(weather.hiti)
     return (
       <>
         <BurgerWindow></BurgerWindow>
