@@ -2,6 +2,9 @@
   cursor: pointer;
   z-index: 4;
 }
+.tala {
+  fill: white;
+}
 .tolur {
   pointer-events: none;
 }
