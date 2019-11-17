@@ -6,7 +6,6 @@
   z-index: 4;
   /* husin góð */
   content: " ";
-  transform: translateZ(-3.5px) scale(2);
   background-size: 100%;
 }
 

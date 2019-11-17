@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="kirkja" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 416.8 492.1" style="enable-background:new 0 0 416.8 492.1;" xml:space="preserve">
+<style type="text/css">
+	.kirkja0{fill:#666666;}
+</style>
+<path class="kirkja0" d="M365.4,0.1l-53.8,133.5v141H61.4C27.5,274.6,0,302,0,335.9v155.7h416.8l-0.6-358.1L365.4,0.1z"/>
+<g style="opacity: 0; transition: 0.3s" id="time">
+
+<text font-weight="bold" font-size="27px" x="320" y="170" id="hours" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="370" y="165" fill="gold"> klst.</text>
+
+<text font-weight="bold" font-size="27px" x="320" y="210" id="minutes" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="370" y="205" fill="gold"> mín.</text>
+
+<text font-weight="bold" font-size="27px" x="320" y="250" id="seconds" fill="gold"></text>
+<text font-weight="bold" font-size="20px" x="370" y="245" fill="gold"> sek.</text>
+
+</g>
+</svg>
