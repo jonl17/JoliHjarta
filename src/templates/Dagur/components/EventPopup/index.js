@@ -21,8 +21,9 @@ const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
       }
     >
       {selectedEvent !== undefined ? (
-        <PopupGluggi device={device}>
+        <PopupGluggi event device={device}>
           <ExitBTN
+            event
             click={() => dispatch(triggerEventPopup("closed"))}
           ></ExitBTN>
           <InfoContainer>

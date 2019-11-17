@@ -1,4 +1,4 @@
-import KirkjaSVG from "../../../../../../static/myndir/kirkja2.svg"
+import KirkjaSVG from "../../../../../../static/myndir/kirkja_klukka.svg"
 import styled from "styled-components"
 import { layer } from "../../../../../constants"
 

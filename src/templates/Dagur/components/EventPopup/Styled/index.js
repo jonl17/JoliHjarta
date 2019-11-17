@@ -10,7 +10,7 @@ export const Title = styled.p`
   font-size: ${sizes.paraLarge};
   font-weight: bold;
   text-align: center;
-  margin: ${margins.xSmall} ${margins.xSmall} 0 ${margins.xSmall};
+  margin: ${margins.xSmall} ${margins.large} 0 ${margins.large};
 `
 export const DirectionBox = styled.div`
   display: grid;

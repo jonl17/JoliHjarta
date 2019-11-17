@@ -14,6 +14,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: ${margins.small};
+  ${props =>
+    props.event &&
+    css`
+      margin: ${margins.xSmall};
+    `}
 `
 export const Line = styled.span`
   position: absolute;

@@ -23,7 +23,7 @@ class index extends React.Component {
   render() {
     const { weather } = this.props
     if (weather.lysing !== undefined) {
-      console.log("Veðurlýsing er: " + weather.lysing)
+      console.log("Veðurlýsing er barasta: " + weather.lysing)
     }
 
     if (weather.hiti !== undefined) console.log(weather.hiti)

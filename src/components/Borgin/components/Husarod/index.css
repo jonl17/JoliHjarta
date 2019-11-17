@@ -2,6 +2,9 @@
   cursor: pointer;
   z-index: 4;
 }
+.gluggi {
+  fill: #3f68c4;
+}
 .tala {
   fill: white;
 }
