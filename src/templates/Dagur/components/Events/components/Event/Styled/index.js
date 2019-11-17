@@ -7,11 +7,14 @@ export const Box = styled.div`
     cursor: pointer;
   }
   position: relative;
-  display: grid;
-  grid-template-rows: 1fr 0.5fr;
+`
+export const ImageContainer = styled.div`
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 `
 export const Image = styled(Img)`
-  width: 100%;
+  height: 100%;
 `
 export const InfoContainer = styled.div`
   display: flex;

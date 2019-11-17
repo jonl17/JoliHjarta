@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 export const Background = styled.div`
   position: fixed;
-  height: 80%;
+  height: 70%;
   width: 100%;
   background: linear-gradient(
     0deg,

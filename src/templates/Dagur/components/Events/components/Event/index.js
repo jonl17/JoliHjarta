@@ -1,5 +1,13 @@
 import React from "react"
-import { Box, Image, InfoContainer, Title, Hvar, Klukkan } from "./Styled"
+import {
+  Box,
+  Image,
+  InfoContainer,
+  Title,
+  Hvar,
+  Klukkan,
+  ImageContainer,
+} from "./Styled"
 import { connect } from "react-redux"
 import { triggerEventPopup, selectEvent } from "../../../../../../state/action"
 
@@ -17,7 +25,9 @@ const Event = ({
 }) => {
   return (
     <Box onClick={() => dispatchesForEventPopup(dispatch, frontmatter)}>
-      <Image fluid={frontmatter.mynd.childImageSharp.fluid}></Image>
+      <ImageContainer>
+        <Image fluid={frontmatter.mynd.childImageSharp.fluid}></Image>
+      </ImageContainer>
       <InfoContainer>
         <Title>{frontmatter.title}</Title>
         <Hvar>Nesvellir 8B</Hvar>
