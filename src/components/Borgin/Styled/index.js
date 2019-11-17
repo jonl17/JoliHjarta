@@ -12,15 +12,5 @@ export const Background = styled.div`
   position: fixed;
   height: 70%;
   width: 100%;
-  background: linear-gradient(
-    0deg,
-    white 0%,
-    #fcee21 19%,
-    #c9bd30 22.39%,
-    #8c8142 45.4%,
-    #5b5251 64.57%,
-    #38305b 82.2%,
-    #231c62 96.61%,
-    #1b1464 100%
-  );
+  background: linear-gradient(0deg, #ffffff 0%, #b8b3e6 40.54%, #5247c3 100%);
 `

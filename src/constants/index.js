@@ -78,7 +78,8 @@ export const PopupGluggi = styled.div`
   position: relative;
   height: 90%;
   min-height: 550px;
-  width: 50%;
+  width: 60%;
+  max-width: 750px;
   ${props =>
     props.device === "tablet" &&
     css`
@@ -100,5 +101,10 @@ export const PopupGluggi = styled.div`
     css`
       display: grid;
       grid-template-rows: 125px auto 200px;
+    `}
+  ${props =>
+    props.event &&
+    css`
+      overflow-y: scroll;
     `}
 `

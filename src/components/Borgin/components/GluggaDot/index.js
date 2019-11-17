@@ -1,16 +1,11 @@
 import React from "react"
 
-// Dagar
-import Dagur1 from "../../../../../static/myndir/gluggi-opinn-1.svg"
-import Dagur15 from "../../../../../static/myndir/gluggi-opinn-15.svg"
-import Dagur17 from "../../../../../static/myndir/gluggi-opinn-17.svg"
-import Dagur18 from "../../../../../static/myndir/gluggi-opinn-18.svg"
-import Dagur19 from "../../../../../static/myndir/gluggi-opinn-19.svg"
-
 // Auka
 import Mavur from "../../../../../static/myndir/Mavur_Flug-01.svg"
 import Hopp from "../../../../../static/myndir/hopp.svg"
 import Mus from "../../../../../static/myndir/mus.svg"
+
+import { GluggaHlutir, LitlarTolur } from "./Styled"
 // other
 import { connect } from "react-redux"
 
@@ -24,11 +19,8 @@ class GluggaDot extends React.Component {
   render() {
     return (
       <>
-        <Dagur1></Dagur1>
-        <Dagur15></Dagur15>
-        <Dagur17></Dagur17>
-        <Dagur18></Dagur18>
-        <Dagur19></Dagur19>
+        <GluggaHlutir></GluggaHlutir>
+        <LitlarTolur></LitlarTolur>
         <Mavur></Mavur>
         <Hopp></Hopp>
         <Mus></Mus>

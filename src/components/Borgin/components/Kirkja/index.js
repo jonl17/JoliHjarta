@@ -47,23 +47,7 @@ class Kirkja extends React.Component {
       })
     }, 1000)
   }
-  componentDidUpdate() {
-    let hours = document.getElementById("hours")
-    let minutes = document.getElementById("minutes")
-    let seconds = document.getElementById("seconds")
-
-    let group = document.getElementById("time")
-
-    if (this.state.timer.hours === -1) {
-      group.style.opacity = 0
-    } else {
-      group.style.opacity = 1
-    }
-
-    hours.textContent = this.state.timer.hours
-    minutes.textContent = this.state.timer.minutes
-    seconds.textContent = this.state.timer.seconds
-  }
+  componentDidUpdate() {}
   componentWillUnmount() {
     clearInterval(interval)
   }
