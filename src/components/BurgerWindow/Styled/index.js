@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(46, 49, 146, 0.86);
+  background: rgba(63, 104, 196, 0.86);
   z-index: ${layer.zero};
   ${props =>
     props.opacity === 0 &&
