@@ -18,7 +18,7 @@ export const layer = {
 export const colors = {
   darkgray: "#797979",
   gray: "#797979",
-  blue: "#181462",
+  blue: "rgba(63, 104, 196, 1)",
   boxgray: "#C4C4C4",
   lightgray: "#E5E5E5",
 }
