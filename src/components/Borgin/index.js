@@ -15,7 +15,9 @@ const Borgin = () => {
         <HusarodBak></HusarodBak>
         <Husarod></Husarod>
         <GluggaDot></GluggaDot>
-        <Kirkja></Kirkja>
+        <div style={{ width: "100%", overflow: "hidden" }}>
+          <Kirkja></Kirkja>
+        </div>
       </Container>
     </>
   )

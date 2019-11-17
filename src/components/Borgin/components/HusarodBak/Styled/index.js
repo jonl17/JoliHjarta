@@ -6,7 +6,7 @@ export const HusSVG = styled(HusarodSVG)`
   box-sizing: border-box;
   height: 100%;
   position: absolute;
-  left: 120px;
+  left: 0px;
   bottom: -72px;
   z-index: ${layer.borg};
   /* husin góð */
