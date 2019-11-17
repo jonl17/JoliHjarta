@@ -30,7 +30,7 @@ const Event = ({
       </ImageContainer>
       <InfoContainer>
         <Title>{frontmatter.title}</Title>
-        <Hvar>Nesvellir 8B</Hvar>
+        <Hvar>{frontmatter.hvar}</Hvar>
         <Klukkan>{"kl. " + frontmatter.klukkan}</Klukkan>
       </InfoContainer>
     </Box>
