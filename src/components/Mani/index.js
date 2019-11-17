@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { Container, Image } from "./Styled"
 import { connect } from "react-redux"
-import { makeItSnow } from "../../../../state/action"
+import { makeItSnow } from "../../state/action"
 
 const Mani = ({ dispatch }) => (
   <StaticQuery

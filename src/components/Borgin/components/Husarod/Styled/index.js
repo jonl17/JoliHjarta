@@ -9,6 +9,6 @@ export const Husin = styled(HusSVG)`
   z-index: ${layer.hus};
   /* husin góð */
   content: " ";
-  transform: translateZ(-2px) scale(3);
+  transform: translateZ(-3.5px) scale(2);
   background-size: 100%;
 `

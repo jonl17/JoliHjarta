@@ -6,10 +6,11 @@ export const HusSVG = styled(HusarodSVG)`
   box-sizing: border-box;
   height: 100%;
   position: absolute;
-  bottom: -92px;
+  left: 120px;
+  bottom: -72px;
   z-index: ${layer.borg};
   /* husin góð */
   content: " ";
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-2px) scale(1.7);
   background-size: 100%;
 `

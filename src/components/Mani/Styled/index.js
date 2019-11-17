@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { margins, layer } from "../../../../../constants"
+import { margins, layer } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
