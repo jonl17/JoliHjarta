@@ -92,7 +92,7 @@ export const PopupGluggi = styled.div`
     `}
   margin: auto;
   background: ${colors.blue};
-  border: 10px solid ${colors.boxgray};
+  border: 10px solid white;
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   color: white;
