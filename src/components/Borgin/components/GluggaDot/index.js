@@ -5,7 +5,7 @@ import Mavur from "../../../../../static/myndir/Mavur_Flug-01.svg"
 import Hopp from "../../../../../static/myndir/hopp.svg"
 import Mus from "../../../../../static/myndir/mus.svg"
 
-import { GluggaHlutir, LitlarTolur } from "./Styled"
+import { GluggaHlutir } from "./Styled"
 // other
 import { connect } from "react-redux"
 
@@ -20,7 +20,6 @@ class GluggaDot extends React.Component {
     return (
       <>
         <GluggaHlutir></GluggaHlutir>
-        <LitlarTolur></LitlarTolur>
         <Mavur></Mavur>
         <Hopp></Hopp>
         <Mus></Mus>
