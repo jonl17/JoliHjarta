@@ -49,3 +49,4 @@ collections:
         }
       - { label: "Stutt lýsing", name: "lysing", widget: "string" }
       - { label: "Hvar", name: "hvar", widget: "string" }
+      - { label: "Mynd", name: "mynd", widget: "image" }
