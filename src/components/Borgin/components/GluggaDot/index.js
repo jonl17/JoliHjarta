@@ -1,25 +1,20 @@
 import React from "react"
 import { connect } from "react-redux"
-import "./index.css"
-
-// Gata
-import Mavur from "../../../../../static/myndir/Mavur_Flug-01.svg"
-import Hopp from "../../../../../static/myndir/hopp.svg"
-import Mus from "../../../../../static/myndir/mus.svg"
+import { layer } from "../../../../constants"
 
 // Gluggar
-import { GluggaHlutir } from "./Styled"
+import { GluggaHlutir, Stekkjastaur, Mavur, Hopp, Mus, Hjol } from "./Styled"
 
 class GluggaDot extends React.Component {
-  componentDidMount() {}
-  componentDidUpdate() {}
   render() {
     return (
       <>
-        <GluggaHlutir></GluggaHlutir>
-        <Mavur></Mavur>
-        <Hopp></Hopp>
-        <Mus></Mus>
+        <GluggaHlutir zindex={layer.hus}></GluggaHlutir>
+        <Mavur zindex={layer.hus}></Mavur>
+        <Hopp zindex={layer.hus}></Hopp>
+        <Mus zindex={layer.hus}></Mus>
+        <Stekkjastaur zindex={layer.borg}></Stekkjastaur>
+        <Hjol zindex={layer.hus}></Hjol>
       </>
     )
   }

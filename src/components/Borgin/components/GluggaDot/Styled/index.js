@@ -1,13 +1,37 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import SVG from "../../../../../../static/myndir/gluggastuffOgTolur.svg"
 
-export const GluggaHlutir = styled(SVG)`
+// Gatan
+import StekkjastaurSVG from "../../../../../../static/myndir/stekkjastaur.svg"
+import MavurSVG from "../../../../../../static/myndir/mavur.svg"
+import HoppSVG from "../../../../../../static/myndir/hopp.svg"
+import MusSVG from "../../../../../../static/myndir/mus.svg"
+import HjolSVG from "../../../../../../static/myndir/hjol.svg"
+
+const SVGstyle = css`
   height: 100%;
   position: absolute;
   top: 55px;
+  z-index: ${props => props.zindex};
+`
+export const Hjol = styled(HjolSVG)`
+  ${SVGstyle};
+`
+export const Mus = styled(MusSVG)`
+  ${SVGstyle};
+`
+export const Hopp = styled(HoppSVG)`
+  ${SVGstyle};
+`
+export const Mavur = styled(MavurSVG)`
+  ${SVGstyle};
+`
+export const Stekkjastaur = styled(StekkjastaurSVG)`
+  ${SVGstyle};
+`
+
+// Glugga hlutir
+export const GluggaHlutir = styled(SVG)`
+  ${SVGstyle};
   pointer-events: none;
-  z-index: 4;
-  /* husin góð */
-  content: " ";
-  background-size: 100%;
 `
