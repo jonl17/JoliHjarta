@@ -1,17 +1,14 @@
 import React from "react"
+import { connect } from "react-redux"
+import "./index.css"
 
-// Auka
+// Gata
 import Mavur from "../../../../../static/myndir/Mavur_Flug-01.svg"
 import Hopp from "../../../../../static/myndir/hopp.svg"
 import Mus from "../../../../../static/myndir/mus.svg"
 
+// Gluggar
 import { GluggaHlutir } from "./Styled"
-// other
-import { connect } from "react-redux"
-
-import "../SVGanimate/animate.css"
-
-import "./index.css"
 
 class GluggaDot extends React.Component {
   componentDidMount() {}
