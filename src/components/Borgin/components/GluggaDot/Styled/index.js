@@ -12,6 +12,7 @@ const SVGstyle = css`
   height: 100%;
   position: absolute;
   top: 55px;
+  pointer-events: none;
   z-index: ${props => props.zindex};
 `
 export const Hjol = styled(HjolSVG)`
@@ -34,4 +35,5 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
 export const GluggaHlutir = styled(SVG)`
   ${SVGstyle};
   pointer-events: none;
+  z-index: 0;
 `
