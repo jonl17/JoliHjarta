@@ -5,6 +5,7 @@ import rootReducer from "./src/state/index"
 import { GlobalStyle } from "./src/components/GlobalStyle"
 import Wrap from "./src/components/Wrap"
 import Client from "./src/service/client"
+import Starter from "./src/components/Starter"
 
 const createStore = () => createThisStore(rootReducer)
 
@@ -14,6 +15,7 @@ export const wrapRootElement = ({ element }) => {
       <Wrap>
         <GlobalStyle></GlobalStyle>
         <Client></Client>
+        <Starter></Starter>
         {element}
       </Wrap>
     </Provider>

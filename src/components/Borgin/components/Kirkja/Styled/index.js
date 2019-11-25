@@ -10,14 +10,7 @@ export const KirkjanSVG = styled(KirkjaSVG)`
 
   /* perspective effect */
   ${props =>
-    props.device === `browserSmall` &&
-    css`
-      transform: translateZ(-4px) scale(3.5);
-      background-size: 100%;
-      top: -40%;
-    `}
-  ${props =>
-    props.device === `browserLarge` &&
+    props.device === `browser` &&
     css`
       transform: translateZ(-4px) scale(3.5);
       background-size: 100%;

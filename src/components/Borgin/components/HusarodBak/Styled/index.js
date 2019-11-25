@@ -11,13 +11,7 @@ export const HusSVG = styled(HusarodSVG)`
   z-index: ${layer.borg};
   /* perspective effect */
   ${props =>
-    props.device === `browserSmall` &&
-    css`
-      transform: translateZ(-2px) scale(1.7);
-      background-size: 100%;
-    `}
-  ${props =>
-    props.device === `browserLarge` &&
+    props.device === `browser` &&
     css`
       transform: translateZ(-2px) scale(1.7);
       background-size: 100%;

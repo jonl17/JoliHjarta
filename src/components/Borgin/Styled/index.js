@@ -8,12 +8,7 @@ export const Container = styled.div`
   position: absolute;
   /** perspective effect */
   ${props =>
-    props.device === `browserSmall` &&
-    css`
-      perspective: 2px;
-    `}
-  ${props =>
-    props.device === `browserLarge` &&
+    props.device === `browser` &&
     css`
       perspective: 2px;
     `}
