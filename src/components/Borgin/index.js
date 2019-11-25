@@ -12,14 +12,16 @@ const Borgin = ({ device }) => {
   return (
     <>
       <Background></Background>
-      <Container device={device}>
-        <HusarodBak></HusarodBak>
-        <Husarod></Husarod>
-        <GluggaDot></GluggaDot>
-        <div style={{ width: "100%", overflow: "hidden" }}>
+      {device !== undefined ? ( // no rendering if device has not be defined, this will prevent skipping of images at load time
+        <Container device={device}>
+          <HusarodBak></HusarodBak>
+          <Husarod></Husarod>
+          <GluggaDot></GluggaDot>
           <Kirkja></Kirkja>
-        </div>
-      </Container>
+        </Container>
+      ) : (
+        <></>
+      )}
     </>
   )
 }
