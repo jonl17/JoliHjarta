@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import HusarodSVG from "../../../../../../static/myndir/husarod2.svg"
 import { layer } from "../../../../../constants"
 
@@ -9,8 +9,11 @@ export const HusSVG = styled(HusarodSVG)`
   left: 0px;
   bottom: -72px;
   z-index: ${layer.borg};
-  /* husin góð */
-  content: " ";
-  transform: translateZ(-2px) scale(1.7);
-  background-size: 100%;
+  /* perspective effect */
+  ${props =>
+    props.device === `browser` &&
+    css`
+      transform: translateZ(-2px) scale(1.7);
+      background-size: 100%;
+    `}
 `

@@ -1,12 +1,11 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { sizes } from "../../../../../constants"
 
 export const List = styled.ul`
   grid-area: submenu;
   margin: auto 150px auto auto;
 `
-export const Item = styled(Link)`
+export const Item = styled.a`
   text-decoration: none;
   color: inherit;
 `

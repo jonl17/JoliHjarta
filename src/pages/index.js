@@ -25,7 +25,6 @@ class index extends React.Component {
     if (weather.lysing !== undefined) {
       console.log("Veðurlýsing er barasta: " + weather.lysing)
     }
-
     if (weather.hiti !== undefined) console.log(weather.hiti)
     return (
       <>
@@ -42,6 +41,8 @@ class index extends React.Component {
 
 const mapStateToProps = state => ({
   weather: state.reducer.weather,
+  device: state.reducer.device,
+  deviceDetails: state.reducer.deviceDetails,
 })
 
 export const query = graphql`

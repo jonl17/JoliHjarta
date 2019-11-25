@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Container = styled.div`
   overflow-y: hidden;
@@ -6,7 +6,12 @@ export const Container = styled.div`
   width: 100%;
   display: inline-block;
   position: absolute;
-  perspective: 2px;
+  /** perspective effect */
+  ${props =>
+    props.device === `browser` &&
+    css`
+      perspective: 2px;
+    `}
 `
 export const Background = styled.div`
   position: fixed;

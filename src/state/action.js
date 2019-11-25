@@ -3,6 +3,11 @@ export const setDevice = width => ({
   type: SET_DEVICE,
   width,
 })
+export const SET_DEVICE_DETAILS = "SET_DEVICE_DETAILS"
+export const setDeviceDetails = width => ({
+  type: SET_DEVICE_DETAILS,
+  width,
+})
 export const GET_WEATHER = "GET_WEATHER"
 export const getWeather = weather => ({
   type: GET_WEATHER,
