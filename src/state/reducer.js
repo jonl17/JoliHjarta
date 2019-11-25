@@ -15,7 +15,7 @@ import {
 } from "./action"
 
 const initialState = {
-  device: window.innerWidth > 1050 ? `browser` : `mobile`, // meta device
+  device: undefined, // meta device
   deviceDetails: undefined, // macro device
   weather: {
     hiti: undefined,

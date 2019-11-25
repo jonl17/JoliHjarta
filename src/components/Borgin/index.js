@@ -9,20 +9,18 @@ import GluggaDot from "./components/GluggaDot"
 import Kirkja from "./components/Kirkja"
 
 const Borgin = ({ device }) => {
-  return (
+  return device !== undefined ? ( // no rendering if device has not be defined, this will prevent skipping of images at load time
     <>
       <Background></Background>
-      {device !== undefined ? ( // no rendering if device has not be defined, this will prevent skipping of images at load time
-        <Container device={device}>
-          <HusarodBak></HusarodBak>
-          <Husarod></Husarod>
-          <GluggaDot></GluggaDot>
-          <Kirkja></Kirkja>
-        </Container>
-      ) : (
-        <></>
-      )}
+      <Container device={device}>
+        <HusarodBak></HusarodBak>
+        <Husarod></Husarod>
+        <GluggaDot></GluggaDot>
+        <Kirkja></Kirkja>
+      </Container>
     </>
+  ) : (
+    <></>
   )
 }
 
