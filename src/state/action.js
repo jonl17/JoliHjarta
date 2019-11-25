@@ -3,9 +3,9 @@ export const setDevice = width => ({
   type: SET_DEVICE,
   width,
 })
-export const SET_DEVICE_DETAILS = "SET_DEVICE_DETAILS"
-export const setDeviceDetails = width => ({
-  type: SET_DEVICE_DETAILS,
+export const SET_PLATFORM = "SET_DEVICE_DETAILS"
+export const setPlatform = width => ({
+  type: SET_PLATFORM,
   width,
 })
 export const GET_WEATHER = "GET_WEATHER"

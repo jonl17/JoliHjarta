@@ -16,10 +16,20 @@ export const Container = styled.div`
     `}
   opacity: ${props => props.opacity};
   transition: .3s;
+  color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "menu homebtn"
                        "... submenu";
-  color: white;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "homebtn"
+        "menu"
+        "submenu";
+    `}
 `

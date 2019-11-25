@@ -1,6 +1,6 @@
 import {
   SET_DEVICE,
-  SET_DEVICE_DETAILS,
+  SET_PLATFORM,
   GET_WEATHER,
   MAKE_IT_SNOW,
   GET_GLUGGAR,
@@ -16,7 +16,7 @@ import {
 
 const initialState = {
   device: undefined, // meta device
-  deviceDetails: undefined, // macro device
+  platform: undefined, // macro device
   weather: {
     hiti: undefined,
     lysing: undefined,
@@ -38,25 +38,25 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case SET_DEVICE:
       return { ...state, device: action.width > 1050 ? `browser` : `mobile` }
-    case SET_DEVICE_DETAILS:
-      let deviceDetails
+    case SET_PLATFORM:
+      let platform
       if (state.device === `browser`) {
         // set different browser sizes
         if (action.width > 1050 && action.width <= 1250) {
-          deviceDetails = `litill-skjar`
+          platform = `litill-skjar`
         } else if (action.width > 1250) {
-          deviceDetails = `stor-skjar`
+          platform = `stor-skjar`
         }
       }
       if (state.device === `mobile`) {
         // set different mobile sizes
         if (action.width <= 750) {
-          deviceDetails = `simi`
+          platform = `simi`
         } else if (action.width > 750 && action.width <= 1050) {
-          deviceDetails = `spjaldtolva`
+          platform = `spjaldtolva`
         }
       }
-      return { ...state, deviceDetails: deviceDetails }
+      return { ...state, platform: platform }
     case GET_WEATHER:
       return {
         ...state,

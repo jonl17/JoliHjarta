@@ -1,6 +1,7 @@
 import React from "react"
 import { List, Item, Text } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
+import { connect } from "react-redux"
 
 const GetSubMenu = () => (
   <StaticQuery
@@ -23,8 +24,12 @@ const GetSubMenu = () => (
   ></StaticQuery>
 )
 
-const SubMenuItems = () => {
-  return <List>{GetSubMenu()}</List>
+const SubMenuItems = ({ platform }) => {
+  return <List platform={platform}>{GetSubMenu()}</List>
 }
 
-export default SubMenuItems
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(SubMenuItems)

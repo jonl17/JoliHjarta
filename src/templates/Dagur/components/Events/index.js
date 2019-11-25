@@ -3,11 +3,11 @@ import { Container, Title, EventTable } from "./Styled"
 import Event from "./components/Event"
 import { connect } from "react-redux"
 
-const Events = ({ events, title, device }) => {
+const Events = ({ events, title, platform }) => {
   return (
     <Container>
       <Title>Viðburðir {title}</Title>
-      <EventTable device={device}>
+      <EventTable platform={platform}>
         {events.map((vidburdur, index) => (
           <Event vidburdur={vidburdur} key={index}></Event>
         ))}
@@ -17,7 +17,7 @@ const Events = ({ events, title, device }) => {
 }
 
 const mapStateToProps = state => ({
-  device: state.reducer.device,
+  platform: state.reducer.platform,
 })
 
 export default connect(mapStateToProps)(Events)

@@ -14,7 +14,7 @@ const dispatches = dispatch => {
   dispatch(triggerEventPopup("closed"))
 }
 
-const getHomeTitle = dispatch => (
+const getHomeTitle = (dispatch, platform) => (
   <StaticQuery
     query={graphql`
       {
@@ -26,15 +26,23 @@ const getHomeTitle = dispatch => (
       }
     `}
     render={data => (
-      <Text onClick={() => dispatches(dispatch)}>
+      <Text to={"/"} platform={platform} onClick={() => dispatches(dispatch)}>
         {data.site.siteMetadata.nafn}
       </Text>
     )}
   ></StaticQuery>
 )
 
-const HomeBTN = ({ dispatch }) => {
-  return <Container to={"/"}>{getHomeTitle(dispatch)}</Container>
+const HomeBTN = ({ dispatch, platform }) => {
+  return (
+    <Container platform={platform}>
+      {getHomeTitle(dispatch, platform)}
+    </Container>
+  )
 }
 
-export default connect()(HomeBTN)
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(HomeBTN)

@@ -42,7 +42,7 @@ class index extends React.Component {
 const mapStateToProps = state => ({
   weather: state.reducer.weather,
   device: state.reducer.device,
-  deviceDetails: state.reducer.deviceDetails,
+  platform: state.reducer.platform,
 })
 
 export const query = graphql`

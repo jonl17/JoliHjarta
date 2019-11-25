@@ -17,22 +17,22 @@ export const EventTable = styled.div`
   grid-gap: ${margins.small};
   top: 125px;
   ${props =>
-    props.device === `browserLarge` &&
+    props.platform === `stor-skjar` &&
     css`
       grid-template-columns: repeat(3, 1fr);
     `}
   ${props =>
-    props.device === `browserSmall` &&
+    props.platform === `litill-skjar` &&
     css`
       grid-template-columns: repeat(2, 1fr);
     `}
   ${props =>
-    props.device === `tablet` &&
+    props.platform === `spjald-tolva` &&
     css`
       grid-template-columns: repeat(2, 1fr);
     `}
   ${props =>
-    props.device === `mobile` &&
+    props.platform === `simi` &&
     css`
       grid-template-columns: repeat(1, 1fr);
     `}
