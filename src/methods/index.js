@@ -36,3 +36,22 @@ export const generateSlugFromDate = date => {
   newDate += "desember"
   return newDate
 }
+
+// countdown to christmass!
+export const countdown = () => {
+  var christmasEve = new Date(2019, 11, 24, 18).getTime()
+  var now = new Date().getTime()
+  var distance = christmasEve - now
+
+  if (distance <= 0) {
+    return -1 // it's time!
+  }
+
+  // do time
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+  // við viljum eingöngu klst mín sek
+  return { hours: days * 24, minutes: minutes, seconds: seconds }
+}
