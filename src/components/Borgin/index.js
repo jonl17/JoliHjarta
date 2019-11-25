@@ -1,5 +1,6 @@
 import React from "react"
 import { Background, Container } from "./Styled"
+import { connect } from "react-redux"
 
 /* import city components */
 import Husarod from "./components/Husarod"
@@ -7,11 +8,11 @@ import HusarodBak from "./components/HusarodBak"
 import GluggaDot from "./components/GluggaDot"
 import Kirkja from "./components/Kirkja"
 
-const Borgin = () => {
+const Borgin = ({ device }) => {
   return (
     <>
       <Background></Background>
-      <Container>
+      <Container device={device}>
         <HusarodBak></HusarodBak>
         <Husarod></Husarod>
         <GluggaDot></GluggaDot>
@@ -23,4 +24,8 @@ const Borgin = () => {
   )
 }
 
-export default Borgin
+const mapStateToProps = state => ({
+  device: state.reducer.device,
+})
+
+export default connect(mapStateToProps)(Borgin)

@@ -1,5 +1,6 @@
 import React from "react"
 import { KirkjanSVG } from "./Styled"
+import { connect } from "react-redux"
 
 // countdown to christmass!
 const countdown = () => {
@@ -47,13 +48,17 @@ class Kirkja extends React.Component {
       })
     }, 1000)
   }
-  componentDidUpdate() {}
   componentWillUnmount() {
     clearInterval(interval)
   }
   render() {
-    return <KirkjanSVG></KirkjanSVG>
+    const { device } = this.props
+    return <KirkjanSVG device={device}></KirkjanSVG>
   }
 }
 
-export default Kirkja
+const mapStateToProps = state => ({
+  device: state.reducer.device,
+})
+
+export default connect(mapStateToProps)(Kirkja)
