@@ -1,31 +1,62 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import { Container, Image } from "./Styled"
+import { Container, Moon } from "./Styled"
 import { connect } from "react-redux"
 import { makeItSnow } from "../../state/action"
+import { countdown } from "../../methods/index"
 
-const Mani = ({ dispatch }) => (
-  <StaticQuery
-    query={graphql`
-      {
-        file(base: { eq: "mani.png" }) {
-          childImageSharp {
-            fixed(height: 150, traceSVG: { color: "white" }) {
-              ...GatsbyImageSharpFixed_tracedSVG
-            }
-          }
-        }
+var interval = 0
+class Mani extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      timer: {
+        hours: -1,
+        minutes: -1,
+        seconds: -1,
+      },
+      hLen: 0,
+      mLen: 0,
+      sLen: 0,
+      christmasTime: false,
+    }
+  }
+  componentDidMount() {
+    interval = setInterval(() => {
+      let timer = countdown()
+      if (timer === -1) {
+        this.setState({
+          christmasTime: true,
+        })
       }
-    `}
-    render={data => (
+      this.setState({
+        timer: timer,
+      })
+    }, 1000)
+  }
+  componentWillUnmount() {
+    clearInterval(interval)
+  }
+  splitIntoDigits(h, m, s) {
+    var hours = h
+      .toString()
+      .split("")
+      .concat(":")
+    var minutes = m
+      .toString()
+      .split("")
+      .concat(":")
+    var seconds = s.toString().split("")
+    var allNumbers = hours.concat(minutes).concat(seconds)
+    return allNumbers
+  }
+  render() {
+    const { dispatch } = this.props
+    return (
       <Container>
-        <Image
-          onClick={() => dispatch(makeItSnow())}
-          fixed={data.file.childImageSharp.fixed}
-        ></Image>
+        <Moon onClick={() => dispatch(makeItSnow())}></Moon>
       </Container>
-    )}
-  ></StaticQuery>
-)
+    )
+  }
+}
 
 export default connect()(Mani)

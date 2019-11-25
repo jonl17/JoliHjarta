@@ -35,5 +35,5 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
 export const GluggaHlutir = styled(SVG)`
   ${SVGstyle};
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 `
