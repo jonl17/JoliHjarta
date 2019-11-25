@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { List, Item, Text } from "./Styled"
+import { List, Item, Wrap } from "./Styled"
 import { connect } from "react-redux"
 import {
   triggerBurgerWindow,
@@ -12,7 +12,7 @@ const dispatches = (dispatch, today) => {
   dispatch(selectCalenderDay(today))
 }
 
-const GetMenuItems = (dispatch, today) => (
+const GetMenuItems = (dispatch, today, device) => (
   <StaticQuery
     query={graphql`
       {
@@ -25,23 +25,29 @@ const GetMenuItems = (dispatch, today) => (
     `}
     render={data =>
       data.site.siteMetadata.menuItems.map((item, index) => (
-        <Item
-          key={index}
-          onClick={() => dispatches(dispatch, today)}
-          to={"/" + today + "desember"}
-        >
-          <Text>{item}</Text>
-        </Item>
+        <Wrap key={index} device={device}>
+          <Item
+            onClick={() => dispatches(dispatch, today)}
+            to={"/" + today + "desember"}
+          >
+            {item}{" "}
+          </Item>
+        </Wrap>
       ))
     }
   ></StaticQuery>
 )
 
-const MenuItems = ({ dispatch, todaysCalenderDay }) => {
-  return <List>{GetMenuItems(dispatch, todaysCalenderDay)}</List>
+const MenuItems = ({ dispatch, todaysCalenderDay, platform }) => {
+  return (
+    <List platform={platform}>
+      {GetMenuItems(dispatch, todaysCalenderDay, platform)}
+    </List>
+  )
 }
 
 const mapStateToProps = state => ({
+  platform: state.reducer.platform,
   todaysCalenderDay: state.reducer.todaysCalenderDay,
 })
 

@@ -7,9 +7,9 @@ import SubMenuItems from "./components/SubMenuItems"
 import { connect } from "react-redux"
 import { triggerBurgerWindow } from "../../state/action"
 
-const Burgerwindow = ({ burgerWindow, dispatch }) => {
+const Burgerwindow = ({ burgerWindow, dispatch, platform }) => {
   return (
-    <Container opacity={burgerWindow === "open" ? 1 : 0}>
+    <Container platform={platform} opacity={burgerWindow === "open" ? 1 : 0}>
       <ExitBTN click={() => dispatch(triggerBurgerWindow("closed"))}></ExitBTN>
       <MenuItems></MenuItems>
       <HomeBTN></HomeBTN>
@@ -20,6 +20,7 @@ const Burgerwindow = ({ burgerWindow, dispatch }) => {
 
 const mapStateToProps = state => ({
   burgerWindow: state.reducer.burgerWindow,
+  platform: state.reducer.platform,
 })
 
 export default connect(mapStateToProps)(Burgerwindow)

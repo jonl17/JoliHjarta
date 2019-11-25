@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { setDevice, setDeviceDetails } from "../../state/action"
+import { setDevice, setPlatform } from "../../state/action"
 
 class Starter extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Starter extends React.Component {
   callBack() {
     const { dispatch } = this.props
     dispatch(setDevice(window.innerWidth))
-    dispatch(setDeviceDetails(window.innerWidth))
+    dispatch(setPlatform(window.innerWidth))
   }
   render() {
     return <></>

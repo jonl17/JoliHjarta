@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'EB Garamond', serif;
     }
     ::selection {
-        background: #FF6347;
+        background: #F37A7E;
         color: white;
     }
     
