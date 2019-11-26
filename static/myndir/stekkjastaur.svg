@@ -33,8 +33,8 @@
 		"/>
 	<circle class="stekkjastaur6" cx="120.2" cy="69.8" r="10.2"/>
 	<circle class="stekkjastaur6" cx="97.5" cy="66.4" r="10.2"/>
-	<circle id="vinstri-auga" class="stekkjastaur1 auga" cx="96.4" cy="68.7" r="4.5"/>
-	<circle id="haegri-auga" class="stekkjastaur1 auga" cx="120.2" cy="73.2" r="4.5"/>
+	<circle id="vinstri-auga" class="stekkjastaur1 auga look-right" cx="96.4" cy="68.7" r="4.5"/>
+	<circle id="haegri-auga" class="stekkjastaur1 auga look-right" cx="120.2" cy="73.2" r="4.5"/>
 	<path class="stekkjastaur0" d="M142.6,169.5h-9.7c-3.2,0-5.7-2.7-5.4-5.9l2.1-24.7l-2.6-29.5h21.5l-2.6,31.5l2.1,22.6
 		C148.3,166.8,145.8,169.5,142.6,169.5z"/>
 	<path class="stekkjastaur6" d="M111.1,87.9c-22.5,0-27.2,14.9-27.2,37.4s11.5,32.9,34,32.9s32.9-6.9,32.9-29.5S133.7,87.9,111.1,87.9z

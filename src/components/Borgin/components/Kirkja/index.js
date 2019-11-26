@@ -5,7 +5,11 @@ import { connect } from "react-redux"
 class Kirkja extends React.Component {
   render() {
     const { device } = this.props
-    return <KirkjanSVG device={device}></KirkjanSVG>
+    return (
+      <>
+        <KirkjanSVG device={device}></KirkjanSVG>
+      </>
+    )
   }
 }
 
