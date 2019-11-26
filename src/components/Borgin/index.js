@@ -8,20 +8,23 @@ import HusarodBak from "./components/HusarodBak"
 import GluggaDot from "./components/GluggaDot"
 import Kirkja from "./components/Kirkja"
 
-const Borgin = ({ device }) => {
-  return device !== undefined ? ( // no rendering if device has not be defined, this will prevent skipping of images at load time
-    <>
-      <Background></Background>
-      <Container device={device}>
-        <HusarodBak></HusarodBak>
-        <Husarod></Husarod>
-        <GluggaDot></GluggaDot>
-        <Kirkja></Kirkja>
-      </Container>
-    </>
-  ) : (
-    <></>
-  )
+class Borgin extends React.Component {
+  render() {
+    const { device } = this.props
+    return device !== undefined ? ( // no rendering if device has not be defined, this will prevent skipping of images at load time
+      <>
+        <Background></Background>
+        <Container id="large-container" device={device}>
+          <HusarodBak></HusarodBak>
+          <Husarod></Husarod>
+          <GluggaDot></GluggaDot>
+          <Kirkja></Kirkja>
+        </Container>
+      </>
+    ) : (
+      <></>
+    )
+  }
 }
 
 const mapStateToProps = state => ({

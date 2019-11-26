@@ -20,6 +20,7 @@ class index extends React.Component {
     /** register all days info available */
     dispatch(getAllDaysInfo(allInfo))
   }
+
   render() {
     const { weather } = this.props
     if (weather.lysing !== undefined) {
