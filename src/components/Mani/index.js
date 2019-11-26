@@ -36,21 +36,20 @@ class Mani extends React.Component {
   componentWillUnmount() {
     clearInterval(interval)
   }
-  splitIntoDigits(h, m, s) {
-    var hours = h
-      .toString()
-      .split("")
-      .concat(":")
-    var minutes = m
-      .toString()
-      .split("")
-      .concat(":")
-    var seconds = s.toString().split("")
-    var allNumbers = hours.concat(minutes).concat(seconds)
+  combineTime(h, m, s) {
+    var hours = h.toString()
+    var minutes = m.toString()
+    var seconds = s.toString()
+    var allNumbers = hours + ":" + minutes + ":" + seconds
     return allNumbers
   }
   render() {
     const { dispatch } = this.props
+    let { hours, minutes, seconds } = this.state.timer
+    let timeToChristmass = this.combineTime(hours, minutes, seconds)
+    let maniTexti = document.getElementById("time-mani-text")
+    console.log(maniTexti)
+    if (maniTexti !== null) maniTexti.textContent = timeToChristmass
     return (
       <Container>
         <Moon onClick={() => dispatch(makeItSnow())}></Moon>

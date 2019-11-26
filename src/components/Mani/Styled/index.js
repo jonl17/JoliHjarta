@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { margins, layer, sizes } from "../../../constants"
-import SVG from "../../../../static/myndir/Moon.svg"
+import SVG from "../../../../static/myndir/Moon_2-01.svg"
 
 export const Container = styled.div`
   position: absolute;
