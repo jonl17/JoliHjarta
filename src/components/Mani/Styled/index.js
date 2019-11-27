@@ -5,8 +5,8 @@ import SVG from "../../../../static/myndir/Moon_2-01.svg"
 
 export const Container = styled.div`
   position: absolute;
-  top: ${margins.small};
-  left: ${margins.small};
+  top: ${margins.xSmall};
+  left: ${margins.xSmall};
   z-index: ${layer.two};
 `
 export const Image = styled(Img)`
