@@ -18,6 +18,7 @@ class Mani extends React.Component {
       mLen: 0,
       sLen: 0,
       christmasTime: false,
+      svgText: undefined,
     }
   }
   componentDidMount() {
@@ -32,6 +33,9 @@ class Mani extends React.Component {
         timer: timer,
       })
     }, 1000)
+    this.setState({
+      svgText: document.getElementById("time-mani-text"),
+    })
   }
   componentWillUnmount() {
     clearInterval(interval)
@@ -47,12 +51,16 @@ class Mani extends React.Component {
     const { dispatch } = this.props
     let { hours, minutes, seconds } = this.state.timer
     let timeToChristmass = this.combineTime(hours, minutes, seconds)
-    let maniTexti = document.getElementById("time-mani-text")
-    console.log(maniTexti)
-    if (maniTexti !== null) maniTexti.textContent = timeToChristmass
+    if (this.state.svgText !== undefined) {
+      let textEl = this.state.svgText
+      textEl.textContent = timeToChristmass
+    }
     return (
       <Container>
-        <Moon onClick={() => dispatch(makeItSnow())}></Moon>
+        <Moon
+          opacity={this.state.timer.hours === -1 ? 0 : 1}
+          onClick={() => dispatch(makeItSnow())}
+        ></Moon>
       </Container>
     )
   }
