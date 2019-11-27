@@ -1,5 +1,4 @@
 const path = require("path")
-const slugify = require("slugify")
 
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
@@ -26,9 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
                     dagsetning
                     vidjo {
                       vidjotitill
-                      vidjourl {
-                        relativePath
-                      }
+                      vidjourl
                     }
                     eventar
                   }
