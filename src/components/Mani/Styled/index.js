@@ -31,4 +31,6 @@ export const Number = styled.p`
 export const Moon = styled(SVG)`
   height: 100px;
   width: 100px;
+  opacity: ${props => props.opacity};
+  transition: 2s;
 `
