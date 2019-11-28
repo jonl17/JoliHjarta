@@ -71,14 +71,11 @@ export const Container = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  display: ${props => props.display};
-  flex-direction: column;
   z-index: ${layer.zero};
 `
 export const PopupGluggi = styled.div`
   position: relative;
-  height: 90%;
-  min-height: 550px;
+  height: auto;
   width: 60%;
   max-width: 750px;
   ${props =>
@@ -97,15 +94,5 @@ export const PopupGluggi = styled.div`
   box-sizing: border-box;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   color: white;
-  ${props =>
-    props.grid &&
-    css`
-      display: grid;
-      grid-template-rows: 125px auto 200px;
-    `}
-  ${props =>
-    props.event &&
-    css`
-      overflow-y: scroll;
-    `}
+  display: ${props => props.display};
 `

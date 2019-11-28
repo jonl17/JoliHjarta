@@ -1,13 +1,16 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Container = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
   box-sizing: border-box;
-  padding: 0 10% 0 10%;
-  margin: 0 auto 0 auto;
 `
-export const Player = styled.iframe`
+export const Player = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  height: 100%;
+  width: 100%;
   margin: auto;
 `
 export const Source = styled.source``

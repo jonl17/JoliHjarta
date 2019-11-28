@@ -1,12 +1,17 @@
 import React from "react"
 import { Container, Line } from "./Styled"
 import { connect } from "react-redux"
-import { triggerBurgerWindow } from "../../state/action"
+import { triggerBurgerWindow, triggerDagurPopup } from "../../state/action"
+
+const dispatches = dispatch => {
+  dispatch(triggerBurgerWindow("open"))
+  dispatch(triggerDagurPopup("closed"))
+}
 
 const Burger = ({ burgerWindow, dispatch }) => {
   return (
     <Container
-      onClick={() => dispatch(triggerBurgerWindow("open"))}
+      onClick={() => dispatches(dispatch)}
       display={burgerWindow === "open" ? "none" : "flex"}
     >
       <Line one></Line>

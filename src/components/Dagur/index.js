@@ -1,51 +1,49 @@
 import React from "react"
-import { Dagsetning, VideoTitle, WindowBox } from "./Styled"
+import { PopupGluggi, CloseSensor, Footer } from "./Styled"
 import { connect } from "react-redux"
 import ExitBTN from "../ExitBTN"
 import { triggerDagurPopup } from "../../state/action"
-//import Video from "../Video"
-//import EventarDagsins from "./components/EventarDagsins"
-import Takki from "../Takki"
-import PlayBTN from "./components/PlayBTN"
-import { Container, PopupGluggi } from "../../constants"
-import { generateSlugFromDate } from "../../methods"
+import Banner from "./components/Banner"
+import Video from "../Video"
+import VerkefniDagsins from "./components/VerkefniDagsins"
+import VidburdirDagsins from "./components/VidburdirDagsins"
 
-const Dagur = ({ dagurPopup, selectedDay, dispatch, device }) => {
-  return (
-    <Container
-      display={
-        dagurPopup === "open" && selectedDay !== undefined ? "flex" : "none"
-      }
-    >
-      {selectedDay !== undefined ? (
-        <PopupGluggi grid device={device}>
-          <ExitBTN
-            click={() => dispatch(triggerDagurPopup("closed"))}
-          ></ExitBTN>
-          <WindowBox>
-            <Dagsetning>{selectedDay.title}</Dagsetning>
-            <VideoTitle>
-              {selectedDay.vidjo !== null
-                ? selectedDay.vidjo.vidjotitill
-                : "Vidjó titil vantar"}
-            </VideoTitle>
-          </WindowBox>
-          {/*<Video video={selectedDay.vidjo.vidjourl}></Video> */}
-          <PlayBTN></PlayBTN>
-          <WindowBox>
-            <Takki text={"Senda inn efni"}></Takki>
-            {/*<EventarDagsins dagsetning={selectedDay.dagsetning}></EventarDagsins>*/}
-            <Takki
-              text={"Sjá alla viðburði"}
-              type={"link"}
-              slug={"/" + generateSlugFromDate(selectedDay.dagsetning)}
-            ></Takki>
-          </WindowBox>
-        </PopupGluggi>
-      ) : (
-        <></>
-      )}
-    </Container>
+// import { generateSlugFromDate } from "../../methods"
+
+const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
+  return selectedDay !== undefined ? (
+    <>
+      <CloseSensor
+        onClick={() => dispatch(triggerDagurPopup("closed"))}
+        display={
+          dagurPopup === "open" && selectedDay !== undefined ? "block" : "none"
+        }
+      ></CloseSensor>
+      <PopupGluggi
+        display={
+          dagurPopup === "open" && selectedDay !== undefined ? "grid" : "none"
+        }
+        grid
+        platform={platform}
+      >
+        <ExitBTN
+          tight
+          click={() => dispatch(triggerDagurPopup("closed"))}
+        ></ExitBTN>
+        <Banner day={selectedDay}></Banner>
+        {selectedDay.vidjo !== null ? (
+          <Video vidjo={selectedDay.vidjo}></Video>
+        ) : (
+          <></>
+        )}
+        <Footer>
+          <VidburdirDagsins></VidburdirDagsins>
+          <VerkefniDagsins></VerkefniDagsins>
+        </Footer>
+      </PopupGluggi>
+    </>
+  ) : (
+    <></>
   )
 }
 
@@ -53,6 +51,7 @@ const mapStateToProps = state => ({
   dagurPopup: state.reducer.dagurPopup,
   selectedDay: state.reducer.selectedDay,
   device: state.reducer.device,
+  platform: state.reducer.platform,
 })
 
 export default connect(mapStateToProps)(Dagur)

@@ -57,9 +57,8 @@ class Husarod extends React.Component {
       this.props.dispatch(birdState("fly"))
     }
   }
-
   render() {
-    return <Husin></Husin>
+    return <Husin id="husin-god"></Husin>
   }
 }
 

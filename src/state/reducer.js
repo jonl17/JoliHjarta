@@ -42,9 +42,9 @@ export default (state = initialState, action) => {
       let platform
       if (state.device === `browser`) {
         // set different browser sizes
-        if (action.width > 1050 && action.width <= 1250) {
+        if (action.width > 1050 && action.width <= 1450) {
           platform = `litill-skjar`
-        } else if (action.width > 1250) {
+        } else if (action.width > 1450) {
           platform = `stor-skjar`
         }
       }

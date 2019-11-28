@@ -1,20 +1,24 @@
 import React from "react"
-import { Container, Player } from "./Styled"
-import Poster from "./postervideo.png"
+import { Container, Player, Source } from "./Styled"
+import { connect } from "react-redux"
 
-const Video = ({ video }) => {
+const Video = ({ vidjo, platform }) => {
+  console.log(platform)
   return (
-    <Container>
+    <Container platform={platform}>
       <Player
-        title={video.title}
-        src={video}
-        poster={Poster}
         frameBorder="0"
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
-        allowFullScreen
-      ></Player>
+        title={vidjo.vidjotitill}
+        frameBorder="0"
+        controls
+      >
+        <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
+      </Player>
     </Container>
   )
 }
-export default Video
+
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+export default connect(mapStateToProps)(Video)

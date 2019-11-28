@@ -15,9 +15,9 @@ export const Container = styled.div`
   justify-content: center;
   margin: ${margins.small};
   ${props =>
-    props.event &&
+    props.tight &&
     css`
-      margin: ${margins.xSmall};
+      margin: 15px;
     `}
 `
 export const Line = styled.span`
