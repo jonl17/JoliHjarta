@@ -27,18 +27,13 @@ class Video extends React.Component {
   render() {
     const { vidjo, platform, videoFullscreen, dispatch } = this.props
     return (
-      <Container platform={platform}>
+      <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
         <ExitBTN
+          tight
           relativeToVideo
           click={() => dispatch(triggerVideoFullscreen())}
         ></ExitBTN>
-        <Player
-          id="video-player"
-          open={videoFullscreen ? "100%" : "0%"}
-          frameBorder="0"
-          title={vidjo.vidjotitill}
-          frameBorder="0"
-        >
+        <Player id="video-player" title={vidjo.vidjotitill} frameBorder="0">
           <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
         </Player>
       </Container>
