@@ -33,8 +33,10 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
         ></ExitBTN>
         <Banner day={selectedDay}></Banner>
         {selectedDay.vidjo !== null ? <PlayBTN></PlayBTN> : <></>}
-        <Footer>
-          <VidburdirDagsins></VidburdirDagsins>
+        <Footer platform={platform}>
+          <VidburdirDagsins
+            dagsetning={selectedDay.dagsetning}
+          ></VidburdirDagsins>
           <VerkefniDagsins></VerkefniDagsins>
         </Footer>
       </PopupGluggi>
