@@ -16,6 +16,7 @@ class Video extends React.Component {
     this.setState({
       video: video,
     })
+    console.log("popup openened")
   }
   componentDidUpdate() {
     if (this.props.videoFullscreen) {
@@ -36,6 +37,7 @@ class Video extends React.Component {
         <Player id="video-player" title={vidjo.vidjotitill} frameBorder="0">
           <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
         </Player>
+        <p style={{ color: "white" }}>Hleður...</p>
       </Container>
     )
   }
