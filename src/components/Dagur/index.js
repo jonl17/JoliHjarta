@@ -7,6 +7,7 @@ import Banner from "./components/Banner"
 import Video from "../Video"
 import VerkefniDagsins from "./components/VerkefniDagsins"
 import VidburdirDagsins from "./components/VidburdirDagsins"
+import PlayBTN from "./components/PlayBTN"
 
 // import { generateSlugFromDate } from "../../methods"
 
@@ -31,16 +32,17 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           click={() => dispatch(triggerDagurPopup("closed"))}
         ></ExitBTN>
         <Banner day={selectedDay}></Banner>
-        {selectedDay.vidjo !== null ? (
-          <Video vidjo={selectedDay.vidjo}></Video>
-        ) : (
-          <></>
-        )}
+        {selectedDay.vidjo !== null ? <PlayBTN></PlayBTN> : <></>}
         <Footer>
           <VidburdirDagsins></VidburdirDagsins>
           <VerkefniDagsins></VerkefniDagsins>
         </Footer>
       </PopupGluggi>
+      {selectedDay.vidjo !== null ? (
+        <Video vidjo={selectedDay.vidjo}></Video>
+      ) : (
+        <></>
+      )}
     </>
   ) : (
     <></>

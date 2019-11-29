@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Container, PopupGluggi } from "../../../../constants"
+import { PopupGluggi } from "../../../../constants"
 import ExitBTN from "../../../../components/ExitBTN"
 import { triggerEventPopup } from "../../../../state/action"
 import {

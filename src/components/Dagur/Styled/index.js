@@ -33,21 +33,20 @@ export const PopupGluggi = styled.div`
   box-sizing: border-box;
   padding:${margins.xSmall};
   /** sizes need to be scaled carefully with this one */
-  height: 100%;
-  width: 600px;
   top: 50%;
   left: 50%;
   ${props =>
     props.platform === `stor-skjar` &&
     css`
       height: 750px;
+      width: 600px;
       margin-top: -375px;
       margin-left: -300px;
     `}
   ${props =>
     props.platform === `litill-skjar` &&
     css`
-      height: 650px;
+      height: 90vh;
       width: 600px;
       top: 25px;
       margin-left: -300px;
@@ -63,7 +62,7 @@ export const PopupGluggi = styled.div`
   ${props =>
     props.platform === `simi` &&
     css`
-      height: 100%
+      height: 100%;
       width: 100%;
       top: 0;
       left: 0%;
