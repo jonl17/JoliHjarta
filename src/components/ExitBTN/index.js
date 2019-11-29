@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 const ExitBTN = ({
   click,
   tight,
+  small,
   relativeToVideo,
   videoFullscreen,
   platform,
@@ -15,9 +16,19 @@ const ExitBTN = ({
       videoFullscreen={videoFullscreen}
       tight={tight}
       onClick={() => click()}
+      small
     >
-      <Line platform={platform} relativeToVideo={relativeToVideo}></Line>
-      <Line platform={platform} relativeToVideo={relativeToVideo} second></Line>
+      <Line
+        small={small}
+        platform={platform}
+        relativeToVideo={relativeToVideo}
+      ></Line>
+      <Line
+        small={small}
+        platform={platform}
+        relativeToVideo={relativeToVideo}
+        second
+      ></Line>
     </Container>
   )
 }

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { margins } from "../../../constants"
 
 export const Container = styled.div`
   position: fixed;
@@ -7,8 +8,12 @@ export const Container = styled.div`
   transition: 0.1s ease-in-out;
   width: 100%;
   height: ${props => props.open};
-  background: black;
-  border: 8px solid white;
+  background: transparent;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      background: black;
+    `}
 `
 export const Player = styled.video`
   position: absolute;
@@ -18,6 +23,7 @@ export const Player = styled.video`
   width: 100%;
   height: 100%;
   transition: 0.3s;
+  box-sizing: border-box;
   ${props =>
     props.platform === `simi` &&
     css`
@@ -27,6 +33,11 @@ export const Player = styled.video`
           height: auto;
           top: 100px;
         `}
+    `}
+  ${props =>
+    props.open === `100%` &&
+    css`
+      padding: ${margins.small};
     `}
   margin: auto;
 `

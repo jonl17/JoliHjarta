@@ -5,6 +5,11 @@ export const Container = styled.div`
   z-index: 1;
   position: absolute;
   top: 0;
+  ${props =>
+    props.small &&
+    css`
+      top: 5px;
+    `}
   right: 0;
   &&:hover {
     cursor: pointer;
@@ -35,12 +40,13 @@ export const Line = styled.span`
   position: absolute;
   height: ${sizes.line};
   width: 100%;
-  background: white;
   ${props =>
-    props.relativeToVideo &&
+    props.small &&
     css`
-      background: black;
+      height: 4px;
+      width: 75%;
     `}
+  background: white;
   ${props =>
     props.platform === `simi` &&
     css`
