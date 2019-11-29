@@ -12,6 +12,7 @@ import {
   SELECT_CALENDER_DAY,
   TRIGGER_BURGER_WINDOW,
   GET_TODAYS_CALENDER_DAY,
+  TRIGGER_VIDEO_FULLSCREEN,
 } from "./action"
 
 const initialState = {
@@ -32,6 +33,7 @@ const initialState = {
   selectedCalenderDay: -1,
   todaysCalenderDay: -1,
   burgerWindow: "closed",
+  videoFullscreen: false,
 }
 
 export default (state = initialState, action) => {
@@ -42,9 +44,9 @@ export default (state = initialState, action) => {
       let platform
       if (state.device === `browser`) {
         // set different browser sizes
-        if (action.width > 1050 && action.width <= 1250) {
+        if (action.width > 1050 && action.width <= 1450) {
           platform = `litill-skjar`
-        } else if (action.width > 1250) {
+        } else if (action.width > 1450) {
           platform = `stor-skjar`
         }
       }
@@ -93,6 +95,8 @@ export default (state = initialState, action) => {
         day = 24 // just so it doesn't go over the 24 of desember
       }
       return { ...state, todaysCalenderDay: day }
+    case TRIGGER_VIDEO_FULLSCREEN:
+      return { ...state, videoFullscreen: !state.videoFullscreen }
     default:
       return state
   }

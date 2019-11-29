@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Container, PopupGluggi } from "../../../../constants"
+import { PopupGluggi } from "../../../../constants"
 import ExitBTN from "../../../../components/ExitBTN"
 import { triggerEventPopup } from "../../../../state/action"
 import {
@@ -14,34 +14,32 @@ import {
 } from "./Styled"
 
 const EventPopup = ({ eventPopup, device, selectedEvent, dispatch }) => {
-  return (
-    <Container
+  return selectedEvent !== undefined ? (
+    <PopupGluggi
       display={
         eventPopup === "open" && selectedEvent !== undefined ? "flex" : "none"
       }
+      event
+      device={device}
     >
-      {selectedEvent !== undefined ? (
-        <PopupGluggi event device={device}>
-          <ExitBTN
-            event
-            click={() => dispatch(triggerEventPopup("closed"))}
-          ></ExitBTN>
-          <InfoContainer>
-            <Title>{selectedEvent.title}</Title>
-            <DirectionBox>
-              <Hvar>
-                <Klukkan>{"kl. " + selectedEvent.klukkan}</Klukkan>
-                {selectedEvent.hvar}
-              </Hvar>
-            </DirectionBox>
-          </InfoContainer>
-          <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
-          <Lysing>{selectedEvent.lysing}</Lysing>
-        </PopupGluggi>
-      ) : (
-        <></>
-      )}
-    </Container>
+      <ExitBTN
+        event
+        click={() => dispatch(triggerEventPopup("closed"))}
+      ></ExitBTN>
+      <InfoContainer>
+        <Title>{selectedEvent.title}</Title>
+        <DirectionBox>
+          <Hvar>
+            <Klukkan>{"kl. " + selectedEvent.klukkan}</Klukkan>
+            {selectedEvent.hvar}
+          </Hvar>
+        </DirectionBox>
+      </InfoContainer>
+      <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
+      <Lysing>{selectedEvent.lysing}</Lysing>
+    </PopupGluggi>
+  ) : (
+    <></>
   )
 }
 

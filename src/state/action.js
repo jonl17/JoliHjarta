@@ -64,3 +64,7 @@ export const getTodaysCalenderDay = day => ({
   type: GET_TODAYS_CALENDER_DAY,
   day,
 })
+export const TRIGGER_VIDEO_FULLSCREEN = "TRIGGER_VIDEO_FULLSCREEN"
+export const triggerVideoFullscreen = () => ({
+  type: TRIGGER_VIDEO_FULLSCREEN,
+})

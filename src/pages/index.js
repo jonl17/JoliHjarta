@@ -60,7 +60,7 @@ export const query = graphql`
             vidjo {
               vidjotitill
               vidjourl {
-                relativePath
+                publicURL
               }
             }
             eventar

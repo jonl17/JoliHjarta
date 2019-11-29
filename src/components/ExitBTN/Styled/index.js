@@ -2,8 +2,14 @@ import styled, { css } from "styled-components"
 import { margins, sizes } from "../../../constants"
 
 export const Container = styled.div`
+  z-index: 1;
   position: absolute;
   top: 0;
+  ${props =>
+    props.small &&
+    css`
+      top: 5px;
+    `}
   right: 0;
   &&:hover {
     cursor: pointer;
@@ -15,16 +21,37 @@ export const Container = styled.div`
   justify-content: center;
   margin: ${margins.small};
   ${props =>
-    props.event &&
+    props.tight &&
     css`
-      margin: ${margins.xSmall};
+      margin: 15px;
+    `}
+  ${props =>
+    props.relativeToVideo &&
+    css`
+      display: none;
+      ${props =>
+        props.videoFullscreen &&
+        css`
+          display: flex;
+        `}
     `}
 `
 export const Line = styled.span`
   position: absolute;
   height: ${sizes.line};
   width: 100%;
+  ${props =>
+    props.small &&
+    css`
+      height: 4px;
+      width: 75%;
+    `}
   background: white;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      background: white;
+    `}
   transform: rotate(45deg);
   ${props =>
     props.second &&

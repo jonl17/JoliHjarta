@@ -1,20 +1,57 @@
 import React from "react"
-import { Container, Player } from "./Styled"
-import Poster from "./postervideo.png"
+import { Container, Player, Source } from "./Styled"
+import { connect } from "react-redux"
+import { triggerVideoFullscreen } from "../../state/action"
+import ExitBTN from "../ExitBTN"
+import loadGIF from "../../../static/myndir/load.gif"
 
-const Video = ({ video }) => {
-  return (
-    <Container>
-      <Player
-        title={video.title}
-        src={video}
-        poster={Poster}
-        frameBorder="0"
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
-        allowFullScreen
-      ></Player>
-    </Container>
-  )
+class Video extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      video: undefined,
+    }
+  }
+  componentDidMount() {
+    let video = document.getElementById("video-player")
+    this.setState({
+      video: video,
+    })
+  }
+  componentDidUpdate() {
+    if (this.props.videoFullscreen) {
+      this.state.video.play()
+    } else {
+      this.state.video.pause()
+    }
+  }
+  render() {
+    const { vidjo, platform, videoFullscreen, dispatch } = this.props
+    return (
+      <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
+        <ExitBTN
+          small
+          relativeToVideo
+          click={() => dispatch(triggerVideoFullscreen())}
+        ></ExitBTN>
+        <Player
+          platform={platform}
+          poster={loadGIF}
+          id="video-player"
+          title={vidjo.vidjotitill}
+          frameBorder="0"
+          playsinline
+          open={videoFullscreen ? "100%" : "0%"}
+        >
+          <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
+        </Player>
+      </Container>
+    )
+  }
 }
-export default Video
+
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+  videoFullscreen: state.reducer.videoFullscreen,
+})
+export default connect(mapStateToProps)(Video)
