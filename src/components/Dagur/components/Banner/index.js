@@ -1,14 +1,15 @@
 import React from "react"
 import { Container, Date, Description, Number, Month } from "./Styled"
+import { connect } from "react-redux"
 
-const Banner = ({ day }) => {
+const Banner = ({ day, platform }) => {
   return (
     <Container>
       <Date>
         <Number>{day.dagsetning.replace("12/", "")}</Number>
         <Month>desember</Month>
       </Date>
-      {day.vidjo !== null ? (
+      {day.vidjo !== null && platform !== "simi" ? (
         <Description>{day.vidjo.vidjotitill}</Description>
       ) : (
         <></>
@@ -17,4 +18,8 @@ const Banner = ({ day }) => {
   )
 }
 
-export default Banner
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(Banner)

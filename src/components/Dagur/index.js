@@ -1,5 +1,5 @@
 import React from "react"
-import { PopupGluggi, CloseSensor, Footer } from "./Styled"
+import { PopupGluggi, CloseSensor, Footer, VideoTitle } from "./Styled"
 import { connect } from "react-redux"
 import ExitBTN from "../ExitBTN"
 import { triggerDagurPopup } from "../../state/action"
@@ -33,8 +33,15 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
         ></ExitBTN>
         <Banner day={selectedDay}></Banner>
         {selectedDay.vidjo !== null ? <PlayBTN></PlayBTN> : <></>}
-        <Footer>
-          <VidburdirDagsins></VidburdirDagsins>
+        {selectedDay.vidjo !== null && platform === "simi" ? (
+          <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
+        ) : (
+          ""
+        )}
+        <Footer platform={platform}>
+          <VidburdirDagsins
+            dagsetning={selectedDay.dagsetning}
+          ></VidburdirDagsins>
           <VerkefniDagsins></VerkefniDagsins>
         </Footer>
       </PopupGluggi>

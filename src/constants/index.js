@@ -31,37 +31,29 @@ export const sizes = {
   paraXlarge: "70px",
 }
 
-export const Button = styled.div`
+const ButtonStyle = css`
   font-size: ${sizes.paraSmall};
-  background: white;
+  background: ${colors.blue};
   box-sizing: border-box;
   box-shadow: 1px 1.5px 1.5px 1px lightgray;
-  border-radius: 43px;
   padding: 10px;
   display: flex;
   font-feature-settings: "pnum" on, "onum" on;
   &&:hover {
     cursor: pointer;
   }
-  color: black;
+  color: white;
   margin: auto;
+  min-width: 200px;
+  text-decoration: none;
+  font-weight: bold;
+`
+
+export const Button = styled.div`
+  ${ButtonStyle};
 `
 export const LinkButton = styled(Link)`
-  font-size: ${sizes.paraSmall};
-  background: white;
-  box-sizing: border-box;
-  box-shadow: 1px 1.5px 1.5px 1px lightgray;
-  border-radius: 43px;
-  padding: 10px;
-  display: flex;
-  font-feature-settings: "pnum" on, "onum" on;
-  &&:hover {
-    cursor: pointer;
-  }
-  color: black;
-  text-decoration: none;
-  min-width: 250px;
-  margin: auto;
+  ${ButtonStyle};
 `
 
 // popup window

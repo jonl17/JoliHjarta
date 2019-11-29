@@ -1,9 +1,20 @@
 import styled, { css } from "styled-components"
-import { layer, colors, margins } from "../../../constants"
+import { layer, colors, margins, sizes } from "../../../constants"
 
 export const Footer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  ${props =>
+    props.platform === `spjaldtolva` &&
+    css`
+      grid-template-columns: 1fr;
+    `}
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      grid-template-columns: 1fr;
+    `}
   grid-gap: 10px;
   grid-area: footer;
 `
@@ -24,7 +35,7 @@ export const PopupGluggi = styled.div`
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   color: white;
   display: ${props => props.display};
-  grid-template-rows: 1fr 2fr 1.5fr;
+  grid-template-rows: .5fr 1fr auto;
   grid-template-areas: "banner"
                        "video"
                        "footer";
@@ -66,5 +77,17 @@ export const PopupGluggi = styled.div`
       width: 100%;
       top: 0;
       left: 0%;
+      grid-template-rows: 0.5fr 1fr 1fr auto;
+      grid-template-areas:
+        "banner"
+        "video"
+        "texti"
+        "footer";
     `}
+`
+export const VideoTitle = styled.p`
+  font-size: ${sizes.paraSmall};
+  color: white;
+  box-sizing: border-box;
+  padding: 10px 0 10px 0;
 `

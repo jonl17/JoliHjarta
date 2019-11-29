@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { sizes } from "../../../../../constants"
 
 export const Container = styled.div`
@@ -24,4 +24,9 @@ export const Month = styled.p`
 export const Description = styled.p`
   font-size: ${sizes.paraSmall};
   margin: 0;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      grid-area: texti;
+    `}
 `
