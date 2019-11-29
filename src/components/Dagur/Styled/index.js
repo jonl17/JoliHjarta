@@ -88,4 +88,6 @@ export const PopupGluggi = styled.div`
 export const VideoTitle = styled.p`
   font-size: ${sizes.paraSmall};
   color: white;
+  box-sizing: border-box;
+  padding: 10px 0 10px 0;
 `
