@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import HusSVG from "../../../../../../static/myndir/nyhus.svg"
+import HusSVG from "../../../../../../static/myndir/svgs/nyhus.svg"
 import { layer } from "../../../../../constants"
 
 export const Husin = styled(HusSVG)`

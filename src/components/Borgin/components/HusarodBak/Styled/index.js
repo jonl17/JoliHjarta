@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import HusarodSVG from "../../../../../../static/myndir/husarod2.svg"
+import HusarodSVG from "../../../../../../static/myndir/svgs/husarod2.svg"
 import { layer } from "../../../../../constants"
 
 export const HusSVG = styled(HusarodSVG)`

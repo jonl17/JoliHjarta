@@ -3,6 +3,7 @@ import { Container, Player, Source } from "./Styled"
 import { connect } from "react-redux"
 import { triggerVideoFullscreen } from "../../state/action"
 import ExitBTN from "../ExitBTN"
+import loadGIF from "../../../static/myndir/load.gif"
 
 class Video extends React.Component {
   constructor(props) {
@@ -16,7 +17,6 @@ class Video extends React.Component {
     this.setState({
       video: video,
     })
-    console.log("popup openened")
   }
   componentDidUpdate() {
     if (this.props.videoFullscreen) {
@@ -34,10 +34,14 @@ class Video extends React.Component {
           relativeToVideo
           click={() => dispatch(triggerVideoFullscreen())}
         ></ExitBTN>
-        <Player id="video-player" title={vidjo.vidjotitill} frameBorder="0">
+        <Player
+          poster={loadGIF}
+          id="video-player"
+          title={vidjo.vidjotitill}
+          frameBorder="0"
+        >
           <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
         </Player>
-        <p style={{ color: "white" }}>Hleður...</p>
       </Container>
     )
   }

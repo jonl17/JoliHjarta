@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components"
-import SVG from "../../../../../../static/myndir/gluggastuffOgTolur.svg"
+import SVG from "../../../../../../static/myndir/svgs/gluggastuffOgTolur.svg"
 
 // Gatan
-import StekkjastaurSVG from "../../../../../../static/myndir/stekkjastaur.svg"
-import MavurSVG from "../../../../../../static/myndir/mavur.svg"
-import HoppSVG from "../../../../../../static/myndir/hopp.svg"
-import MusSVG from "../../../../../../static/myndir/mus.svg"
-import HjolSVG from "../../../../../../static/myndir/hjol.svg"
-import SnjorSVG from "../../../../../../static/myndir/snjor-layer.svg"
+import StekkjastaurSVG from "../../../../../../static/myndir/svgs/stekkjastaur.svg"
+import MavurSVG from "../../../../../../static/myndir/svgs/mavur.svg"
+import HoppSVG from "../../../../../../static/myndir/svgs/hopp.svg"
+import MusSVG from "../../../../../../static/myndir/svgs/mus.svg"
+import HjolSVG from "../../../../../../static/myndir/svgs/hjol.svg"
+import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-layer.svg"
 
 const SVGstyle = css`
   height: 100%;
