@@ -38,7 +38,7 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           <VerkefniDagsins></VerkefniDagsins>
         </Footer>
       </PopupGluggi>
-      {selectedDay.vidjo !== null ? (
+      {selectedDay.vidjo !== null && dagurPopup === "open" ? (
         <Video vidjo={selectedDay.vidjo}></Video>
       ) : (
         <></>

@@ -19,6 +19,9 @@ class Video extends React.Component {
     })
   }
   componentDidUpdate() {
+    document
+      .getElementById("video-source")
+      .setAttribute("src", this.props.vidjo.vidjourl.publicURL)
     if (this.props.videoFullscreen) {
       this.state.video.play()
     } else {
@@ -43,7 +46,7 @@ class Video extends React.Component {
           playsinline
           open={videoFullscreen ? "100%" : "0%"}
         >
-          <Source type="video/webm" src={vidjo.vidjourl.publicURL}></Source>
+          <Source id="video-source" src={vidjo.vidjourl.publicURL}></Source>
         </Player>
       </Container>
     )
