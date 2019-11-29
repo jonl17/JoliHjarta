@@ -41,6 +41,11 @@ export const Line = styled.span`
     css`
       background: black;
     `}
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      background: white;
+    `}
   transform: rotate(45deg);
   ${props =>
     props.second &&

@@ -2,7 +2,13 @@ import React from "react"
 import { Container, Line } from "./Styled"
 import { connect } from "react-redux"
 
-const ExitBTN = ({ click, tight, relativeToVideo, videoFullscreen }) => {
+const ExitBTN = ({
+  click,
+  tight,
+  relativeToVideo,
+  videoFullscreen,
+  platform,
+}) => {
   return (
     <Container
       relativeToVideo={relativeToVideo}
@@ -10,14 +16,15 @@ const ExitBTN = ({ click, tight, relativeToVideo, videoFullscreen }) => {
       tight={tight}
       onClick={() => click()}
     >
-      <Line relativeToVideo={relativeToVideo}></Line>
-      <Line relativeToVideo={relativeToVideo} second></Line>
+      <Line platform={platform} relativeToVideo={relativeToVideo}></Line>
+      <Line platform={platform} relativeToVideo={relativeToVideo} second></Line>
     </Container>
   )
 }
 
 const mapStateToProps = state => ({
   videoFullscreen: state.reducer.videoFullscreen,
+  platform: state.reducer.platform,
 })
 
 export default connect(mapStateToProps)(ExitBTN)
