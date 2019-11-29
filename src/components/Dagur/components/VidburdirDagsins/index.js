@@ -3,6 +3,7 @@ import { Box, Title, EventBox, Event, EventName, EventInfo } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
 import Takki from "../../../Takki"
 import { generateSlugFromDate } from "../../../../methods"
+import { connect } from "react-redux"
 
 var counter = 0
 const getEvents = dags => (
@@ -46,9 +47,14 @@ const getEvents = dags => (
   )
 )
 
-const VidburdirDagsins = ({ dagsetning }) => {
-  console.log(dagsetning)
-  return (
+const VidburdirDagsins = ({ dagsetning, platform }) => {
+  return platform === `simi` ? (
+    <Takki
+      slug={"/" + generateSlugFromDate(dagsetning)}
+      type={"link"}
+      text={"Sjá alla viðburði"}
+    ></Takki>
+  ) : (
     <Box>
       <Title>Viðburðir dagsins</Title>
       <EventBox>{getEvents(dagsetning)}</EventBox>
@@ -61,4 +67,8 @@ const VidburdirDagsins = ({ dagsetning }) => {
   )
 }
 
-export default VidburdirDagsins
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(VidburdirDagsins)

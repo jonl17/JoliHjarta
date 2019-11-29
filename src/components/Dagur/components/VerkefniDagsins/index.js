@@ -1,9 +1,16 @@
 import React from "react"
 import { Box, Title, Texti } from "./Styled"
 import Takki from "../../../Takki"
+import { connect } from "react-redux"
 
-const VerkefniDagsins = () => {
-  return (
+const VerkefniDagsins = ({ platform }) => {
+  return platform === `simi` ? (
+    <Takki
+      slug={"/sendu-inn-efni/"}
+      type={"link"}
+      text="Senda inn efni"
+    ></Takki>
+  ) : (
     <Box>
       <Title>Verkefni dagsins</Title>
       <Texti>
@@ -20,4 +27,8 @@ const VerkefniDagsins = () => {
   )
 }
 
-export default VerkefniDagsins
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(VerkefniDagsins)

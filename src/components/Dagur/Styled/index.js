@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { layer, colors, margins } from "../../../constants"
+import { layer, colors, margins, sizes } from "../../../constants"
 
 export const Footer = styled.div`
   display: grid;
@@ -77,5 +77,15 @@ export const PopupGluggi = styled.div`
       width: 100%;
       top: 0;
       left: 0%;
+      grid-template-rows: 0.5fr 1fr 1fr auto;
+      grid-template-areas:
+        "banner"
+        "video"
+        "texti"
+        "footer";
     `}
+`
+export const VideoTitle = styled.p`
+  font-size: ${sizes.paraSmall};
+  color: white;
 `
