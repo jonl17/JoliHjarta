@@ -17,17 +17,9 @@ export const Container = styled.div`
 export const Grid = styled.div`
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: ${margins.xSmall};
   margin: auto;
-
-  /** scaling */
-  grid-template-rows: repeat(8, 45px);
-  ${props =>
-    props.device === `browserLarge` &&
-    css`
-      grid-template-rows: repeat(8, 55px);
-    `}
 `
 export const Desember = styled.p`
   margin: 0;
