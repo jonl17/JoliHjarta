@@ -27,6 +27,8 @@ export const Player = styled.video`
   ${props =>
     props.platform === `simi` &&
     css`
+      z-index: 20;
+      height: auto;
       ${props =>
         props.open === `100%` &&
         css`
