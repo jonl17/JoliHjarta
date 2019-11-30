@@ -10,15 +10,14 @@ export const Container = styled.div`
   width: 100%;
   height: ${props => props.open};
   background: black;
-  ${props => props.platform === `simi` && css``}
+  display: flex;
+  align-content: center;
+  justify-content: center;
 `
 export const Player = styled.iframe`
   object-fit: contain;
   padding: 15px;
   box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  top: 0;
   z-index: 11;
   width: 100%;
 `
