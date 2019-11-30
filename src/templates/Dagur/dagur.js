@@ -7,11 +7,13 @@ import Title from "./components/Title"
 import EventPopup from "./components/EventPopup"
 import Calender from "./components/Calender"
 import BurgerWindow from "../../components/BurgerWindow"
+import { connect } from "react-redux"
 
-const Dagur = ({ data, pageContext }) => {
+const Dagur = ({ data, pageContext, platform }) => {
+  console.log(platform)
   return (
-    <Container>
-      <Grid>
+    <Container platform={platform}>
+      <Grid platform={platform}>
         <BurgerWindow></BurgerWindow>
         <Burger></Burger>
         <Title></Title>
@@ -58,4 +60,8 @@ export const query = graphql`
   }
 `
 
-export default Dagur
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(Dagur)

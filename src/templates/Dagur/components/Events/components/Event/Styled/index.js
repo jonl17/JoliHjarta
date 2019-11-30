@@ -9,8 +9,8 @@ export const Box = styled.div`
   position: relative;
 `
 export const ImageContainer = styled.div`
-  height: 250px;
-  width: 100%;
+  height: ${sizes.eventBox};
+  width: ${sizes.eventBox};
   object-fit: cover;
 `
 export const Image = styled(Img)`

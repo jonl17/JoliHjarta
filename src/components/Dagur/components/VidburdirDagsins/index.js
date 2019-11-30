@@ -5,46 +5,40 @@ import Takki from "../../../Takki"
 import { generateSlugFromDate } from "../../../../methods"
 import { connect } from "react-redux"
 
-var counter = 0
-const getEvents = dags => (
-  (counter = 0),
-  (
-    <StaticQuery
-      query={graphql`
-        {
-          allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/content/events/" } }
-          ) {
-            nodes {
-              frontmatter {
-                title
-                hvenaer
-                hvar
-                klukkan
-              }
+const getEvents = (dags, counter = 0) => (
+  <StaticQuery
+    query={graphql`
+      {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/content/events/" } }
+        ) {
+          nodes {
+            frontmatter {
+              title
+              hvenaer
+              hvar
+              klukkan
             }
           }
         }
-      `}
-      render={data =>
-        data.allMarkdownRemark.nodes.map((item, index) =>
-          item.frontmatter.hvenaer === dags && counter < 2
-            ? (counter++,
-              (
-                <Event key={index}>
-                  <EventName>{item.frontmatter.title}</EventName>
-                  <EventInfo>
-                    {item.frontmatter.hvar +
-                      " - kl. " +
-                      item.frontmatter.klukkan}
-                  </EventInfo>
-                </Event>
-              ))
-            : ""
-        )
       }
-    ></StaticQuery>
-  )
+    `}
+    render={data =>
+      data.allMarkdownRemark.nodes.map((item, index) =>
+        item.frontmatter.hvenaer === dags && counter < 2
+          ? (counter++,
+            (
+              <Event key={index}>
+                <EventName>{item.frontmatter.title}</EventName>
+                <EventInfo>
+                  {item.frontmatter.hvar + " - kl. " + item.frontmatter.klukkan}
+                </EventInfo>
+              </Event>
+            ))
+          : ""
+      )
+    }
+  ></StaticQuery>
 )
 
 const VidburdirDagsins = ({ dagsetning, platform }) => {

@@ -29,6 +29,7 @@ export const sizes = {
   paraMed: "25px",
   paraLarge: "35px",
   paraXlarge: "70px",
+  eventBox: "225px",
 }
 
 const ButtonStyle = css`
