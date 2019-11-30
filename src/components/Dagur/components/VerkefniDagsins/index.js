@@ -45,8 +45,7 @@ const getVerkefni = (dags, counter = 0, dispatch) => (
 const VerkefniDagsins = ({ platform, dagsetning, dispatch }) => {
   return platform === `simi` ? (
     <Takki
-      slug={"/sendu-inn-efni/"}
-      type={"link"}
+      click={() => dispatch(triggerSenduInnEfni("open"))}
       text="Senda inn efni"
     ></Takki>
   ) : (

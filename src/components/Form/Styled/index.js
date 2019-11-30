@@ -1,15 +1,52 @@
 import styled from "styled-components"
+import { sizes, colors } from "../../../constants"
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
 `
 export const Formid = styled.form`
   margin: auto;
-  height: 600px;
-  width: 400px;
+  box-sizing: border-box;
+  padding: 25px;
 `
 export const Label = styled.label``
-export const Input = styled.input``
-export const Button = styled.button``
+export const Input = styled.input`
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color: ${colors.blue};
+  box-sizing: border-box;
+  &&::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  &&::before {
+    content: "Veldu skrá";
+    display: inline-block;
+    background: white;
+    color: ${colors.blue};
+    border: 4px solid white;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: ${sizes.paraMed};
+  }
+`
+export const TextInput = styled.input`
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: ${sizes.paraMed};
+  &&:focus {
+    background: ${colors.blue};
+    color: white;
+  }
+  border-color: white;
+`
+export const Text = styled.p`
+  font-size: ${sizes.paraMed};
+`

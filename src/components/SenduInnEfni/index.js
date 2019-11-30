@@ -1,7 +1,14 @@
 import React from "react"
 import { PopupGluggi, CloseSensor } from "./Styled"
 import { connect } from "react-redux"
-import { triggerSenduInnEfni } from "../../state/action"
+import { triggerSenduInnEfni, triggerDagurPopup } from "../../state/action"
+import Form from "../Form"
+import ExitBTN from "../ExitBTN"
+
+const dispatches = dispatch => {
+  dispatch(triggerDagurPopup("closed"))
+  dispatch(triggerSenduInnEfni("closed"))
+}
 
 const Senduinnefni = ({
   platform,
@@ -12,7 +19,7 @@ const Senduinnefni = ({
   return (
     <>
       <CloseSensor
-        onClick={() => dispatch(triggerSenduInnEfni("closed"))}
+        onClick={() => dispatches(dispatch)}
         display={
           senduInnEfniOpen === "open" && selectedDay !== undefined
             ? "block"
@@ -22,13 +29,16 @@ const Senduinnefni = ({
       <PopupGluggi
         display={
           senduInnEfniOpen === "open" && selectedDay !== undefined
-            ? "grid"
+            ? "block"
             : "none"
         }
-        grid
         platform={platform}
       >
-        <p>YO ELLIOT</p>
+        <ExitBTN
+          tight
+          click={() => dispatch(triggerSenduInnEfni("closed"))}
+        ></ExitBTN>
+        <Form></Form>
       </PopupGluggi>
     </>
   )

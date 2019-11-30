@@ -2,20 +2,23 @@ import React from "react"
 import { PopupGluggi, CloseSensor, Footer, VideoTitle } from "./Styled"
 import { connect } from "react-redux"
 import ExitBTN from "../ExitBTN"
-import { triggerDagurPopup } from "../../state/action"
+import { triggerDagurPopup, triggerSenduInnEfni } from "../../state/action"
 import Banner from "./components/Banner"
 import Video from "../Video"
 import VerkefniDagsins from "./components/VerkefniDagsins"
 import VidburdirDagsins from "./components/VidburdirDagsins"
 import PlayBTN from "./components/PlayBTN"
 
-// import { generateSlugFromDate } from "../../methods"
+const dispatches = dispatch => {
+  dispatch(triggerDagurPopup("closed"))
+  dispatch(triggerSenduInnEfni("closed"))
+}
 
 const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
   return selectedDay !== undefined ? (
     <>
       <CloseSensor
-        onClick={() => dispatch(triggerDagurPopup("closed"))}
+        onClick={() => dispatches(dispatch)}
         display={
           dagurPopup === "open" && selectedDay !== undefined ? "block" : "none"
         }
@@ -32,7 +35,11 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           click={() => dispatch(triggerDagurPopup("closed"))}
         ></ExitBTN>
         <Banner day={selectedDay}></Banner>
-        {selectedDay.vidjo !== null ? <PlayBTN></PlayBTN> : <></>}
+        {selectedDay.vidjo !== null && selectedDay.vidjo.vidjourl !== "" ? (
+          <PlayBTN></PlayBTN>
+        ) : (
+          <></>
+        )}
         {selectedDay.vidjo !== null && platform === "simi" ? (
           <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
         ) : (
@@ -48,7 +55,11 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
         </Footer>
       </PopupGluggi>
       {selectedDay.vidjo !== null && dagurPopup === "open" ? (
-        <Video vidjo={selectedDay.vidjo}></Video>
+        selectedDay.vidjo.vidjorul !== "" ? (
+          <Video vidjo={selectedDay.vidjo}></Video>
+        ) : (
+          ""
+        )
       ) : (
         <></>
       )}
