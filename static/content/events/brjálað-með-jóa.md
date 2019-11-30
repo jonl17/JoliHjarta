@@ -1,9 +1,11 @@
 ---
-title: Brjálað með Jóa
-hvenaer: 12/20
-klukkan: '17:45'
-lysing: Jói Fel sýnir okkur hvernig á að baka 6000 kökur á einu kvöldi.
-hvar: Jói Fel Hamraborg
-mynd: /myndir/screenshot-2019-11-08-at-11.16.59.png
+title: ' Jólaljósin tendruð á Oslóartrénu á Austurvelli'
+hvenaer: 12/1
+klukkan: '15:30'
+lysing: >-
+  Við Stella , Stebbi og Valdís Finnboga munum verða á Austurvell að syngja og
+  sprella þegar kveikt verður á stóra jólatrénu á Austurvelli í miðborginni. 
+hvar: Austurvelli
+mynd: /myndir/jólatréið.jpg
 ---
 
