@@ -8,6 +8,8 @@ collections:
   - name: "dagur"
     label: "Dagur í desember"
     folder: "static/content/dagar"
+    editor:
+      preview: false
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -18,28 +20,30 @@ collections:
           format: "M/D",
           hint: "Veldu þann dag í desember sem á við",
         }
-      - label: "Vidjo"
+      - label: "Video"
         name: "vidjo"
         widget: "object"
         fields:
           - {
-              label: "Vidjo Titill",
+              label: "Lýsing",
               name: "vidjotitill",
-              widget: "string",
+              widget: "text",
               required: false,
             }
           - {
               label: "Vidjo URL",
               name: "vidjourl",
-              widget: "file",
+              widget: "string",
               required: false,
             }
   - name: "event"
     label: "Viðburður"
     folder: "static/content/events"
+    editor:
+      preview: false
     create: true
     fields:
-      - { label: "Title", name: "title", "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Hvenær", name: "hvenaer", widget: "date", format: "M/D" }
       - {
           label: "Klukkan",
@@ -47,6 +51,20 @@ collections:
           widget: "string",
           hint: "setjið inn á þessu formatti: 16-18",
         }
-      - { label: "Stutt lýsing", name: "lysing", widget: "string" }
+      - { label: "Stutt lýsing", name: "lysing", widget: "text" }
       - { label: "Hvar", name: "hvar", widget: "string" }
       - { label: "Mynd", name: "mynd", widget: "image" }
+  - name: "verkefni-dagins"
+    label: "Verkefni Dagsins"
+    folder: "static/content/verkefni-dagsins"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - { label: "Lýsing", name: "title", widget: "text" }
+      - {
+          label: "Dagsetning",
+          name: "dagsetning",
+          widget: "date",
+          format: "M/D",
+        }
