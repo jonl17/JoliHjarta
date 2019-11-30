@@ -14,6 +14,7 @@ import {
   GET_TODAYS_CALENDER_DAY,
   TRIGGER_VIDEO_FULLSCREEN,
   TRIGGER_CALENDER_WINDOW,
+  TRIGGER_SENDU_INN_EFNI,
 } from "./action"
 
 const initialState = {
@@ -36,6 +37,7 @@ const initialState = {
   burgerWindow: "closed",
   videoFullscreen: false,
   calenderWindowOpen: false,
+  senduInnEfniOpen: "closed",
 }
 
 export default (state = initialState, action) => {
@@ -101,6 +103,8 @@ export default (state = initialState, action) => {
       return { ...state, videoFullscreen: !state.videoFullscreen }
     case TRIGGER_CALENDER_WINDOW:
       return { ...state, calenderWindowOpen: !state.calenderWindowOpen }
+    case TRIGGER_SENDU_INN_EFNI:
+      return { ...state, senduInnEfniOpen: action.trigger }
     default:
       return state
   }

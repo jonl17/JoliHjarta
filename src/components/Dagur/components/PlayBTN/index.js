@@ -11,6 +11,7 @@ const Container = styled.div`
   color: white;
   margin: auto;
   display: grid;
+  background: white;
   &&:hover {
     cursor: pointer;
   }

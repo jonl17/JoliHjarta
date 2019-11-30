@@ -72,3 +72,8 @@ export const TRIGGER_CALENDER_WINDOW = "TRIGGER_CALENDER_WINDOW"
 export const triggerCalenderWindow = () => ({
   type: TRIGGER_CALENDER_WINDOW,
 })
+export const TRIGGER_SENDU_INN_EFNI = "TRIGGER_SENDU_INN_EFNI"
+export const triggerSenduInnEfni = trigger => ({
+  type: TRIGGER_SENDU_INN_EFNI,
+  trigger,
+})

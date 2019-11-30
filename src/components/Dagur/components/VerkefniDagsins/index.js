@@ -3,8 +3,9 @@ import { Box, Title, Texti } from "./Styled"
 import Takki from "../../../Takki"
 import { connect } from "react-redux"
 import { graphql, StaticQuery } from "gatsby"
+import { triggerSenduInnEfni } from "../../../../state/action"
 
-const getVerkefni = (dags, counter = 0) => (
+const getVerkefni = (dags, counter = 0, dispatch) => (
   <StaticQuery
     query={graphql`
       {
@@ -30,8 +31,7 @@ const getVerkefni = (dags, counter = 0) => (
                 <Title>{item.frontmatter.title}</Title>
                 <Texti>{item.frontmatter.lysing}</Texti>
                 <Takki
-                  slug={"/sendu-inn-efni/"}
-                  type={"link"}
+                  click={() => dispatch(triggerSenduInnEfni("open"))}
                   text="Senda inn efni"
                 ></Takki>
               </Box>
@@ -42,7 +42,7 @@ const getVerkefni = (dags, counter = 0) => (
   ></StaticQuery>
 )
 
-const VerkefniDagsins = ({ platform, dagsetning }) => {
+const VerkefniDagsins = ({ platform, dagsetning, dispatch }) => {
   return platform === `simi` ? (
     <Takki
       slug={"/sendu-inn-efni/"}
@@ -50,7 +50,7 @@ const VerkefniDagsins = ({ platform, dagsetning }) => {
       text="Senda inn efni"
     ></Takki>
   ) : (
-    getVerkefni(dagsetning)
+    getVerkefni(dagsetning, 0, dispatch)
   )
 }
 

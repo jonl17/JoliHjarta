@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { layer, colors, sizes, margins } from "../../../constants"
+import styled, { css } from "styled-components"
+import { layer, colors, margins } from "../../../constants"
 
 export const CloseSensor = styled.div`
   height: 100%;

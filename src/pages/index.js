@@ -8,6 +8,7 @@ import BurgerWindow from "../components/BurgerWindow"
 import Mani from "../components/Mani"
 import { graphql } from "gatsby"
 import { getAllDaysInfo } from "../state/action"
+import SenduInnEfni from "../components/SenduInnEfni"
 
 class index extends React.Component {
   componentDidMount() {
@@ -22,7 +23,7 @@ class index extends React.Component {
   }
 
   render() {
-    const { weather } = this.props
+    const { weather, senduInnEfniOpen } = this.props
     if (weather.lysing !== undefined) {
       console.log("Veðurlýsing er barasta: " + weather.lysing)
     }
@@ -35,6 +36,7 @@ class index extends React.Component {
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>
         <Dagur></Dagur>
+        {senduInnEfniOpen === `open` ? <SenduInnEfni></SenduInnEfni> : ""}
       </>
     )
   }
@@ -44,6 +46,7 @@ const mapStateToProps = state => ({
   weather: state.reducer.weather,
   device: state.reducer.device,
   platform: state.reducer.platform,
+  senduInnEfniOpen: state.reducer.senduInnEfniOpen,
 })
 
 export const query = graphql`
