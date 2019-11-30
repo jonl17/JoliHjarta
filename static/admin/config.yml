@@ -61,7 +61,8 @@ collections:
       preview: false
     create: true
     fields:
-      - { label: "Lýsing", name: "title", widget: "text" }
+      - { label: "Titill", name: "title", widget: "string" }
+      - { label: "Lýsing", name: "lysing", widget: "text" }
       - {
           label: "Dagsetning",
           name: "dagsetning",
