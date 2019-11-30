@@ -1,10 +1,18 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { LinkButton, Button, sizes } from "../../../constants"
 
 export const Container = styled.div`
   box-sizing: border-box;
   padding: 5% 0 3% 0;
   width: 100%;
+  ${props =>
+    props.fixed &&
+    css`
+      position: fixed;
+      bottom: 5px;
+      left: 0;
+      padding: 0% 10% 5% 10%;
+    `}
 `
 export const Text = styled.p`
   text-align: center;

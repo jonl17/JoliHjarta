@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Text, BTN, LinkBTN } from "./Styled"
 
-const Takki = ({ type, text, slug }) => {
+const Takki = ({ type, text, slug, fixed, click }) => {
   return type === `link` ? (
     <Container>
       <LinkBTN to={slug}>
@@ -9,7 +9,7 @@ const Takki = ({ type, text, slug }) => {
       </LinkBTN>
     </Container>
   ) : (
-    <Container>
+    <Container onClick={click} fixed={fixed}>
       <BTN>
         <Text>{text}</Text>
       </BTN>

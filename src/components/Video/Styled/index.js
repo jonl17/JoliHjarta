@@ -8,25 +8,25 @@ export const Container = styled.div`
   transition: 0.1s ease-in-out;
   width: 100%;
   height: ${props => props.open};
-  background: transparent;
+  background: black;
   ${props =>
     props.platform === `simi` &&
     css`
       background: black;
     `}
 `
-export const Player = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
+export const Player = styled.iframe`
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+/*
   transition: 0.3s;
   box-sizing: border-box;
   ${props =>
     props.platform === `simi` &&
     css`
+      z-index: 20;
+      height: auto;
       ${props =>
         props.open === `100%` &&
         css`
@@ -40,5 +40,6 @@ export const Player = styled.video`
       padding: ${margins.small};
     `}
   margin: auto;
+  */
 `
 export const Source = styled.source``

@@ -32,7 +32,7 @@ collections:
             }
           - {
               label: "VidjoURL",
-              name: "url",
+              name: "vidjourl",
               widget: "string",
               required: false,
             }

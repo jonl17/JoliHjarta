@@ -2,10 +2,17 @@ import React from "react"
 import { connect } from "react-redux"
 import ExitBTN from "../../../../components/ExitBTN"
 import { triggerEventPopup } from "../../../../state/action"
-import { PopupGluggi, CloseSensor } from "./Styled"
+import {
+  PopupGluggi,
+  CloseSensor,
+  ImageContainer,
+  Image,
+  Texti,
+} from "./Styled"
 import Banner from "./Banner"
 
 const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
+  console.log(selectedEvent)
   return selectedEvent !== undefined ? (
     <>
       <CloseSensor
@@ -25,6 +32,10 @@ const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
       >
         <ExitBTN click={() => dispatch(triggerEventPopup("closed"))}></ExitBTN>
         <Banner event={selectedEvent}></Banner>
+        <ImageContainer>
+          <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
+        </ImageContainer>
+        <Texti>{selectedEvent.lysing}</Texti>
       </PopupGluggi>
     </>
   ) : (

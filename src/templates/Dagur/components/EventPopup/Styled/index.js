@@ -1,5 +1,20 @@
 import styled, { css } from "styled-components"
-import { margins, colors, layer } from "../../../../../constants"
+import { margins, colors, layer, sizes } from "../../../../../constants"
+import Img from "gatsby-image"
+
+export const Texti = styled.p`
+  font-size: ${sizes.paraSmall};
+`
+
+export const ImageContainer = styled.div`
+  height: 250px;
+  width: 250px;
+  margin: auto;
+`
+export const Image = styled(Img)`
+  height: 100%;
+  width: 100%;
+`
 
 export const CloseSensor = styled.div`
   height: 100%;
@@ -20,7 +35,7 @@ export const PopupGluggi = styled.div`
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   color: white;
   display: ${props => props.display};
-  grid-template-rows: .5fr 1fr auto;
+  grid-template-rows: .3fr 1fr 1fr;
   grid-template-areas: "banner"
                        "mynd"
                        "lysing";
