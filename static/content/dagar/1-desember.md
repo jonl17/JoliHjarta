@@ -1,5 +1,5 @@
 ---
-title: Hvar eru jólin
+title: 1. desember
 dagsetning: 12/1
 vidjo:
   vidjotitill: ''
