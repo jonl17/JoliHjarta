@@ -10,11 +10,7 @@ export const Container = styled.div`
   width: 100%;
   height: ${props => props.open};
   background: black;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      padding-bottom: 300px;
-    `}
+  ${props => props.platform === `simi` && css``}
 `
 export const Player = styled.iframe`
   object-fit: contain;
