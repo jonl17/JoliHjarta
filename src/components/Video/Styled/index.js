@@ -16,12 +16,13 @@ export const Container = styled.div`
     `}
 `
 export const Player = styled.iframe`
-  object-fit: cover;
+  object-fit: contain;
   padding: 15px;
   box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 11;
+  width: 100%;
 `
 export const Source = styled.source``
