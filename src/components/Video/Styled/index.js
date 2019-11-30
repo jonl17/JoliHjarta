@@ -12,7 +12,7 @@ export const Container = styled.div`
   ${props =>
     props.platform === `simi` &&
     css`
-      background: black;
+      padding-bottom: 300px;
     `}
 `
 export const Player = styled.iframe`
