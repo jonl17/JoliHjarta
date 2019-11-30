@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Date, Description, Number, Month } from "./Styled"
+import { Container, Date, Description, Number } from "./Styled"
 import { connect } from "react-redux"
 
 const Banner = ({ day, platform }) => {
@@ -7,7 +7,6 @@ const Banner = ({ day, platform }) => {
     <Container>
       <Date>
         <Number>{day.dagsetning.replace("12/", "")}</Number>
-        <Month>desember</Month>
       </Date>
       {day.vidjo !== null && platform !== "simi" ? (
         <Description>{day.vidjo.vidjotitill}</Description>

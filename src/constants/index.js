@@ -20,7 +20,7 @@ export const colors = {
   gray: "#797979",
   blue: "rgba(63, 104, 196, 1)",
   boxgray: "#C4C4C4",
-  lightgray: "#E5E5E5",
+  lightgray: "#F37A7E",
   hover: "#F37A7E",
 }
 export const sizes = {

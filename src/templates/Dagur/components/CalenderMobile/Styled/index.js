@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { margins, sizes } from "../../../../../constants"
 
 export const ExtraContainer = styled.div`
