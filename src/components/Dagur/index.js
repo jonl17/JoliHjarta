@@ -42,7 +42,9 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           <VidburdirDagsins
             dagsetning={selectedDay.dagsetning}
           ></VidburdirDagsins>
-          <VerkefniDagsins></VerkefniDagsins>
+          <VerkefniDagsins
+            dagsetning={selectedDay.dagsetning}
+          ></VerkefniDagsins>
         </Footer>
       </PopupGluggi>
       {selectedDay.vidjo !== null && dagurPopup === "open" ? (

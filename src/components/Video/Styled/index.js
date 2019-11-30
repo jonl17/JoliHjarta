@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components"
-import { margins } from "../../../constants"
+import styled from "styled-components"
 
 export const Container = styled.div`
   overflow: hidden;

@@ -9,7 +9,7 @@ class Video extends React.Component {
   componentDidUpdate() {
     document
       .getElementById("video-player")
-      .setAttribute("src", this.props.vidjo.vidjourl)
+      .setAttribute("src", this.props.vidjo.vidjourl + "?api=1")
   }
   dispatches(dispatch) {
     dispatch(triggerVideoFullscreen())
