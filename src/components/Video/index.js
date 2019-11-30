@@ -30,8 +30,7 @@ class Video extends React.Component {
   }
   render() {
     const { vidjo, platform, videoFullscreen, dispatch } = this.props
-    console.log(vidjo)
-    return platform !== `simi` ? (
+    return (
       <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
         <ExitBTN
           small
@@ -50,18 +49,6 @@ class Video extends React.Component {
           <Source id="video-source" src={vidjo.vidjourl}></Source>
         </Player>
       </Container>
-    ) : (
-      <Player
-        platform={platform}
-        poster={loadGIF}
-        id="video-player"
-        title={vidjo.vidjotitill}
-        frameBorder="0"
-        playsinline
-        open={videoFullscreen ? "100%" : "0%"}
-      >
-        <Source id="video-source" src={vidjo.vidjourl}></Source>
-      </Player>
     )
   }
 }
