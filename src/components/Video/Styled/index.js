@@ -19,6 +19,9 @@ export const Player = styled.iframe`
   object-fit: cover;
   padding: 15px;
   box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
 /*
   transition: 0.3s;
   box-sizing: border-box;
