@@ -1,6 +1,12 @@
 ---
-title: Verkefni-1
-lysing: ' it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+title: Verkefni dagsins
+lysing: >-
+  Þið ætlið að senda okkur allskonar jólaskemmtilegt til að gera í miðborginni í
+  December.
+
+  Það má sko heldur betur vera eitthvað fyndið og sniðugt og við erum æst í að
+  þið sendið á okkur áskoranir til að leysa eins og t.d. að fara á handahlaupum
+  niður Laugarveginn hahaah.
 dagsetning: 12/1
 ---
 
