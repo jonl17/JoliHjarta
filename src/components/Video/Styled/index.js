@@ -22,27 +22,6 @@ export const Player = styled.iframe`
   position: absolute;
   left: 0;
   top: 0;
-/*
-  transition: 0.3s;
-  box-sizing: border-box;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      z-index: 20;
-      height: auto;
-      ${props =>
-        props.open === `100%` &&
-        css`
-          height: auto;
-          top: 100px;
-        `}
-    `}
-  ${props =>
-    props.open === `100%` &&
-    css`
-      padding: ${margins.small};
-    `}
-  margin: auto;
-  */
+  z-index: 11;
 `
 export const Source = styled.source``

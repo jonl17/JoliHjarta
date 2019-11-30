@@ -21,22 +21,22 @@ class Video extends React.Component {
     const { vidjo, platform, videoFullscreen, dispatch } = this.props
     return (
       <>
-        <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
-          <ExitBTN
-            small
-            relativeToVideo
-            click={() => this.dispatches(dispatch)}
-          ></ExitBTN>
-          <Player
-            id="video-player"
-            src={vidjo.vidjourl + "?api=1"}
-            height={videoFullscreen ? "100%" : "0%"}
-            width={"100%"}
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></Player>
-        </Container>
+        {/* <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}> */}
+        <ExitBTN
+          small
+          relativeToVideo
+          click={() => this.dispatches(dispatch)}
+        ></ExitBTN>
+        <Player
+          id="video-player"
+          src={vidjo.vidjourl + "?api=1"}
+          height={videoFullscreen ? "100%" : "0%"}
+          width={"100%"}
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></Player>
+        {/* </Container> */}
       </>
     )
   }

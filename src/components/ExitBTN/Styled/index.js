@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import { margins, sizes } from "../../../constants"
 
 export const Container = styled.div`
-  z-index: 1;
+  z-index: 20;
   position: absolute;
   top: 0;
   ${props =>
