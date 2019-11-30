@@ -6,10 +6,11 @@ import { connect } from "react-redux"
 import { triggerVideoFullscreen } from "../../../../state/action"
 
 const Container = styled.div`
-  max-height: 100px;
   height: 100%;
+  width: 100%;
   color: white;
   margin: auto;
+  display: grid;
   &&:hover {
     cursor: pointer;
   }

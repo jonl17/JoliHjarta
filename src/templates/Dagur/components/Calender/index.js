@@ -8,8 +8,9 @@ for (var i = 0; i < 24; i++) {
   Days[i] = i + 1
 }
 
-const Calender = ({ device }) => {
-  return (
+const Calender = ({ device, platform }) => {
+  console.log(device)
+  return platform !== `simi` ? (
     <Container>
       <Desember>Desember</Desember>
       <Grid device={device}>
@@ -18,12 +19,15 @@ const Calender = ({ device }) => {
         ))}
       </Grid>
     </Container>
+  ) : (
+    ""
   )
 }
 
 const mapStateToProps = state => ({
   selectedDay: state.reducer.selectedDay,
   device: state.reducer.device,
+  platform: state.reducer.platform,
 })
 
 export default connect(mapStateToProps)(Calender)

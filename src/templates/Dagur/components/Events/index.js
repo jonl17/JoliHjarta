@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 
 const Events = ({ events, title, platform }) => {
   return (
-    <Container>
+    <Container platform={platform}>
       <Title>Viðburðir {title}</Title>
       <EventTable platform={platform}>
         {events.map((vidburdur, index) => (
