@@ -30,8 +30,8 @@ class Video extends React.Component {
           <Player
             id="video-player"
             src={vidjo.vidjourl + "?api=1"}
-            height={videoFullscreen ? "100%" : "0%"}
             width="200"
+            height="100%"
             frameBorder="0"
             allow="fullscreen"
             allowfullscreen
