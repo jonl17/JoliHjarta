@@ -1,44 +1,72 @@
-import styled from "styled-components"
-import { sizes, margins } from "../../../../../constants"
-import Img from "gatsby-image"
+import styled, { css } from "styled-components"
+import { margins, colors, layer } from "../../../../../constants"
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-export const Title = styled.p`
-  font-size: ${sizes.paraLarge};
-  font-weight: bold;
-  text-align: center;
-  margin: ${margins.xSmall} ${margins.large} 0 ${margins.large};
-`
-export const DirectionBox = styled.div`
-  display: grid;
-  margin: auto;
-`
-export const Klukkan = styled.span`
-  font-weight: bold;
-  font-size: ${sizes.paraSmall};
-  margin: 0;
-  padding-right: 10px;
-`
-export const Hvar = styled.p`
-  width: 100%;
-  font-size: ${sizes.paraSmall};
-  margin: 0;
-  padding-bottom: 10px;
-`
-export const Image = styled(Img)`
+export const CloseSensor = styled.div`
   height: 100%;
   width: 100%;
-  max-height: 275px;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+  position: fixed;
+  z-index: ${layer.one};
+  display: ${props => props.display};
+  background: transparent;
+  top: 0;
+  left: 0;
 `
-export const Lysing = styled.p`
+
+export const PopupGluggi = styled.div`
+  position: fixed;
+  background: ${colors.blue};
+  border: 10px solid white;
   box-sizing: border-box;
-  padding: 0 ${margins.large} 0 ${margins.large};
-  font-size: ${sizes.paraSmall};
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  display: ${props => props.display};
+  grid-template-rows: .5fr 1fr auto;
+  grid-template-areas: "banner"
+                       "mynd"
+                       "lysing";
+  grid-gap: 10px;
+  z-index: ${layer.zero};
+  box-sizing: border-box;
+  padding:${margins.xSmall};
+  /** sizes need to be scaled carefully with this one */
+  top: 50%;
+  left: 50%;
+  ${props =>
+    props.platform === `stor-skjar` &&
+    css`
+      height: 750px;
+      width: 600px;
+      margin-top: -375px;
+      margin-left: -300px;
+    `}
+  ${props =>
+    props.platform === `litill-skjar` &&
+    css`
+      height: 90vh;
+      width: 600px;
+      top: 25px;
+      margin-left: -300px;
+    `}
+  ${props =>
+    props.platform === `spjaldtolva` &&
+    css`
+      height: 100%;
+      width: 500px;
+      top: 0;
+      margin-left: -250px;
+    `}
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0%;
+      grid-template-rows: 0.5fr 1fr 1fr auto;
+      grid-template-areas:
+        "banner"
+        "video"
+        "texti"
+        "footer";
+    `}
 `

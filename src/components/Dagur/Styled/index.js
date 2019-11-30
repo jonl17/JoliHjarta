@@ -27,6 +27,7 @@ export const CloseSensor = styled.div`
   display: ${props => props.display};
   background: transparent;
 `
+
 export const PopupGluggi = styled.div`
   position: fixed;
   background: ${colors.blue};
