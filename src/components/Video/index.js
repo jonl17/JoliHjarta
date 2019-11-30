@@ -12,6 +12,7 @@ class Video extends React.Component {
       video: undefined,
     }
   }
+  /*
   componentDidMount() {
     let video = document.getElementById("video-player")
     this.setState({
@@ -27,7 +28,7 @@ class Video extends React.Component {
     } else {
       this.state.video.pause()
     }
-  }
+  } */
   render() {
     const { vidjo, platform, videoFullscreen, dispatch } = this.props
     return (
@@ -38,16 +39,12 @@ class Video extends React.Component {
           click={() => dispatch(triggerVideoFullscreen())}
         ></ExitBTN>
         <Player
-          platform={platform}
-          poster={loadGIF}
-          id="video-player"
-          title={vidjo.vidjotitill}
+          src="https://player.vimeo.com/video/376542047"
+          height={videoFullscreen ? "100%" : "0%"}
           frameBorder="0"
-          playsinline
-          open={videoFullscreen ? "100%" : "0%"}
-        >
-          <Source id="video-source" src={vidjo.vidjourl}></Source>
-        </Player>
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></Player>
       </Container>
     )
   }
