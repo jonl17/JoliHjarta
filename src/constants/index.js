@@ -32,16 +32,20 @@ export const sizes = {
   eventBox: "225px",
 }
 
-const ButtonStyle = css`
+export const ButtonStyle = css`
   font-size: ${sizes.paraSmall};
   background: ${colors.blue};
   box-sizing: border-box;
-  box-shadow: 1px 1.5px 1.5px 1px lightgray;
+  border: 1px solid white;
   padding: 10px;
   display: flex;
+  transition: 0.2s;
   font-feature-settings: "pnum" on, "onum" on;
   &&:hover {
     cursor: pointer;
+    background: white;
+    color: ${colors.blue};
+    border: 1px solid ${colors.blue};
   }
   color: white;
   margin: auto;

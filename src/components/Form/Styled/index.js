@@ -1,5 +1,9 @@
 import styled from "styled-components"
-import { sizes, colors } from "../../../constants"
+import { sizes, colors, ButtonStyle } from "../../../constants"
+
+export const Submit = styled.input`
+  ${ButtonStyle};
+`
 
 export const Container = styled.div`
   height: 100%;
@@ -46,6 +50,8 @@ export const TextInput = styled.input`
     color: white;
   }
   border-color: white;
+  &&:not(:placeholder-shown) {
+  }
 `
 export const Text = styled.p`
   font-size: ${sizes.paraMed};

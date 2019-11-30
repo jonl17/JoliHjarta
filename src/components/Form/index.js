@@ -4,7 +4,7 @@ import {
   Formid,
   Label,
   Input,
-  Button,
+  Submit,
   Text,
   TextInput,
 } from "./Styled"
@@ -23,8 +23,9 @@ const Form = () => {
         <Text>
           <Label>Nafn:</Label>
         </Text>
-        <TextInput type="text" name="nafn"></TextInput>
+        <TextInput placeholder=" " required type="text" name="nafn"></TextInput>
         <Input
+          required
           type="file"
           name="efni"
           placeholder="Skrá"
@@ -32,7 +33,7 @@ const Form = () => {
         ></Input>
         <div data-netlify-recaptcha="true"></div>
         <Text>
-          <Takki text={"Senda inn"} type="submit"></Takki>
+          <Submit value="Senda inn" type="submit"></Submit>
         </Text>
       </Formid>
     </Container>
