@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { margins } from "../../../constants"
 
 export const Container = styled.div`
+  overflow: hidden;
   position: fixed;
   box-sizing: border-box;
   z-index: 20;
