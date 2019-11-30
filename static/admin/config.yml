@@ -31,8 +31,8 @@ collections:
               required: false,
             }
           - {
-              label: "Vidjo URL",
-              name: "vidjourl",
+              label: "VidjoURL",
+              name: "url",
               widget: "string",
               required: false,
             }
