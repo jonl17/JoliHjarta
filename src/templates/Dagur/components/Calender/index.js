@@ -9,7 +9,6 @@ for (var i = 0; i < 24; i++) {
 }
 
 const Calender = ({ device, platform }) => {
-  console.log(device)
   return platform !== `simi` ? (
     <Container>
       <Desember>Desember</Desember>

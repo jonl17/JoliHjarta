@@ -12,7 +12,6 @@ import {
 import Banner from "./Banner"
 
 const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
-  console.log(selectedEvent)
   return selectedEvent !== undefined ? (
     <>
       <CloseSensor
