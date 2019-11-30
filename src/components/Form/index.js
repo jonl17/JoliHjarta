@@ -15,10 +15,10 @@ const Form = () => {
     <Container>
       <Formid
         name="sendaInnEfni"
-        method="POST"
+        method="post"
+        action="/success"
         data-netlify="true"
-        action="/"
-        data-netlify-recaptcha="true"
+        data-netlify-honeypot="bot-field"
       >
         <Text>
           <Label>Nafn:</Label>
