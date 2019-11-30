@@ -6,12 +6,14 @@ import {
   triggerBurgerWindow,
   triggerDagurPopup,
   triggerEventPopup,
+  triggerCalenderWindow,
 } from "../../../../state/action"
 
 const dispatches = dispatch => {
   dispatch(triggerBurgerWindow("closed"))
   dispatch(triggerDagurPopup("closed"))
   dispatch(triggerEventPopup("closed"))
+  dispatch(triggerCalenderWindow())
 }
 
 const getHomeTitle = (dispatch, platform) => (

@@ -21,7 +21,7 @@ class Video extends React.Component {
   componentDidUpdate() {
     document
       .getElementById("video-source")
-      .setAttribute("src", this.props.vidjo.url)
+      .setAttribute("src", this.props.vidjo.vidjourl)
     if (this.props.videoFullscreen) {
       this.state.video.play()
     } else {
@@ -47,7 +47,7 @@ class Video extends React.Component {
           playsinline
           open={videoFullscreen ? "100%" : "0%"}
         >
-          <Source id="video-source" src={vidjo.url}></Source>
+          <Source id="video-source" src={vidjo.vidjourl}></Source>
         </Player>
       </Container>
     )

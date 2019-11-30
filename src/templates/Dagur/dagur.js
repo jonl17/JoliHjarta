@@ -6,26 +6,43 @@ import Burger from "../../components/Burger"
 import Title from "./components/Title"
 import EventPopup from "./components/EventPopup"
 import Calender from "./components/Calender"
+import CalenderMobile from "./components/CalenderMobile"
 import BurgerWindow from "../../components/BurgerWindow"
 import { connect } from "react-redux"
+import Takki from "../../components/Takki"
+import { triggerCalenderWindow } from "../../state/action"
 
-const Dagur = ({ data, pageContext, platform }) => {
-  console.log(platform)
-  return (
-    <Container platform={platform}>
-      <Grid platform={platform}>
-        <BurgerWindow></BurgerWindow>
-        <Burger></Burger>
-        <Title></Title>
-        <Events
-          events={data.allMarkdownRemark.edges}
-          title={pageContext.frontmatter.title}
-        ></Events>
-        <EventPopup></EventPopup>
-        <Calender></Calender>
-      </Grid>
-    </Container>
-  )
+class Dagur extends React.Component {
+  render() {
+    const { data, pageContext, platform, dispatch } = this.props
+    return (
+      <Container platform={platform}>
+        <Grid platform={platform}>
+          <BurgerWindow></BurgerWindow>
+          <Burger></Burger>
+          <Title></Title>
+          <Events
+            events={data.allMarkdownRemark.edges}
+            title={pageContext.frontmatter.title}
+          ></Events>
+          <EventPopup></EventPopup>
+          <Calender></Calender>
+        </Grid>
+        {platform === `simi` ? (
+          <>
+            <CalenderMobile></CalenderMobile>
+            <Takki
+              click={() => dispatch(triggerCalenderWindow())}
+              fixed
+              text={"Desember"}
+            ></Takki>
+          </>
+        ) : (
+          <></>
+        )}
+      </Container>
+    )
+  }
 }
 
 /* Query for the events for the day */

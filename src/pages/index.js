@@ -59,9 +59,8 @@ export const query = graphql`
             dagsetning
             vidjo {
               vidjotitill
-              url
+              vidjourl
             }
-            eventar
           }
         }
       }

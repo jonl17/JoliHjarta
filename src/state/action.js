@@ -68,3 +68,7 @@ export const TRIGGER_VIDEO_FULLSCREEN = "TRIGGER_VIDEO_FULLSCREEN"
 export const triggerVideoFullscreen = () => ({
   type: TRIGGER_VIDEO_FULLSCREEN,
 })
+export const TRIGGER_CALENDER_WINDOW = "TRIGGER_CALENDER_WINDOW"
+export const triggerCalenderWindow = () => ({
+  type: TRIGGER_CALENDER_WINDOW,
+})

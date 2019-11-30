@@ -25,11 +25,8 @@ exports.createPages = ({ graphql, actions }) => {
                     dagsetning
                     vidjo {
                       vidjotitill
-                      vidjourl {
-                        relativePath
-                      }
+                      vidjourl
                     }
-                    eventar
                   }
                 }
               }
