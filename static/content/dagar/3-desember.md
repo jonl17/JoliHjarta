@@ -5,6 +5,6 @@ vidjo:
   vidjotitill: >-
     Svona er lýsing hérna um vidjóið, Kajak & lúxus algert æði, frábært fyrir
     börnin og alla hina líka!
-  vidjourl: /myndir/kajak_iphone_.mp4
+  vidjourl: ''
 ---
 
