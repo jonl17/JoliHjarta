@@ -39,8 +39,9 @@ class Video extends React.Component {
           click={() => dispatch(triggerVideoFullscreen())}
         ></ExitBTN>
         <Player
-          src="https://player.vimeo.com/video/376542047"
+          src={vidjo.vidjourl}
           height={videoFullscreen ? "100%" : "0%"}
+          width={"100%"}
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowfullscreen

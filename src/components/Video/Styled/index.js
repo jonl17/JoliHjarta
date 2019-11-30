@@ -16,11 +16,7 @@ export const Container = styled.div`
     `}
 `
 export const Player = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
   object-fit: cover;
-  width: 100%;
   padding: 15px;
   box-sizing: border-box;
 /*
