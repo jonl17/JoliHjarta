@@ -1,5 +1,5 @@
 ---
-title: ' Jólaljósin tendruð á Oslóartrénu á Austurvelli'
+title: ' Jólaljósin tendruð á Oslóartrénu.'
 hvenaer: 12/1
 klukkan: '15:30'
 lysing: >-
