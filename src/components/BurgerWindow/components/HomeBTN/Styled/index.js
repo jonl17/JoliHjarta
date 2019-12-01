@@ -37,3 +37,10 @@ export const Text = styled(Link)`
     color: ${colors.hover};
   }
 `
+export const NavText = styled(Link)`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  margin: auto auto auto 75px;
+`

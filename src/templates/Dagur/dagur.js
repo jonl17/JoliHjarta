@@ -18,8 +18,8 @@ class Dagur extends React.Component {
     return (
       <Container platform={platform}>
         <Grid platform={platform}>
-          <BurgerWindow></BurgerWindow>
-          <Burger></Burger>
+          {/* <BurgerWindow></BurgerWindow>
+          <Burger></Burger> */}
           <Title></Title>
           <Events
             events={data.allMarkdownRemark.edges}

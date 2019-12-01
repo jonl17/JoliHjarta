@@ -20,8 +20,8 @@ export const colors = {
   gray: "#797979",
   blue: "rgba(63, 104, 196, 1)",
   boxgray: "#C4C4C4",
-  lightgray: "#F3797E;",
-  hover: "#F37A7E",
+  lightgray: "#F3797E",
+  hover: "rgba(63, 104, 196, 1)",
 }
 export const sizes = {
   line: "6px",

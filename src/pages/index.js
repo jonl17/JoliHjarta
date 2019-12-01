@@ -20,6 +20,7 @@ class index extends React.Component {
     } = this.props
     /** register all days info available */
     dispatch(getAllDaysInfo(allInfo))
+    console.log(this.props)
   }
 
   render() {

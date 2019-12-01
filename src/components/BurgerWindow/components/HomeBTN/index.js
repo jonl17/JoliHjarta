@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Text } from "./Styled"
+import { Container, Text, NavText } from "./Styled"
 import { graphql, StaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import {
@@ -16,7 +16,7 @@ const dispatches = dispatch => {
   dispatch(triggerCalenderWindow())
 }
 
-const getHomeTitle = (dispatch, platform) => (
+const getHomeTitle = (dispatch, platform, nav) => (
   <StaticQuery
     query={graphql`
       {
@@ -27,18 +27,29 @@ const getHomeTitle = (dispatch, platform) => (
         }
       }
     `}
-    render={data => (
-      <Text to={"/"} platform={platform} onClick={() => dispatches(dispatch)}>
-        {data.site.siteMetadata.nafn}
-      </Text>
-    )}
+    render={data =>
+      !nav ? (
+        <Text to={"/"} platform={platform} onClick={() => dispatches(dispatch)}>
+          {data.site.siteMetadata.nafn}
+        </Text>
+      ) : (
+        <NavText
+          to={"/"}
+          platform={platform}
+          onClick={() => dispatches(dispatch)}
+        >
+          {" "}
+          {data.site.siteMetadata.nafn}
+        </NavText>
+      )
+    }
   ></StaticQuery>
 )
 
-const HomeBTN = ({ dispatch, platform }) => {
+const HomeBTN = ({ dispatch, platform, nav }) => {
   return (
     <Container platform={platform}>
-      {getHomeTitle(dispatch, platform)}
+      {getHomeTitle(dispatch, platform, nav)}
     </Container>
   )
 }

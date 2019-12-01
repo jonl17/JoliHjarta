@@ -40,7 +40,6 @@ export const CloseSensor = styled.div`
 `
 
 export const PopupGluggi = styled.div`
-  overflow-y: scroll;
   position: fixed;
   background: ${colors.blue};
   border: 10px solid white;
@@ -82,6 +81,7 @@ export const PopupGluggi = styled.div`
       width: 500px;
       top: 0;
       margin-left: -250px;
+      overflow-y: scroll;
     `}
   ${props =>
     props.platform === `simi` &&
@@ -96,5 +96,6 @@ export const PopupGluggi = styled.div`
         "video"
         "texti"
         "footer";
+      overflow-y: scroll;
     `}
 `

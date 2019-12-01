@@ -5,8 +5,8 @@ export const Container = styled.div`
   height: 32px;
   width: 32px;
   position: fixed;
-  top: ${margins.small};
-  right: ${margins.small};
+  top: ${margins.xSmall};
+  right: ${margins.xSmall};
   z-index: ${layer.zero};
   display: ${props => props.display};
   flex-direction: column;

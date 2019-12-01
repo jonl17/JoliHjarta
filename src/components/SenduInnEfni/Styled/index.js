@@ -51,6 +51,7 @@ export const PopupGluggi = styled.div`
       width: 500px;
       top: 0;
       margin-left: -250px;
+      overflow-y: scroll;
     `}
   ${props =>
     props.platform === `simi` &&
@@ -65,5 +66,6 @@ export const PopupGluggi = styled.div`
         "video"
         "texti"
         "footer";
+      overflow-y: scroll;
     `}
 `

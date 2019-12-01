@@ -15,6 +15,13 @@ export const List = styled.ul`
       padding: 0;
     `}
   grid-area: menu;
+  ${props =>
+    props.nav &&
+    css`
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+    `}
 `
 export const Item = styled(Link)`
   text-decoration: none;
@@ -23,6 +30,14 @@ export const Item = styled(Link)`
     cursor: pointer;
     color: ${colors.hover};
   }
+  ${props =>
+    props.nav &&
+    css`
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      margin: auto;
+    `}
 `
 export const Wrap = styled.div`
   font-size: ${sizes.paraXlarge};
@@ -33,4 +48,26 @@ export const Wrap = styled.div`
     `}
   font-weight: bold;
   margin: 0;
+`
+// nav versions
+export const WrapNav = styled.div`
+  margin: 0;
+  display: grid;
+  height: 100%;
+`
+export const ItemNav = styled.a`
+  text-decoration: none;
+  color: inherit;
+  &&:hover {
+    cursor: pointer;
+    color: ${colors.hover};
+  }
+  ${props =>
+    props.nav &&
+    css`
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      margin: auto;
+    `}
 `

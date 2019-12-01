@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components"
 import { layer } from "../../../constants"
 
-export const Container = styled.div`
+export const ContainerMobile = styled.div`
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(63, 104, 196, 0.86);
+  background: #F3797E;
   z-index: ${layer.zero};
   ${props =>
     props.opacity === 0 &&
@@ -32,4 +32,22 @@ export const Container = styled.div`
         "menu"
         "submenu";
     `}
+`
+export const Container = styled.div`
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #F3797E;
+  z-index: ${layer.zero};
+  ${props =>
+    props.opacity === 0 &&
+    css`
+      z-index: -1;
+    `}
+  opacity: ${props => props.opacity};
+  transition: .3s;
+  color: white;
+  display: flex;
 `

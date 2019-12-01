@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { List, Item, Wrap } from "./Styled"
+import { List, Item, Wrap, WrapNav, ItemNav } from "./Styled"
 import { connect } from "react-redux"
 import {
   triggerBurgerWindow,
@@ -12,7 +12,7 @@ const dispatches = (dispatch, today) => {
   dispatch(selectCalenderDay(today))
 }
 
-const GetMenuItems = (dispatch, today, device) => (
+const GetMenuItems = (dispatch, today, device, nav) => (
   <StaticQuery
     query={graphql`
       {
@@ -24,24 +24,47 @@ const GetMenuItems = (dispatch, today, device) => (
       }
     `}
     render={data =>
-      data.site.siteMetadata.menuItems.map((item, index) => (
-        <Wrap key={index} device={device}>
-          <Item
-            onClick={() => dispatches(dispatch, today)}
-            to={"/" + today + "desember"}
-          >
-            {item}{" "}
-          </Item>
-        </Wrap>
-      ))
+      data.site.siteMetadata.menuItems.map((item, index) =>
+        !nav ? (
+          <Wrap key={index} device={device}>
+            <Item
+              onClick={() => dispatches(dispatch, today)}
+              to={"/" + today + "desember"}
+            >
+              {item}{" "}
+            </Item>
+          </Wrap>
+        ) : (
+          <>
+            <WrapNav key={index}>
+              <Item
+                nav
+                onClick={() => dispatches(dispatch, today)}
+                to={"/" + today + "desember"}
+              >
+                {item}{" "}
+              </Item>
+            </WrapNav>
+            <WrapNav key={index + "nav"}>
+              <ItemNav
+                nav
+                target="_blank"
+                href={"mailto:jolihjartarvk@gmail.com"}
+              >
+                jolihjartarvk@gmail.com
+              </ItemNav>
+            </WrapNav>
+          </>
+        )
+      )
     }
   ></StaticQuery>
 )
 
-const MenuItems = ({ dispatch, todaysCalenderDay, platform }) => {
+const MenuItems = ({ dispatch, todaysCalenderDay, platform, nav }) => {
   return (
-    <List platform={platform}>
-      {GetMenuItems(dispatch, todaysCalenderDay, platform)}
+    <List nav platform={platform}>
+      {GetMenuItems(dispatch, todaysCalenderDay, platform, nav)}
     </List>
   )
 }
