@@ -24,5 +24,10 @@ export const Player = styled.iframe`
   box-sizing: border-box;
   z-index: 11;
   width: 100%;
+  ${props =>
+    props.simi &&
+    css`
+      padding-top: 100px;
+    `}
 `
 export const Source = styled.source``

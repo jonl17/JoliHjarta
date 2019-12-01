@@ -19,37 +19,26 @@ class Video extends React.Component {
   }
   render() {
     const { vidjo, platform, videoFullscreen, dispatch, simi } = this.props
-    if (simi) {
-      return (
-        <>
-          <Container simi platform={platform}>
-            <ExitBTN
-              small
-              relativeToVideo
-              click={() => this.dispatches(dispatch)}
-            ></ExitBTN>
+    return (
+      <>
+        <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
+          <ExitBTN
+            small
+            relativeToVideo
+            click={() => this.dispatches(dispatch)}
+          ></ExitBTN>
+          {platform === `simi` ? (
             <Player
-              simi
               id="video-player"
               src={vidjo.vidjourl + "?api=1"}
-              height={"100%"}
+              simi
+              height={videoFullscreen ? "300px" : "0%"}
               width="100%"
               frameBorder="0"
               allow="fullscreen"
               allowfullscreen
             ></Player>
-          </Container>
-        </>
-      )
-    } else {
-      return (
-        <>
-          <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
-            <ExitBTN
-              small
-              relativeToVideo
-              click={() => this.dispatches(dispatch)}
-            ></ExitBTN>
+          ) : (
             <Player
               id="video-player"
               src={vidjo.vidjourl + "?api=1"}
@@ -59,10 +48,10 @@ class Video extends React.Component {
               allow="fullscreen"
               allowfullscreen
             ></Player>
-          </Container>
-        </>
-      )
-    }
+          )}
+        </Container>
+      </>
+    )
   }
 }
 
