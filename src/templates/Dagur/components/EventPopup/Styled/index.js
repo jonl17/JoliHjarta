@@ -5,15 +5,16 @@ import Img from "gatsby-image"
 export const Texti = styled.p`
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: ${sizes.paraSmall};
+  font-size: 15px;
   margin-left: ${margins.large};
   margin-right: ${margins.large};
   margin-top: 0;
   ${props =>
     props.platform === `simi` &&
     css`
-      margin-left: ${margins.xSmall};
-      margin-right: ${margins.xSmall};
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
     `}
 `
 
