@@ -8,6 +8,7 @@ import HoppSVG from "../../../../../../static/myndir/svgs/hopp.svg"
 import MusSVG from "../../../../../../static/myndir/svgs/mus.svg"
 import HjolSVG from "../../../../../../static/myndir/svgs/hjol.svg"
 import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-layer.svg"
+import { layer } from "../../../../../constants"
 
 const SVGstyle = css`
   height: 100%;
@@ -45,5 +46,5 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
 export const GluggaHlutir = styled(SVG)`
   ${SVGstyle};
   /* pointer-events: none; */
-  z-index: 40;
+  z-index: ${layer.hus};
 `
