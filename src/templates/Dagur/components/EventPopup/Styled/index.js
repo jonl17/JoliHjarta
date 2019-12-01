@@ -4,6 +4,14 @@ import Img from "gatsby-image"
 
 export const Texti = styled.p`
   font-size: ${sizes.paraSmall};
+  margin-left: ${margins.large};
+  margin-right: ${margins.large};
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      margin-left: ${margins.xSmall};
+      margin-right: ${margins.xSmall};
+    `}
 `
 
 export const ImageContainer = styled.div`

@@ -37,7 +37,7 @@ const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
         <ImageContainer platform={platform}>
           <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
         </ImageContainer>
-        <Texti>{selectedEvent.lysing}</Texti>
+        <Texti platform={platform}>{selectedEvent.lysing}</Texti>
       </PopupGluggi>
     </>
   ) : (
