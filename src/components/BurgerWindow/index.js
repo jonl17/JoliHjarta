@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, ContainerMobile } from "./Styled"
+import { Container, ContainerMobile, ClickZone } from "./Styled"
 import ExitBTN from "../ExitBTN"
 import MenuItems from "./components/MenuItems"
 import HomeBTN from "./components/HomeBTN"
@@ -26,14 +26,23 @@ const Burgerwindow = ({ burgerWindow, dispatch, platform }) => {
   } else {
     return (
       // it's a navbar!
-      <Container platform={platform} opacity={burgerWindow === "open" ? 1 : 0}>
-        <ExitBTN
-          tight
-          click={() => dispatch(triggerBurgerWindow("closed"))}
-        ></ExitBTN>
-        <HomeBTN nav></HomeBTN>
-        <MenuItems nav></MenuItems>
-      </Container>
+      <>
+        <ClickZone
+          display={burgerWindow === "open" ? "block" : "none"}
+          onClick={() => dispatch(triggerBurgerWindow("closed"))}
+        ></ClickZone>
+        <Container
+          platform={platform}
+          opacity={burgerWindow === "open" ? 1 : 0}
+        >
+          <ExitBTN
+            tight
+            click={() => dispatch(triggerBurgerWindow("closed"))}
+          ></ExitBTN>
+          <HomeBTN nav></HomeBTN>
+          <MenuItems nav></MenuItems>
+        </Container>
+      </>
     )
   }
 }

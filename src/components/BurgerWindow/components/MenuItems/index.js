@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { List, Item, Wrap, WrapNav, ItemNav } from "./Styled"
+import { List, Item, Wrap, ItemNav } from "./Styled"
 import { connect } from "react-redux"
 import {
   triggerBurgerWindow,
@@ -12,7 +12,7 @@ const dispatches = (dispatch, today) => {
   dispatch(selectCalenderDay(today))
 }
 
-const GetMenuItems = (dispatch, today, device, nav) => (
+const GetMenuItems = (dispatch, today, platform, nav) => (
   <StaticQuery
     query={graphql`
       {
@@ -26,35 +26,33 @@ const GetMenuItems = (dispatch, today, device, nav) => (
     render={data =>
       data.site.siteMetadata.menuItems.map((item, index) =>
         !nav ? (
-          <Wrap key={index} device={device}>
-            <Item
-              onClick={() => dispatches(dispatch, today)}
-              to={"/" + today + "desember"}
-            >
-              {item}{" "}
-            </Item>
-          </Wrap>
-        ) : (
-          <>
-            <WrapNav key={index}>
+          <List key={index} nav={"true"} platform={platform}>
+            <Wrap>
               <Item
-                nav
                 onClick={() => dispatches(dispatch, today)}
                 to={"/" + today + "desember"}
               >
-                {item}{" "}
+                {item}
               </Item>
-            </WrapNav>
-            <WrapNav key={index + "nav"}>
-              <ItemNav
-                nav
-                target="_blank"
-                href={"mailto:jolihjartarvk@gmail.com"}
-              >
-                jolihjartarvk@gmail.com
-              </ItemNav>
-            </WrapNav>
-          </>
+            </Wrap>
+          </List>
+        ) : (
+          <List key={index + "nav"} nav={"true"} platform={platform}>
+            <Item
+              nav={"true"}
+              onClick={() => dispatches(dispatch, today)}
+              to={"/" + today + "desember"}
+            >
+              {item}
+            </Item>
+            <ItemNav
+              nav={"true"}
+              target="_blank"
+              href={"mailto:jolihjartarvk@gmail.com"}
+            >
+              jolihjartarvk@gmail.com
+            </ItemNav>
+          </List>
         )
       )
     }
@@ -62,11 +60,7 @@ const GetMenuItems = (dispatch, today, device, nav) => (
 )
 
 const MenuItems = ({ dispatch, todaysCalenderDay, platform, nav }) => {
-  return (
-    <List nav platform={platform}>
-      {GetMenuItems(dispatch, todaysCalenderDay, platform, nav)}
-    </List>
-  )
+  return GetMenuItems(dispatch, todaysCalenderDay, platform, nav)
 }
 
 const mapStateToProps = state => ({

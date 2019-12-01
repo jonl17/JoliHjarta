@@ -43,4 +43,7 @@ export const NavText = styled(Link)`
   color: white;
   text-decoration: none;
   margin: auto auto auto 75px;
+  &&:hover {
+    color: ${colors.hover};
+  }
 `

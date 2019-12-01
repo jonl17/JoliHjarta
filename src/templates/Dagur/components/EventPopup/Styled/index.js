@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { margins, colors, layer, sizes } from "../../../../../constants"
+import { margins, colors, layer } from "../../../../../constants"
 import Img from "gatsby-image"
 
 export const Texti = styled.p`

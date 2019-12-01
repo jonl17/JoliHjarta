@@ -1,6 +1,15 @@
 import styled, { css } from "styled-components"
 import { layer } from "../../../constants"
 
+export const ClickZone = styled.div`
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: fixed;
+  z-index: ${layer.one};
+  display: ${props => props.display};
+`
+
 export const ContainerMobile = styled.div`
   height: 100vh;
   width: 100%;
@@ -40,7 +49,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   background: #F3797E;
-  z-index: ${layer.zero};
+  z-index: 20;
   ${props =>
     props.opacity === 0 &&
     css`

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { LinkButton, Button, sizes } from "../../../constants"
+import { LinkButton, Button } from "../../../constants"
 
 export const Container = styled.div`
   box-sizing: border-box;

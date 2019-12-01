@@ -18,7 +18,7 @@ class Video extends React.Component {
     player.pause()
   }
   render() {
-    const { vidjo, platform, videoFullscreen, dispatch, simi } = this.props
+    const { vidjo, platform, videoFullscreen, dispatch } = this.props
     return (
       <>
         <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
