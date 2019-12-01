@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Player, Source } from "./Styled"
+import { Container, Player } from "./Styled"
 import { connect } from "react-redux"
 import { triggerVideoFullscreen } from "../../state/action"
 import ExitBTN from "../ExitBTN"

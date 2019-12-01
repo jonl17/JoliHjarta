@@ -76,6 +76,7 @@
 	.gluggastoffogtolur70{fill:none;stroke:#3F68C4;stroke-width:7.8156;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g id="Layer_1">
+<g id="10des" class="dot">
 	<g>
 		<defs>
 			<rect id="SVGID_1_" x="1490.9" y="578.3" width="84.2" height="91.6"/>
@@ -109,9 +110,10 @@
 				c0.2,0.3,0.6,0.3,0.8,0L1514.9,639.7z"/>
 		</g>
 	</g>
-	<g>
+	<g  >
 		<path class="gluggastoffogtolur3" d="M1571.1,582.3v83.6h-76.2v-83.6H1571.1 M1575.1,578.3h-84.2v91.6h84.2V578.3L1575.1,578.3z"/>
 	</g>
+</g>
 	<g>
 		<rect x="149.5" y="578.3" class="gluggastoffogtolur1" width="84.2" height="91.6"/>
 	</g>

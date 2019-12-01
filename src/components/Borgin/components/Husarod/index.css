@@ -3,6 +3,7 @@
 }
 .gluggi {
   fill: #3f68c4;
+  pointer-events: none;
 }
 .tala {
   fill: white;
@@ -12,4 +13,8 @@
 }
 .tolur:hover {
   cursor: pointer;
+}
+
+#dagur1 {
+  pointer-events: all;
 }

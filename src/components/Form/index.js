@@ -1,5 +1,4 @@
 import React from "react"
-import { Container } from "./Styled"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -20,16 +19,9 @@ const Iframe = styled.iframe`
 const Form = () => {
   return (
     <Wrapper>
-      <Iframe
-        style={{ height: "100%", width: "100%" }}
-        src="https://script.google.com/macros/s/AKfycbxFop40dXC6gF7tKAoF1s2OXTlr1dJkddRUPuamRUtcpPyPilIa/exec"
-      ></Iframe>
+      <Iframe src="https://script.google.com/macros/s/AKfycbxFop40dXC6gF7tKAoF1s2OXTlr1dJkddRUPuamRUtcpPyPilIa/exec"></Iframe>
     </Wrapper>
   )
 }
 
 export default Form
-
-{
-  /* <style>.iframe{}</style> */
-}

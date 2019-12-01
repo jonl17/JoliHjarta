@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import SVG from "../../../../../../static/myndir/svgs/gluggastuffOgTolur.svg"
+import SVG from "../../../../../../static/myndir/svgs/gluggar-nytt.svg"
 
 // Gatan
 import StekkjastaurSVG from "../../../../../../static/myndir/svgs/stekkjastaur.svg"
@@ -44,6 +44,6 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
 // Glugga hlutir
 export const GluggaHlutir = styled(SVG)`
   ${SVGstyle};
-  pointer-events: none;
-  z-index: 2;
+  /* pointer-events: none; */
+  z-index: 40;
 `

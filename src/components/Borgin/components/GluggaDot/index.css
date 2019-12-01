@@ -38,3 +38,10 @@
 .look-left {
   animation: look-left-animate 8s ease 2s infinite;
 }
+
+.des {
+  display: none;
+}
+#desember1 {
+  display: block;
+}
