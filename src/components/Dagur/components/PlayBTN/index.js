@@ -6,8 +6,9 @@ import { connect } from "react-redux"
 import { triggerVideoFullscreen } from "../../../../state/action"
 
 const Container = styled.div`
-  height: 100%;
+  object-fit: cover;
   width: 100%;
+  height: 250px;
   color: white;
   margin: auto;
   display: grid;

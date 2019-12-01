@@ -56,6 +56,7 @@ export const PopupGluggi = styled.div`
   ${props =>
     props.platform === `simi` &&
     css`
+      position: absolute;
       height: 100%;
       width: 100%;
       top: 0;
