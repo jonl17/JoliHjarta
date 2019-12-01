@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { margins, sizes } from "../../../../../../constants"
 
 export const Container = styled.div``
@@ -21,4 +21,9 @@ export const Title = styled.p`
   font-weight: bold;
   text-align: center;
   margin: ${margins.xSmall} ${margins.large} 0 ${margins.large};
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      margin: ${margins.small} ${margins.xSmall} 0 ${margins.xSmall};
+    `}
 `
