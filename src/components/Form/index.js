@@ -1,27 +1,17 @@
 import React from "react"
-import styled from "styled-components"
+import { Wrapper, Iframe } from "./Styled"
+import { connect } from "react-redux"
 
-const Wrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-`
-const Iframe = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-`
-
-const Form = () => {
+const Form = ({ platform }) => {
   return (
-    <Wrapper>
+    <Wrapper platform={platform}>
       <Iframe src="https://script.google.com/macros/s/AKfycbxFop40dXC6gF7tKAoF1s2OXTlr1dJkddRUPuamRUtcpPyPilIa/exec"></Iframe>
     </Wrapper>
   )
 }
 
-export default Form
+const mapStateToProps = state => ({
+  platform: state.reducer.platform,
+})
+
+export default connect(mapStateToProps)(Form)
