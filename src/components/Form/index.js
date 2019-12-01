@@ -1,41 +1,35 @@
 import React from "react"
-import {
-  Container,
-  Formid,
-  Label,
-  Input,
-  Submit,
-  Text,
-  TextInput,
-} from "./Styled"
+import { Container } from "./Styled"
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+`
+const Iframe = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+`
 
 const Form = () => {
   return (
-    <Container>
-      <Formid
-        name="nyttefni"
-        method="post"
-        action="/success"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <Text>
-          <Label>Nafn:</Label>
-        </Text>
-        <TextInput placeholder=" " required type="text" name="nafn"></TextInput>
-        <Input
-          required
-          type="file"
-          name="efni"
-          placeholder="Skrá"
-          accept="image/png, image/jpeg, video/mp4"
-        ></Input>
-        <Text>
-          <Submit name="submit" value="Senda inn" type="submit"></Submit>
-        </Text>
-      </Formid>
-    </Container>
+    <Wrapper>
+      <Iframe
+        style={{ height: "100%", width: "100%" }}
+        src="https://script.google.com/macros/s/AKfycbxFop40dXC6gF7tKAoF1s2OXTlr1dJkddRUPuamRUtcpPyPilIa/exec"
+      ></Iframe>
+    </Wrapper>
   )
 }
 
 export default Form
+
+{
+  /* <style>.iframe{}</style> */
+}

@@ -34,10 +34,7 @@ const Senduinnefni = ({
         }
         platform={platform}
       >
-        <ExitBTN
-          tight
-          click={() => dispatch(triggerSenduInnEfni("closed"))}
-        ></ExitBTN>
+        <ExitBTN tight click={() => dispatches(dispatch)}></ExitBTN>
         <Form></Form>
       </PopupGluggi>
     </>

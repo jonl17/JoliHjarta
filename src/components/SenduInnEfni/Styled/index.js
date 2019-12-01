@@ -25,7 +25,6 @@ export const PopupGluggi = styled.div`
   grid-gap: 10px;
   z-index: ${layer.zero};
   box-sizing: border-box;
-  padding:${margins.xSmall};
   /** sizes need to be scaled carefully with this one */
   top: 50%;
   left: 50%;
