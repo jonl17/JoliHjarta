@@ -16,7 +16,7 @@ const SEO = () => (
       />
     )}
     {"Jól í hjarta" && <meta name="keywords" content={"Jól í hjarta"} />}
-    <link sizes="16x16" href={Favicon} rel="icon" type="image/png"></link>
+    <link sizes="32x32" href={Favicon} rel="icon" type="image/png"></link>
   </Helmet>
 )
 

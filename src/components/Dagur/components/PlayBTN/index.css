@@ -4,5 +4,5 @@
   box-sizing: border-box;
   padding: 50px;
   margin: auto;
-  background: white;
+  position: absolute;
 }
