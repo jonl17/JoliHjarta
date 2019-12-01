@@ -30,5 +30,5 @@ export const Desember = styled.p`
   text-align: center;
   font-size: ${sizes.paraMed};
   padding-bottom: ${margins.xSmall};
-  font-style: italic;
+  font-family: "Montserrat", sans-serif;
 `

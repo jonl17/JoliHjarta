@@ -43,14 +43,7 @@ const getVerkefni = (dags, counter = 0, dispatch) => (
 )
 
 const VerkefniDagsins = ({ platform, dagsetning, dispatch }) => {
-  return platform === `simi` ? (
-    <Takki
-      click={() => dispatch(triggerSenduInnEfni("open"))}
-      text="Senda inn efni"
-    ></Takki>
-  ) : (
-    getVerkefni(dagsetning, 0, dispatch)
-  )
+  return getVerkefni(dagsetning, 0, dispatch)
 }
 
 const mapStateToProps = state => ({
