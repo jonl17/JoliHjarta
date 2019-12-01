@@ -1,12 +1,10 @@
 ---
 title: Verkefni dagsins
 lysing: >-
-  Þið ætlið að senda okkur allskonar jólaskemmtilegt til að gera í miðborginni í
-  December.
+  Sendu inn jólalegar hugmyndir að því sem Stella, Stebbi og Valdis geta gert í
+  miðborg Reykjavíkur í desember. 
 
-  Það má sko heldur betur vera eitthvað fyndið og sniðugt og við erum æst í að
-  þið sendið á okkur áskoranir til að leysa eins og t.d. að fara á handahlaupum
-  niður Laugarveginn hahaah.
+  Mundu að skrifa nafnið þitt <3
 dagsetning: 12/1
 ---
 
