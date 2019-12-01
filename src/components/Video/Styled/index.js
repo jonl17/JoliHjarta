@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Container = styled.div`
   overflow: hidden;
@@ -12,6 +12,11 @@ export const Container = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
+  ${props =>
+    props.simi &&
+    css`
+      position: relative;
+    `}
 `
 export const Player = styled.iframe`
   object-fit: contain;

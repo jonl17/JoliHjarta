@@ -18,27 +18,51 @@ class Video extends React.Component {
     player.pause()
   }
   render() {
-    const { vidjo, platform, videoFullscreen, dispatch } = this.props
-    return (
-      <>
-        <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
-          <ExitBTN
-            small
-            relativeToVideo
-            click={() => this.dispatches(dispatch)}
-          ></ExitBTN>
-          <Player
-            id="video-player"
-            src={vidjo.vidjourl + "?api=1"}
-            height={videoFullscreen ? "100%" : "0%"}
-            width="100%"
-            frameBorder="0"
-            allow="fullscreen"
-            allowfullscreen
-          ></Player>
-        </Container>
-      </>
-    )
+    const { vidjo, platform, videoFullscreen, dispatch, simi } = this.props
+    if (simi) {
+      return (
+        <>
+          <Container simi platform={platform}>
+            <ExitBTN
+              small
+              relativeToVideo
+              click={() => this.dispatches(dispatch)}
+            ></ExitBTN>
+            <Player
+              simi
+              id="video-player"
+              src={vidjo.vidjourl + "?api=1"}
+              height={"100%"}
+              width="100%"
+              frameBorder="0"
+              allow="fullscreen"
+              allowfullscreen
+            ></Player>
+          </Container>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
+            <ExitBTN
+              small
+              relativeToVideo
+              click={() => this.dispatches(dispatch)}
+            ></ExitBTN>
+            <Player
+              id="video-player"
+              src={vidjo.vidjourl + "?api=1"}
+              height={videoFullscreen ? "100%" : "0%"}
+              width="100%"
+              frameBorder="0"
+              allow="fullscreen"
+              allowfullscreen
+            ></Player>
+          </Container>
+        </>
+      )
+    }
   }
 }
 

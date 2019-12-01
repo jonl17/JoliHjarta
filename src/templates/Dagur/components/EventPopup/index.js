@@ -31,7 +31,7 @@ const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
       >
         <ExitBTN click={() => dispatch(triggerEventPopup("closed"))}></ExitBTN>
         <Banner event={selectedEvent}></Banner>
-        <ImageContainer>
+        <ImageContainer platform={platform}>
           <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
         </ImageContainer>
         <Texti>{selectedEvent.lysing}</Texti>

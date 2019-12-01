@@ -3,12 +3,13 @@ import { colors, sizes, margins } from "../../../constants"
 
 export const Container = styled.div`
   box-sizing: border-box;
-  border: ${sizes.line} solid ${colors.darkgray};
+  border: ${sizes.line} solid white;
   background: ${colors.lightgray};
   display: inline-block;
   height: 100%;
   width: 100%;
   padding: ${margins.large} ${margins.large} 0 180px;
+  color: white;
   ${props =>
     props.platform === `spjaldtolva` &&
     css`

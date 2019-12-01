@@ -10,6 +10,12 @@ export const ImageContainer = styled.div`
   height: 250px;
   width: 250px;
   margin: auto;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      height: 200px;
+      width: 200px;
+    `}
 `
 export const Image = styled(Img)`
   height: 100%;

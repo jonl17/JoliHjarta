@@ -35,10 +35,12 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           click={() => dispatch(triggerDagurPopup("closed"))}
         ></ExitBTN>
         <Banner day={selectedDay}></Banner>
-        {selectedDay.vidjo !== null && selectedDay.vidjo.vidjourl !== "" ? (
+        {selectedDay.vidjo !== null &&
+        selectedDay.vidjo.vidjourl !== "" &&
+        platform !== `simi` ? (
           <PlayBTN></PlayBTN>
         ) : (
-          <></>
+          <Video simi vidjo={selectedDay.vidjo}></Video>
         )}
         {selectedDay.vidjo !== null && platform === "simi" ? (
           <VideoTitle>{selectedDay.vidjo.vidjotitill}</VideoTitle>
@@ -54,7 +56,9 @@ const Dagur = ({ dagurPopup, selectedDay, dispatch, platform }) => {
           ></VerkefniDagsins>
         </Footer>
       </PopupGluggi>
-      {selectedDay.vidjo !== null && dagurPopup === "open" ? (
+      {selectedDay.vidjo !== null &&
+      dagurPopup === "open" &&
+      platform !== `simi` ? (
         selectedDay.vidjo.vidjorul !== "" ? (
           <Video vidjo={selectedDay.vidjo}></Video>
         ) : (

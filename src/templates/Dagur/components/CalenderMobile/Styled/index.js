@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { margins, sizes } from "../../../../../constants"
+import { margins, sizes, colors } from "../../../../../constants"
 
 export const ExtraContainer = styled.div`
   position: fixed;
@@ -7,7 +7,7 @@ export const ExtraContainer = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  background: lightgray;
+  background: ${colors.lightgray};
 `
 export const Container = styled.div`
   display: grid;
