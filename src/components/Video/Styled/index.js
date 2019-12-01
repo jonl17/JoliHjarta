@@ -27,7 +27,13 @@ export const Player = styled.iframe`
   ${props =>
     props.simi &&
     css`
-      padding-top: 100px;
+      display: none;
+      ${props =>
+        props.open === `yes` &&
+        css`
+          padding-top: 100px;
+          display: block;
+        `}
     `}
 `
 export const Source = styled.source``

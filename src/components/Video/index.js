@@ -37,6 +37,7 @@ class Video extends React.Component {
               frameBorder="0"
               allow="fullscreen"
               allowfullscreen
+              open={videoFullscreen ? "yes" : "no"}
             ></Player>
           ) : (
             <Player
