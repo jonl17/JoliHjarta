@@ -40,6 +40,7 @@ export const CloseSensor = styled.div`
 `
 
 export const PopupGluggi = styled.div`
+  overflow-y: scroll;
   position: fixed;
   background: ${colors.blue};
   border: 10px solid white;
