@@ -26,7 +26,7 @@ export const Title = styled.p`
   font-family: "Montserrat", sans-serif;
   margin: 0;
   font-size: ${sizes.paraSmall};
-  font-weight: 900;
+  font-weight: 800;
 `
 export const Klukkan = styled.p`
   font-family: "Montserrat", sans-serif;

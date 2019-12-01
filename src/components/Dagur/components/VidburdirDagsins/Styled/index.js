@@ -15,7 +15,7 @@ export const Title = styled.p`
   color: ${colors.blue};
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
 `
 export const EventBox = styled.div`
   display: flex;

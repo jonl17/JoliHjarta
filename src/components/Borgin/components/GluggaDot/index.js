@@ -28,6 +28,14 @@ class GluggaDot extends React.Component {
     })
     let storiContainer = document.getElementById("large-container")
     storiContainer.addEventListener("scroll", e => this.callBack(e))
+
+    /* OPEN SESAME WINDOWS BABEY */
+    let gluggar = document.getElementsByClassName("des")
+    let d = new Date()
+    for (var i = 0; i < gluggar.length; i++) {
+      if (parseInt(gluggar[i].id.replace("desember", "")) <= d.getDate())
+        gluggar[i].classList.add("opinn-gluggi")
+    }
   }
   callBack(e) {
     if (e.target.scrollLeft > 1200) {

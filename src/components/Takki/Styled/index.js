@@ -19,7 +19,7 @@ export const Text = styled.p`
   width: 100%;
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
 `
 export const LinkBTN = styled(LinkButton)``
 export const BTN = styled(Button)``

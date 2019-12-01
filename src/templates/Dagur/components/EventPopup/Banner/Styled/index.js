@@ -12,12 +12,12 @@ export const Directions = styled.p`
 export const Klukkan = styled.span`
   padding-right: 5px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
 `
 export const Hvar = styled.span`
   padding-left: 5px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
 `
 
 export const Title = styled.p`
