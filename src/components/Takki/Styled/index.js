@@ -18,7 +18,8 @@ export const Text = styled.p`
   text-align: center;
   width: 100%;
   margin: 0;
-  font-size: ${sizes.paraSmall};
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 `
 export const LinkBTN = styled(LinkButton)``
 export const BTN = styled(Button)``

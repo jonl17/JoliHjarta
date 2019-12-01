@@ -7,6 +7,7 @@
 module.exports = {
   siteMetadata: {
     nafn: `Jól í hjarta`,
+    about: `Jóladagatal í miðborg Reykjavík.`,
     menuItems: [`Viðburðir`],
     subMenuItems: [`jolihjartarvk@gmail.com`],
   },

@@ -7,13 +7,17 @@ export const Directions = styled.p`
   margin: auto;
   text-align: center;
   font-size: ${sizes.paraSmall};
+  padding-top: 10px;
 `
 export const Klukkan = styled.span`
   padding-right: 5px;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 `
 export const Hvar = styled.span`
   padding-left: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 `
 
 export const Title = styled.p`

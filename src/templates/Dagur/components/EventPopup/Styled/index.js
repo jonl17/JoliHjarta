@@ -3,9 +3,12 @@ import { margins, colors, layer, sizes } from "../../../../../constants"
 import Img from "gatsby-image"
 
 export const Texti = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   font-size: ${sizes.paraSmall};
   margin-left: ${margins.large};
   margin-right: ${margins.large};
+  margin-top: 0;
   ${props =>
     props.platform === `simi` &&
     css`
@@ -17,13 +20,7 @@ export const Texti = styled.p`
 export const ImageContainer = styled.div`
   height: 250px;
   width: 250px;
-  margin: auto;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      height: 200px;
-      width: 200px;
-    `}
+  margin: 10px auto 10px auto;
 `
 export const Image = styled(Img)`
   height: 100%;

@@ -17,6 +17,7 @@ export const Footer = styled.div`
     `}
   grid-gap: 10px;
   grid-area: footer;
+  padding-bottom: 5px;
 `
 
 export const CloseSensor = styled.div`
@@ -36,14 +37,14 @@ export const PopupGluggi = styled.div`
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
   color: white;
   display: ${props => props.display};
-  grid-template-rows: .5fr 1fr auto;
+  grid-template-rows: .1fr 1fr auto;
   grid-template-areas: "banner"
                        "video"
                        "footer";
   grid-gap: 10px;
   z-index: ${layer.zero};
   box-sizing: border-box;
-  padding:${margins.xSmall};
+  padding: 0 ${margins.xSmall};
   /** sizes need to be scaled carefully with this one */
   top: 50%;
   left: 50%;

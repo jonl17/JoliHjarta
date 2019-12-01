@@ -7,14 +7,18 @@ export const Box = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 `
 export const Title = styled.p`
   font-size: ${sizes.paraSmall};
   color: ${colors.blue};
   margin: 0;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 `
 export const Texti = styled.p`
+  font-size: 14px;
   color: ${colors.blue};
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 `

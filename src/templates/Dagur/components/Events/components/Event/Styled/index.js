@@ -23,13 +23,18 @@ export const InfoContainer = styled.div`
   padding: 10px 0 10px 0;
 `
 export const Title = styled.p`
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   font-size: ${sizes.paraSmall};
+  font-weight: 900;
 `
 export const Klukkan = styled.p`
+  font-family: "Montserrat", sans-serif;
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
 `
 export const Hvar = styled.div`
+  font-family: "Montserrat", sans-serif;
   margin: 0;
+  font-weight: 600;
 `
