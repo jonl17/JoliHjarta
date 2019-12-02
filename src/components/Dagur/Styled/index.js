@@ -92,7 +92,7 @@ overflow-y: scroll;
 export const VideoTitle = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: ${sizes.paraSmall};
-  font-weight: 800;
+  font-weight: bold;
   color: white;
   box-sizing: border-box;
   padding: 10px 0 10px 0;
