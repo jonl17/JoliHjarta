@@ -8,7 +8,6 @@ import {
   triggerDagurPopup,
   selectCalenderDay,
 } from "../../../../state/action"
-import { birdState } from "../../../../state/animationAction"
 import { findDayWithID } from "../../../../methods"
 
 class Husarod extends React.Component {
@@ -53,9 +52,6 @@ class Husarod extends React.Component {
     this.dispatchDay(e.srcElement.id).then(() =>
       this.props.dispatch(triggerDagurPopup("open"))
     )
-    if (e.srcElement.id === "dagur17") {
-      this.props.dispatch(birdState("fly"))
-    }
   }
   render() {
     return <Husin id="husin-god"></Husin>

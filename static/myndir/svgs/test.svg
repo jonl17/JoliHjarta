@@ -3,16 +3,17 @@
 <svg version="1.1" id="husarod" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 3908.2 1080" style="enable-background:new 0 0 3908.2 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#D9797D;}
+	.st0{fill:#F37A7E;}
 	.st1{fill:#FFBEBE;}
-	.st2{fill:#8EBDB9;}
-	.st3{fill:#4687AA;}
-	.st4{fill:#FAC35A;}
+	.st2{fill:#76BDB9;} 
+	.st3{fill:#0087ac;}
+	.st4{fill:#ffc351;}
 	.st5{fill:#3F68C4;}
 	.st6{fill:none;}
-	.st7{enable-background:new    ;}
 	.st8{fill:#FFFFFF;}
-	.st9{fill:none;stroke-miterlimit:10;}
+	.st9{fill:none;}
+	
+
 </style>
 <polygon class="st0" points="0,528.4 0,426.3 36.6,426.5 50.2,528.4 "/>
 <rect y="528.4" class="st1" width="50.1" height="369.4"/>
