@@ -81,17 +81,23 @@ overflow-y: scroll;
       width: 100%;
       top: 0;
       left: 0%;
-      grid-template-rows: 0.5fr 1fr 1fr auto;
-      grid-template-areas:
-        "banner"
-        "video"
-        "texti"
-        "footer";
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     `}
 `
 export const VideoTitle = styled.p`
+  font-family: "Montserrat", sans-serif;
   font-size: ${sizes.paraSmall};
+  font-weight: 800;
   color: white;
   box-sizing: border-box;
   padding: 10px 0 10px 0;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      grid-area: texti;
+      margin: 0;
+      padding: 0;
+    `}
 `

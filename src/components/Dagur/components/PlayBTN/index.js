@@ -16,6 +16,7 @@ const Container = styled.div`
   margin: auto;
   display: grid;
   background: white;
+  grid-area: video;
   &&:hover {
     cursor: pointer;
   }
