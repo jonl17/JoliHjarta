@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
-#dagur1 {
+.clickableGluggi {
+  pointer-events: all;
+}
+#dagur1,
+#dagur2 {
   pointer-events: all;
 }

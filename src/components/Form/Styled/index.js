@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { sizes, colors, ButtonStyle } from "../../../constants"
 
 export const Wrapper = styled.div`
   position: relative;
