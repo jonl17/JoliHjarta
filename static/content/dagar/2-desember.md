@@ -1,8 +1,8 @@
 ---
-title: 2. desember
+title: Jólaævintýri Þorra og Þuru
 dagsetning: 12/2
 vidjo:
-  vidjotitill: 2. desember
+  vidjotitill: Jólaævintýri Þorra og Þuru
   vidjourl: 'https://player.vimeo.com/video/376780129'
 ---
 
