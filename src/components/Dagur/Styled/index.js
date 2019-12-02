@@ -81,9 +81,12 @@ overflow-y: scroll;
       width: 100%;
       top: 0;
       left: 0%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+        "banner"
+        "texti"
+        "video"
+        "footer";
     `}
 `
 export const VideoTitle = styled.p`
