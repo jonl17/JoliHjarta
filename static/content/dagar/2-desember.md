@@ -1,5 +1,5 @@
 ---
-title: Jólaævintýri Þorra og Þuru
+title: 2. desember
 dagsetning: 12/2
 vidjo:
   vidjotitill: Jólaævintýri Þorra og Þuru
