@@ -4,7 +4,6 @@ import ExitBTN from "../components/ExitBTN"
 
 const Wrap = styled.div`
   position: relative;
-  overflow: hidden;
   width: 100%;
   min-height: 100vh;
 `
