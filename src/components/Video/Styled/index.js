@@ -31,8 +31,6 @@ export const Player = styled.iframe`
       ${props =>
         props.open === `yes` &&
         css`
-          padding-top: 100px;
-          margin-top: 50px;
           display: block;
         `}
     `}

@@ -4,19 +4,17 @@ import ExitBTN from "../components/ExitBTN"
 
 const Wrap = styled.div`
   position: relative;
-  overflow: hidden;
   width: 100%;
-  min-height: 100vh;
+  margin: 0;
 `
 
 const Iframe = styled.iframe`
+  width: 100%;
+  height: 100vh;
+  border: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  /* -webkit-overflow-scrolling: touch; */
 `
 
 const SenduInnEfni = () => {
