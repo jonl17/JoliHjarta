@@ -17,7 +17,7 @@ export const Container = styled.div`
   justify-content: center;
   margin: ${margins.small};
   ${props =>
-    props.tight &&
+    props.tight === "true" &&
     css`
       margin: 15px;
     `}
@@ -64,7 +64,7 @@ export const LinkContainer = styled(Link)`
   justify-content: center;
   margin: ${margins.small};
   ${props =>
-    props.tight &&
+    props.tight === "true" &&
     css`
       margin: 15px;
     `}
