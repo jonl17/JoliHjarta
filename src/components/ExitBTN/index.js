@@ -1,35 +1,31 @@
 import React from "react"
-import { Container, Line } from "./Styled"
+import { Container, Line, LinkContainer } from "./Styled"
 import { connect } from "react-redux"
 
 const ExitBTN = ({
   click,
   tight,
-  small,
   relativeToVideo,
   videoFullscreen,
   platform,
+  type,
+  slug,
 }) => {
-  return (
+  return type !== "link" ? (
     <Container
-      relativeToVideo={relativeToVideo}
-      videoFullscreen={videoFullscreen}
-      tight={tight}
+      relativetovideo={relativeToVideo}
+      videofullscreen={videoFullscreen}
+      tight={tight ? "true" : "false"}
       onClick={() => click()}
-      small
     >
-      <Line
-        small={small}
-        platform={platform}
-        relativeToVideo={relativeToVideo}
-      ></Line>
-      <Line
-        small={small}
-        platform={platform}
-        relativeToVideo={relativeToVideo}
-        second
-      ></Line>
+      <Line platform={platform} relativetovideo={relativeToVideo}></Line>
+      <Line platform={platform} relativetovideo={relativeToVideo} second></Line>
     </Container>
+  ) : (
+    <LinkContainer tight={tight ? "true" : "false"} to={slug}>
+      <Line platform={platform}></Line>
+      <Line platform={platform} second></Line>
+    </LinkContainer>
   )
 }
 

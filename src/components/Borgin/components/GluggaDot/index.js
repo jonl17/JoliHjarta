@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { layer } from "../../../../constants"
 import "./index.css"
+import { OpenWindow } from "../../../../methods"
 
 // Gluggar
 import {
@@ -30,12 +31,11 @@ class GluggaDot extends React.Component {
     storiContainer.addEventListener("scroll", e => this.callBack(e))
 
     /* OPEN SESAME WINDOWS BABEY */
-    let gluggar = document.getElementsByClassName("des")
-    let d = new Date()
-    for (var i = 0; i < gluggar.length; i++) {
-      if (parseInt(gluggar[i].id.replace("desember", "")) <= d.getDate())
-        gluggar[i].classList.add("opinn-gluggi")
-    }
+    // gluggadót
+    let skraut = document.getElementsByClassName("des")
+    // click zone glugga
+    let gluggar = document.getElementsByClassName("gluggi")
+    OpenWindow(skraut, gluggar)
   }
   callBack(e) {
     if (e.target.scrollLeft > 1200) {

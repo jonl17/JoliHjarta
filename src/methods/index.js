@@ -55,3 +55,14 @@ export const countdown = () => {
   // við viljum eingöngu klst mín sek
   return { hours: days * 24, minutes: minutes, seconds: seconds }
 }
+
+// automatically open windows and make em clickable
+export const OpenWindow = (skraut, gluggar) => {
+  let d = new Date()
+  for (var i = 0; i < skraut.length; i++) {
+    if (parseInt(skraut[i].id.replace("desember", "")) <= d.getDate())
+      skraut[i].classList.add("opinn-gluggi")
+    if (parseInt(gluggar[i].id.replace("dagur", "")) <= d.getDate())
+      gluggar[i].classList.add("clickableGluggi")
+  }
+}
