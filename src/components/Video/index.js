@@ -29,6 +29,7 @@ class Video extends React.Component {
           ></ExitBTN>
           {platform === `simi` ? (
             <Player
+              className="video-player"
               id="video-player"
               src={vidjo.vidjourl + "?api=1"}
               simi
@@ -41,6 +42,7 @@ class Video extends React.Component {
             ></Player>
           ) : (
             <Player
+              className="video-player"
               id="video-player"
               src={vidjo.vidjourl + "?api=1"}
               height={videoFullscreen ? "100%" : "0%"}
