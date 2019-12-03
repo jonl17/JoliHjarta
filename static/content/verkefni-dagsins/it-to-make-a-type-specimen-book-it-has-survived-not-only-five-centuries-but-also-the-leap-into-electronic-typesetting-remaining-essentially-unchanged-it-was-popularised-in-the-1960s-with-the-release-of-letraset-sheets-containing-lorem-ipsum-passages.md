@@ -1,8 +1,8 @@
 ---
 title: Verkefni dagsins
 lysing: |-
-  Skrifaðu þína eigin jólalega jólasögu og sendu okkur, 
-  hún gæti verið lesin upp í þáttunum okkar ...:)
-dagsetning: 12/2
+  Taktu mynd af þér með einhverju jólalegu jólatréi og sendu okkur.
+  Einn tveir oooooog.....Brostu,  það kostar ekki neitt....:)
+dagsetning: 12/3
 ---
 
