@@ -24,9 +24,8 @@ class index extends React.Component {
   render() {
     const { weather } = this.props
     if (weather.lysing !== undefined) {
-      console.log("Veðurlýsing er barasta: " + weather.lysing)
+      console.log(weather.lysing)
     }
-    if (weather.hiti !== undefined) console.log(weather.hiti)
     return (
       <>
         <BurgerWindow></BurgerWindow>
@@ -35,7 +34,6 @@ class index extends React.Component {
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>
         <Dagur></Dagur>
-        {/* {senduInnEfniOpen === `open` ? <SenduInnEfni></SenduInnEfni> : ""} */}
       </>
     )
   }

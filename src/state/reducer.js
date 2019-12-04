@@ -25,7 +25,7 @@ const initialState = {
     lysing: undefined,
     snjolysing: undefined,
   },
-  makeItSnow: false,
+  makeItSnow: "false",
   gluggar: undefined,
   selectedDay: undefined,
   dagurPopup: "closed",
@@ -73,7 +73,7 @@ export default (state = initialState, action) => {
         },
       }
     case MAKE_IT_SNOW:
-      return { ...state, makeItSnow: !state.makeItSnow }
+      return { ...state, makeItSnow: action.trigger }
     case GET_GLUGGAR:
       return { ...state, gluggar: action.gluggar }
     case SELECT_DAY:

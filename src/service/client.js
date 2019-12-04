@@ -6,18 +6,29 @@ const url =
   "https://apis.is/weather/observations/is?stations=1,422&time=1h&anytime=0"
 
 class Client extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      hiti: "",
+      lysing: "",
+      snjolysing: "",
+    }
+  }
   componentDidMount() {
-    fetch(url)
-      .then(response => response.json())
-      .then(data =>
-        this.props.dispatch(
-          getWeather({
-            hiti: data.results[0].T,
-            lysing: data.results[0].W,
-            snjolysing: data.results[0].SNC,
-          })
-        )
-      )
+    setTimeout(() => {
+      fetch(url)
+        .then(response => response.json())
+        .then(data => this.checkSnow(data.results[0]))
+    }, 1000)
+  }
+  checkSnow(vedrid) {
+    this.props.dispatch(
+      getWeather({
+        hiti: vedrid.T,
+        lysing: vedrid.W,
+        snjolysing: vedrid.SNC,
+      })
+    )
   }
 
   render() {

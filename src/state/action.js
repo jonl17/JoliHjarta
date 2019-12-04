@@ -14,8 +14,9 @@ export const getWeather = weather => ({
   weather,
 })
 export const MAKE_IT_SNOW = "MAKE_IT_SNOW"
-export const makeItSnow = () => ({
+export const makeItSnow = trigger => ({
   type: MAKE_IT_SNOW,
+  trigger,
 })
 export const GET_GLUGGAR = "GET_GLUGGAR"
 export const getGluggar = gluggar => ({
