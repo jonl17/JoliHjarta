@@ -1,6 +1,6 @@
 ---
 title: Ævintýraleikvöllur /Listasmiðja
-hvenaer: 12/4
+hvenaer: 12/7
 klukkan: 13 -15
 lysing: >-
   Eitthvað úr engu er listasmiðja  þar sem unnið er sérstaklega með
@@ -8,7 +8,7 @@ lysing: >-
   viðburðinn
 
   https://listasafnreykjavikur.is/vi%C3%B0burdir/aevintyraleikvollurlistasmidja-eitthvad-ur-engu
-hvar: listasafn Reykjavíkur Hafnarhúsi
+hvar: Listasafn Reykjavíkur Hafnarhúsi
 mynd: /myndir/eitthvað-úr-engu.jpg
 ---
 
