@@ -57,11 +57,11 @@ export const query = graphql`
     ) {
       edges {
         node {
+          html
           frontmatter {
             title
             hvenaer
             klukkan
-            lysing
             hvar
             mynd {
               childImageSharp {

@@ -8,8 +8,10 @@ import {
   ImageContainer,
   Image,
   Texti,
+  TextContent,
 } from "./Styled"
 import Banner from "./Banner"
+import "./index.css"
 
 const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
   return selectedEvent !== undefined ? (
@@ -33,15 +35,20 @@ const EventPopup = ({ eventPopup, platform, selectedEvent, dispatch }) => {
           tight
           click={() => dispatch(triggerEventPopup("closed"))}
         ></ExitBTN>
-        <Banner event={selectedEvent}></Banner>
+        <Banner event={selectedEvent.frontmatter}></Banner>
         <ImageContainer platform={platform}>
-          {selectedEvent.mynd !== null ? (
-            <Image fluid={selectedEvent.mynd.childImageSharp.fluid}></Image>
+          {selectedEvent.frontmatter.mynd !== null ? (
+            <Image
+              fluid={selectedEvent.frontmatter.mynd.childImageSharp.fluid}
+            ></Image>
           ) : (
             <></>
           )}
         </ImageContainer>
-        <Texti platform={platform}>{selectedEvent.lysing}</Texti>
+        <TextContent
+          className="texta-content"
+          dangerouslySetInnerHTML={{ __html: selectedEvent.html }}
+        ></TextContent>
       </PopupGluggi>
     </>
   ) : (
