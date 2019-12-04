@@ -7,7 +7,7 @@ import MavurSVG from "../../../../../../static/myndir/svgs/mavur.svg"
 import HoppSVG from "../../../../../../static/myndir/svgs/hopp.svg"
 import MusSVG from "../../../../../../static/myndir/svgs/mus.svg"
 import HjolSVG from "../../../../../../static/myndir/svgs/hjol.svg"
-import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-layer.svg"
+import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-nytt.svg"
 import { layer } from "../../../../../constants"
 
 const SVGstyle = css`
