@@ -2,8 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { getWeather } from "../state/action"
 
-const url =
-  "https://apis.is/weather/observations/is?stations=1,422&time=1h&anytime=0"
+const url = "https://apis.is/weather/forecasts/is?stations=1,422"
 
 class Client extends React.Component {
   constructor() {
@@ -18,17 +17,32 @@ class Client extends React.Component {
     setTimeout(() => {
       fetch(url)
         .then(response => response.json())
-        .then(data => this.checkSnow(data.results[0]))
+        .then(data => this.checkWeather(data.results[0].forecast))
     }, 1000)
   }
-  checkSnow(vedrid) {
-    this.props.dispatch(
-      getWeather({
-        hiti: vedrid.T,
-        lysing: vedrid.W,
-        snjolysing: vedrid.SNC,
-      })
-    )
+
+  checkWeather(vedur) {
+    let todaysForecast = []
+
+    // set min & sec to 0, so we can compare the hourly forecast
+    let now = new Date()
+    now.setMinutes(0)
+    now.setSeconds(0)
+    now.setMilliseconds(0)
+    // get todays forecast
+    for (var i = 0; i < vedur.length; i++) {
+      if (vedur[i].ftime.includes("2019-12-04")) {
+        todaysForecast.push(vedur[i])
+        let d = new Date(todaysForecast[i].ftime)
+        if (d.getHours() === now.getHours()) {
+          this.props.dispatch(
+            getWeather({
+              lysing: todaysForecast[i].W,
+            })
+          )
+        }
+      }
+    }
   }
 
   render() {

@@ -7,7 +7,6 @@ import {
   CloseSensor,
   ImageContainer,
   Image,
-  Texti,
   TextContent,
 } from "./Styled"
 import Banner from "./Banner"
