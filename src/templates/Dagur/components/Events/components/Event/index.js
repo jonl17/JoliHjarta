@@ -26,7 +26,11 @@ const Event = ({
   return (
     <Box onClick={() => dispatchesForEventPopup(dispatch, frontmatter)}>
       <ImageContainer>
-        <Image fluid={frontmatter.mynd.childImageSharp.fluid}></Image>
+        {frontmatter.mynd !== null ? (
+          <Image fluid={frontmatter.mynd.childImageSharp.fluid}></Image>
+        ) : (
+          <></>
+        )}
       </ImageContainer>
       <InfoContainer>
         <Title>{frontmatter.title}</Title>
