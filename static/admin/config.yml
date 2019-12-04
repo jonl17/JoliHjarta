@@ -51,7 +51,7 @@ collections:
           widget: "string",
           hint: "setjið inn á þessu formatti: 16-18",
         }
-      - { label: "Stutt lýsing", name: "lysing", widget: "text" }
+      - { label: "Stutt lýsing", name: "body", widget: "markup" }
       - { label: "Hvar", name: "hvar", widget: "string" }
       - { label: "Mynd", name: "mynd", widget: "image" }
   - name: "verkefni-dagins"
