@@ -15,7 +15,9 @@ const SEO = () => (
         content={"Jóladagatal í miðborg Reykjavíkur"}
       />
     )}
-    {"Jól í hjarta" && <meta name="keywords" content={"Jól í hjarta"} />}
+    {"Jól, jóladagatal, Reykjavík" && (
+      <meta name="keywords" content={"Jól, jóladagatal, Reykjavík"} />
+    )}
     <link sizes="32x32" href={Favicon} rel="icon" type="image/png"></link>
   </Helmet>
 )
