@@ -4,7 +4,6 @@ import Event from "./components/Event"
 import { connect } from "react-redux"
 
 const Events = ({ events, title, platform }) => {
-  console.log(events)
   return (
     <Container platform={platform}>
       <Title>Viðburðir {title}</Title>
