@@ -16,26 +16,20 @@ const dispatchesForEventPopup = (dispatch, event) => {
   dispatch(triggerEventPopup("open")) // open sesame
   dispatch(selectEvent(event))
 }
-
-const Event = ({
-  dispatch,
-  vidburdur: {
-    node: { frontmatter },
-  },
-}) => {
+const Event = ({ dispatch, vidburdur: { node } }) => {
   return (
-    <Box onClick={() => dispatchesForEventPopup(dispatch, frontmatter)}>
+    <Box onClick={() => dispatchesForEventPopup(dispatch, node)}>
       <ImageContainer>
-        {frontmatter.mynd !== null ? (
-          <Image fluid={frontmatter.mynd.childImageSharp.fluid}></Image>
+        {node.frontmatter.mynd !== null ? (
+          <Image fluid={node.frontmatter.mynd.childImageSharp.fluid}></Image>
         ) : (
           <></>
         )}
       </ImageContainer>
       <InfoContainer>
-        <Title>{frontmatter.title}</Title>
-        <Hvar>{frontmatter.hvar}</Hvar>
-        <Klukkan>{"kl. " + frontmatter.klukkan}</Klukkan>
+        <Title>{node.frontmatter.title}</Title>
+        <Hvar>{node.frontmatter.hvar}</Hvar>
+        <Klukkan>{"kl. " + node.frontmatter.klukkan}</Klukkan>
       </InfoContainer>
     </Box>
   )

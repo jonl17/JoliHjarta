@@ -17,6 +17,10 @@ export const Texti = styled.p`
       line-height: 1.5;
     `}
 `
+export const TextContent = styled.div`
+  box-sizing: border-box;
+  padding: 25px 0 25px 0;
+`
 
 export const ImageContainer = styled.div`
   height: 250px;
@@ -40,6 +44,7 @@ export const CloseSensor = styled.div`
 `
 
 export const PopupGluggi = styled.div`
+  overflow-y: scroll;
   position: fixed;
   background: ${colors.blue};
   border: 10px solid white;

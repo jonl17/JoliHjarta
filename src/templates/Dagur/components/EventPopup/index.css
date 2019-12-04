@@ -1,0 +1,24 @@
+.texta-content > p,
+.texta-content > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: 64px;
+  margin-right: 64px;
+  margin-top: 0;
+  line-height: 1.5;
+}
+.texta-content > a {
+  text-decoration: none;
+  color: #f3797e;
+}
+.texta-content > a:hover {
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  .texta-content > p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
