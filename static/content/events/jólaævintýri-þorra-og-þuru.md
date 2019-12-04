@@ -1,10 +1,10 @@
 ---
 title: Jólaævintýri Þorra og Þuru
-hvenaer: 12/1
+hvenaer: 12/8
 klukkan: '13:00'
 lysing: >-
-  Núna á sunnudaginn frumsýna álfarnir Þorri og Þura glænýtt jólaævintýri hér í
-  Tjarnarbíói. Falleg jólasaga í leik og söng fyrir alla fjölskylduna.
+  Álfarnir Þorri og Þura sýna glænýtt jólaævintýri hér í Tjarnarbíói. Falleg
+  jólasaga í leik og söng fyrir alla fjölskylduna.
 
   Miðasala: https://tix.is/is/tjarnarbio/buyingflow/tickets/8521/
 
