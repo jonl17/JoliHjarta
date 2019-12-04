@@ -19,7 +19,7 @@ class Video extends React.Component {
   }
   render() {
     const { vidjo, platform, videoFullscreen, dispatch } = this.props
-    return (
+    return vidjo !== null ? (
       <>
         <Container platform={platform} open={videoFullscreen ? "100%" : "0%"}>
           <ExitBTN
@@ -54,6 +54,8 @@ class Video extends React.Component {
           )}
         </Container>
       </>
+    ) : (
+      <></>
     )
   }
 }
