@@ -15,12 +15,11 @@ class Snjokoma extends React.Component {
   componentDidUpdate() {
     if (this.props.weather.lysing !== undefined) {
       let serverLysing = this.props.weather.lysing.toLowerCase()
-      let snjolysing = this.props.weather.snjolysing
       if (serverLysing !== this.state.lysing) {
         this.setState({
           lysing: serverLysing,
         })
-        if (serverLysing.includes("snjó") || snjolysing !== "") {
+        if (serverLysing.includes("snjó")) {
           this.props.dispatch(makeItSnow("true"))
         } else {
           this.props.dispatch(makeItSnow("false"))
