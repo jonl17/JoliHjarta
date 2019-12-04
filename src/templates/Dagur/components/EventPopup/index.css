@@ -8,7 +8,7 @@
   margin-top: 0;
   line-height: 1.5;
 }
-.texta-content > a {
+.texta-content > p > a {
   text-decoration: none;
   color: #f3797e;
 }
