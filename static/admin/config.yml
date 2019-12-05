@@ -36,6 +36,13 @@ collections:
               widget: "string",
               required: false,
             }
+          - {
+              label: "Thumbnail",
+              name: "thumbnail",
+              widget: "image",
+              required: false,
+              hint: "Viltu bæta við sérstöku thumbnail?",
+            }
   - name: "event"
     label: "Viðburður"
     folder: "static/content/events"
