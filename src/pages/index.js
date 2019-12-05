@@ -60,6 +60,19 @@ export const query = graphql`
             vidjo {
               vidjotitill
               vidjourl
+              thumbnail {
+                childImageSharp {
+                  fluid(
+                    traceSVG: {
+                      color: "rgba(63, 104, 196, 1)"
+                      turnPolicy: TURNPOLICY_MINORITY
+                      blackOnWhite: false
+                    }
+                  ) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
             }
           }
         }

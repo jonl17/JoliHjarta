@@ -35,8 +35,14 @@ const GetThumbnail = () => (
           childImageSharp: { fluid: { originalName: { eq: "preview.jpg" } } }
         ) {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(
+              traceSVG: {
+                color: "rgba(63, 104, 196, 1)"
+                turnPolicy: TURNPOLICY_MINORITY
+                blackOnWhite: false
+              }
+            ) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -46,13 +52,23 @@ const GetThumbnail = () => (
   ></StaticQuery>
 )
 
-const PlayBTN = ({ dispatch }) => {
+const PlayBTN = ({ dispatch, selectedDay: { vidjo } }) => {
+  console.log(vidjo)
   return (
     <Container onClick={() => dispatch(triggerVideoFullscreen())}>
-      {GetThumbnail()}
+      {vidjo.thumbnail !== null ? ( // tries to get special thumbnails
+        <Image fluid={vidjo.thumbnail.childImageSharp.fluid}></Image>
+      ) : (
+        // falls back on the default
+        GetThumbnail()
+      )}
       <PlaySVG></PlaySVG>
     </Container>
   )
 }
 
-export default connect()(PlayBTN)
+const mapStateToProps = state => ({
+  selectedDay: state.reducer.selectedDay,
+})
+
+export default connect(mapStateToProps)(PlayBTN)
