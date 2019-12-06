@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import { sizes, margins, colors, layer } from "../../../../../constants"
+import { sizes, margins, colors, layer } from "../../../../../src/constants"
 
 export const Container = styled.div`
   height: 100%;
-  width: 100%;
+  width: 300px;
   display: grid;
   margin: auto;
   grid-area: homebtn;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { sizes, colors, margins } from "../../../../../constants"
+import { sizes, colors, margins } from "../../../../../src/constants"
 
 export const List = styled.ul`
   grid-area: submenu;

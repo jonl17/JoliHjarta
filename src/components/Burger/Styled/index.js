@@ -1,12 +1,20 @@
 import styled from "styled-components"
 import { margins, layer, sizes } from "../../../constants"
 
+export const ExtraContainer = styled.div`
+  height: 100%;
+  width: 500px;
+  position: relative;
+`
+
 export const Container = styled.div`
   height: 32px;
   width: 32px;
-  position: fixed;
-  top: ${margins.xSmall};
-  right: ${margins.xSmall};
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15.5px;
+  margin-left: -15.5px;
   z-index: ${layer.zero};
   display: ${props => props.display};
   flex-direction: column;

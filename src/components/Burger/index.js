@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Line } from "./Styled"
+import { Container, Line, ExtraContainer } from "./Styled"
 import { connect } from "react-redux"
 import { triggerBurgerWindow, triggerDagurPopup } from "../../state/action"
 
@@ -10,14 +10,16 @@ const dispatches = dispatch => {
 
 const Burger = ({ burgerWindow, dispatch }) => {
   return (
-    <Container
-      onClick={() => dispatches(dispatch)}
-      display={burgerWindow === "open" ? "none" : "flex"}
-    >
-      <Line one></Line>
-      <Line two></Line>
-      <Line three></Line>
-    </Container>
+    <ExtraContainer>
+      <Container
+        onClick={() => dispatches(dispatch)}
+        display={burgerWindow === "open" ? "none" : "flex"}
+      >
+        <Line one></Line>
+        <Line two></Line>
+        <Line three></Line>
+      </Container>
+    </ExtraContainer>
   )
 }
 

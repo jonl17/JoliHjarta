@@ -4,10 +4,10 @@ import Borgin from "../components/Borgin"
 import Snjokoma from "../components/Snjokoma"
 import Dagur from "../components/Dagur"
 import Burger from "../components/Burger"
-import BurgerWindow from "../components/BurgerWindow"
 import Mani from "../components/Mani"
 import { graphql } from "gatsby"
 import { getAllDaysInfo } from "../state/action"
+import Menu from "../components/Menu"
 
 class index extends React.Component {
   componentDidMount() {
@@ -28,8 +28,8 @@ class index extends React.Component {
     }
     return (
       <>
-        <BurgerWindow></BurgerWindow>
         <Burger></Burger>
+        <Menu></Menu>
         <Mani></Mani>
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>
