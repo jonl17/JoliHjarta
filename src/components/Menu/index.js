@@ -24,7 +24,7 @@ const spitOutMenuItems = () => (
       data.site.siteMetadata.menuItems.map((item, index) => (
         <Item
           nohover={
-            index === data.site.siteMetadata.menuItems.length - 1
+            index === data.site.siteMetadata.menuItems.length - 1 || index === 0
               ? "true"
               : "false"
           }

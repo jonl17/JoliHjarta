@@ -9,11 +9,11 @@ module.exports = {
     nafn: `Jól í hjarta`,
     about: `Jóladagatal í miðborg Reykjavík.`,
     menuItems: [
-      { name: `Jól í hjarta`, type: `link`, to: `/` },
+      { name: `Jól í hjarta`, type: `burg`, to: `/` },
       { name: `Um okkur`, type: `dropdown` },
       { name: `Hlekkir`, type: `dropdown` },
       { name: `Viðburðir`, type: `link`, to: `desember` },
-      { name: `jolihjartarvk@gmail.com`, type: `mail` },
+      // { name: `Hafa samband`, type: `mail` },
       { name: ``, type: `burg` }, // this is so we get equal space for the x btn
     ],
   },

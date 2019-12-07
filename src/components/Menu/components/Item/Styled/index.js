@@ -58,4 +58,10 @@ export const Text = styled.p`
   font-weight: 800;
   text-align: center;
   margin-top: 28px;
+  ${props =>
+    props.home === "true" &&
+    css`
+      font-size: 20px;
+      margin-top: 24px;
+    `}
 `

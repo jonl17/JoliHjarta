@@ -34,7 +34,7 @@ const Item = ({ nafn, nohover, type, slug }) => {
   ) : (
     <Container nafn={nafn} dropdown nohover={nohover}>
       {type !== `burg` ? <Dropdown nafn={nafn}></Dropdown> : ""}
-      <Text>{nafn}</Text>
+      <Text home={nafn === `Jól í hjarta` ? "true" : "false"}>{nafn}</Text>
     </Container>
   )
 }

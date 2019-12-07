@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { layer } from "../../../../../../../constants"
+import { layer, colors } from "../../../../../../../constants"
 
 export const Box = styled.div`
   position: absolute;
@@ -33,7 +33,7 @@ export const Hlekkur = styled.a`
   display: block;
   margin: auto;
   &&:hover {
-    color: black;
+    color: ${colors.blue};
   }
 `
 export const Texti = styled.p`
