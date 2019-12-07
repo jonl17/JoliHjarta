@@ -31,7 +31,7 @@ const ContainerStyle = css`
             ${props =>
               props.nafn === `Um okkur` &&
               css`
-                height: 500px;
+                height: 525px;
                 padding-right: 400px;
               `}
           `}

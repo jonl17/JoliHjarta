@@ -41,4 +41,5 @@ export const Texti = styled.p`
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   line-height: 1.5;
+  padding-right: 15px;
 `
