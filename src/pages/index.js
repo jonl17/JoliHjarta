@@ -28,8 +28,8 @@ class index extends React.Component {
     }
     return (
       <>
-        <Burger></Burger>
         <Menu></Menu>
+        <Burger></Burger>
         <Mani></Mani>
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>

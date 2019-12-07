@@ -1,25 +1,27 @@
 import React from "react"
-import { Container, Line, ExtraContainer } from "./Styled"
+import { Container, Line } from "./Styled"
 import { connect } from "react-redux"
 import { triggerBurgerWindow, triggerDagurPopup } from "../../state/action"
 
+// open nav
 const dispatches = dispatch => {
   dispatch(triggerBurgerWindow("open"))
   dispatch(triggerDagurPopup("closed"))
 }
 
 const Burger = ({ burgerWindow, dispatch }) => {
-  return (
-    <ExtraContainer>
-      <Container
-        onClick={() => dispatches(dispatch)}
-        display={burgerWindow === "open" ? "none" : "flex"}
-      >
-        <Line one></Line>
-        <Line two></Line>
-        <Line three></Line>
-      </Container>
-    </ExtraContainer>
+  console.log(burgerWindow)
+  return burgerWindow === "closed" ? (
+    <Container onClick={() => dispatches(dispatch)}>
+      <Line one></Line>
+      <Line two></Line>
+      <Line three></Line>
+    </Container>
+  ) : (
+    <Container onClick={() => dispatch(triggerBurgerWindow("closed"))}>
+      <Line one ex></Line>
+      <Line two ex></Line>
+    </Container>
   )
 }
 
