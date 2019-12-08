@@ -40,6 +40,7 @@ const spitOutMenuItems = () => (
 
 const Menu = () => {
   const burgerWindow = useSelector(state => state.reducer.burgerWindow)
+  const platform = useSelector(state => state.reducer.platform)
   const dispatch = useDispatch()
   return (
     <>
@@ -47,7 +48,9 @@ const Menu = () => {
         display={burgerWindow === "open" ? "block" : "none"}
         onClick={() => dispatch(triggerBurgerWindow("closed"))}
       ></ClickZone>
-      <Navbar display={burgerWindow}>{spitOutMenuItems()}</Navbar>
+      <Navbar platform={platform} display={burgerWindow}>
+        {spitOutMenuItems()}
+      </Navbar>
     </>
   )
 }

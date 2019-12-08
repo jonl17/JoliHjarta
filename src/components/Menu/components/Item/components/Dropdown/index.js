@@ -1,5 +1,6 @@
 import React from "react"
 import { Box, Hlekkur, Texti } from "./Styled"
+import { useSelector } from "react-redux"
 
 const linkar = [
   { name: "Reykjavík", url: "https://reykjavik.is/" },
@@ -12,10 +13,15 @@ const linkar = [
 ]
 
 const Dropdown = ({ nafn }) => {
+  const platform = useSelector(state => state.reducer.platform)
   return (
     <Box nafn={nafn}>
       {nafn === `Hlekkir` ? (
-        linkar.map(item => <Hlekkur>{item.name}</Hlekkur>)
+        linkar.map((item, index) => (
+          <Hlekkur href={item.url} target="_blank" key={index}>
+            {item.name}
+          </Hlekkur>
+        ))
       ) : (
         <div>
           <Texti>

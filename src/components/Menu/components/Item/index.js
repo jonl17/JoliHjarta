@@ -1,5 +1,11 @@
 import React from "react"
-import { Container, Text, LinkContainer, EmailContainer } from "./Styled"
+import {
+  Container,
+  Text,
+  LinkContainer,
+  EmailContainer,
+  ExternalLink,
+} from "./Styled"
 import { useSelector, useDispatch } from "react-redux"
 import { selectCalenderDay } from "../../../../state/action"
 import Dropdown from "./components/Dropdown"
@@ -8,6 +14,7 @@ const Item = ({ nafn, nohover, type, slug }) => {
   const todaysCalenderDay = useSelector(
     state => state.reducer.todaysCalenderDay
   )
+  const platform = useSelector(state => state.reducer.platform)
   const dispatch = useDispatch()
   return type === `link` ? (
     nafn === `Viðburðir` ? (
@@ -16,12 +23,12 @@ const Item = ({ nafn, nohover, type, slug }) => {
         to={nafn === `Viðburðir` ? todaysCalenderDay + slug : slug}
         nohover={nohover}
       >
-        <Text>{nafn}</Text>
+        <Text platform={platform}>{nafn}</Text>
       </LinkContainer>
     ) : (
-      <LinkContainer to={slug} nohover={nohover}>
-        <Text>{nafn}</Text>
-      </LinkContainer>
+      <ExternalLink target="_blank" href={slug} nohover={nohover}>
+        <Text platform={platform}>{nafn}</Text>
+      </ExternalLink>
     )
   ) : type === `mail` ? (
     <EmailContainer
@@ -29,12 +36,17 @@ const Item = ({ nafn, nohover, type, slug }) => {
       target="_blank"
       href={"mailto:jolihjartarvk@gmail.com"}
     >
-      <Text>{nafn}</Text>
+      <Text platform={platform}>{nafn}</Text>
     </EmailContainer>
   ) : (
-    <Container nafn={nafn} dropdown nohover={nohover}>
+    <Container platform={platform} nafn={nafn} dropdown nohover={nohover}>
       {type !== `burg` ? <Dropdown nafn={nafn}></Dropdown> : ""}
-      <Text home={nafn === `Jól í hjarta` ? "true" : "false"}>{nafn}</Text>
+      <Text
+        platform={platform}
+        home={nafn === `Jól í hjarta` ? "true" : "false"}
+      >
+        {nafn}
+      </Text>
     </Container>
   )
 }

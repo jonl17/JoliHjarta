@@ -42,9 +42,17 @@ const ContainerStyle = css`
 /** dropdown container */
 export const Container = styled.div`
   ${ContainerStyle};
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      padding: 0;
+    `}
 `
 /** línk container */
 export const LinkContainer = styled(Link)`
+  ${ContainerStyle};
+`
+export const ExternalLink = styled.a`
   ${ContainerStyle};
 `
 /** email container */
@@ -56,12 +64,18 @@ export const Text = styled.p`
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  text-align: center;
   margin-top: 28px;
   ${props =>
     props.home === "true" &&
     css`
       font-size: 20px;
       margin-top: 24px;
+    `}
+  text-align: center;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      text-align: left;
+      padding-left: 50px;
     `}
 `

@@ -32,6 +32,7 @@ export const Hlekkur = styled.a`
   width: 100%;
   display: block;
   margin: auto;
+  color: inherit;
   &&:hover {
     color: ${colors.blue};
   }

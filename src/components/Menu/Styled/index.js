@@ -22,6 +22,12 @@ export const Navbar = styled.div`
     css`
       height: 75px;
       overflow: visible;
+      ${props =>
+        props.platform === `simi` &&
+        css`
+          height: 100%;
+          flex-direction: column;
+        `}
     `}
 `
 export const ClickZone = styled.div`
