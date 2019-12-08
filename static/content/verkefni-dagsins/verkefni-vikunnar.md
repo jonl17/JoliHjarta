@@ -1,5 +1,5 @@
 ---
-title: Verkefni vikunnar
+title: Verkefni dagsins
 lysing: >-
   Sendu inn jólalegar hugmyndir að því sem Stella, Stebbi og Valdis geta gert í
   miðborg Reykjavíkur í desember. 
