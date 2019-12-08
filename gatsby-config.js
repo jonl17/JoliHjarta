@@ -8,8 +8,19 @@ module.exports = {
   siteMetadata: {
     nafn: `Jól í hjarta`,
     about: `Jóladagatal í miðborg Reykjavík.`,
-    menuItems: [`Viðburðir`],
-    subMenuItems: [`jolihjartarvk@gmail.com`],
+    menuItems: [
+      { name: `Jól í hjarta`, type: `burg`, to: `/` },
+      { name: `Um okkur`, type: `dropdown` },
+      { name: `Hlekkir`, type: `dropdown` },
+      { name: `Viðburðir`, type: `link`, external: false, to: `desember` },
+      {
+        name: `Jólavættir`,
+        type: `link`,
+        external: true,
+        to: `https://reykjavik.is/jolavaettir-i-reykjavik-snjallvaeddar`,
+      },
+      { name: ``, type: `burg` }, // this is so we get equal space for the x btn
+    ],
   },
   plugins: [
     {

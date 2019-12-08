@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { sizes, margins, colors } from "../../../../../constants"
+import { sizes, margins, colors } from "../../../../../src/constants"
 import { Link } from "gatsby"
 
 export const List = styled.ul`
@@ -16,7 +16,7 @@ export const List = styled.ul`
     `}
   grid-area: menu;
   ${props =>
-    props.nav &&
+    props.nav === "true" &&
     css`
       margin: auto;
       display: flex;
@@ -31,7 +31,7 @@ export const Item = styled(Link)`
     color: ${colors.hover};
   }
   ${props =>
-    props.nav &&
+    props.nav === "true" &&
     css`
       font-size: 16px;
       font-family: "Montserrat", sans-serif;
@@ -41,6 +41,8 @@ export const Item = styled(Link)`
 `
 export const Wrap = styled.div`
   font-size: ${sizes.paraXlarge};
+  width: 300px;
+
   ${props =>
     props.device === `simi` &&
     css`
@@ -63,7 +65,7 @@ export const ItemNav = styled.a`
     color: ${colors.hover};
   }
   ${props =>
-    props.nav &&
+    props.nav === "true" &&
     css`
       font-size: 16px;
       font-family: "Montserrat", sans-serif;

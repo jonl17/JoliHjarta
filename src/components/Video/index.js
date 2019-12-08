@@ -7,9 +7,11 @@ import Vimeo from "@vimeo/player"
 
 class Video extends React.Component {
   componentDidUpdate() {
-    document
-      .getElementById("video-player")
-      .setAttribute("src", this.props.vidjo.vidjourl + "?api=1")
+    if (document.getElementById("video-player") !== null) {
+      document
+        .getElementById("video-player")
+        .setAttribute("src", this.props.vidjo.vidjourl + "?api=1")
+    }
   }
   dispatches(dispatch) {
     dispatch(triggerVideoFullscreen())

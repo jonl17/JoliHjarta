@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { layer } from "../../../constants"
+import { layer } from "../../../src/constants"
 
 export const ClickZone = styled.div`
   height: 100%;

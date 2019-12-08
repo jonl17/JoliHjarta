@@ -6,8 +6,6 @@ import Title from "./components/Title"
 import EventPopup from "./components/EventPopup"
 import Calender from "./components/Calender"
 import CalenderMobile from "./components/CalenderMobile"
-// import Burger from "../../components/Burger"
-// import BurgerWindow from "../../components/BurgerWindow"
 import { connect } from "react-redux"
 import Takki from "../../components/Takki"
 import { triggerCalenderWindow } from "../../state/action"
@@ -18,8 +16,6 @@ class Dagur extends React.Component {
     return (
       <Container platform={platform}>
         <Grid platform={platform}>
-          {/* <BurgerWindow></BurgerWindow>
-          <Burger></Burger> */}
           <Title></Title>
           <Events
             events={data.allMarkdownRemark.edges}

@@ -1,11 +1,11 @@
 import React from "react"
 import { Container, ContainerMobile, ClickZone } from "./Styled"
-import ExitBTN from "../ExitBTN"
+import ExitBTN from "../../src/components/ExitBTN"
 import MenuItems from "./components/MenuItems"
 import HomeBTN from "./components/HomeBTN"
 import SubMenuItems from "./components/SubMenuItems"
 import { connect } from "react-redux"
-import { triggerBurgerWindow } from "../../state/action"
+import { triggerBurgerWindow } from "../../src/state/action"
 
 const Burgerwindow = ({ burgerWindow, dispatch, platform }) => {
   if (platform === `simi` || platform === `spjaldtolva`) {

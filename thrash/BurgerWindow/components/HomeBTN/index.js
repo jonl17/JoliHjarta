@@ -7,7 +7,7 @@ import {
   triggerDagurPopup,
   triggerEventPopup,
   triggerCalenderWindow,
-} from "../../../../state/action"
+} from "../../../../src/state/action"
 
 const dispatches = dispatch => {
   dispatch(triggerBurgerWindow("closed"))
