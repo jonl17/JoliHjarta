@@ -5,7 +5,7 @@ import Item from "./components/Item"
 import { useSelector, useDispatch } from "react-redux"
 import { triggerBurgerWindow } from "../../state/action"
 
-const spitOutMenuItems = () => (
+const spitOutMenuItems = platform => (
   <StaticQuery
     query={graphql`
       {
@@ -21,19 +21,22 @@ const spitOutMenuItems = () => (
       }
     `}
     render={data =>
-      data.site.siteMetadata.menuItems.map((item, index) => (
-        <Item
-          nohover={
-            index === data.site.siteMetadata.menuItems.length - 1 || index === 0
-              ? "true"
-              : "false"
-          }
-          key={index}
-          nafn={item.name}
-          type={item.type}
-          slug={item.to}
-        ></Item>
-      ))
+      data.site.siteMetadata.menuItems.map((item, index) =>
+        platform !== `simi` ? (
+          <Item
+            nohover={
+              index === data.site.siteMetadata.menuItems.length - 1 ||
+              index === 0
+                ? "true"
+                : "false"
+            }
+            key={index}
+            item={item}
+          ></Item>
+        ) : (
+          <Item key={index} item={item} nohover="true"></Item>
+        )
+      )
     }
   ></StaticQuery>
 )
@@ -45,11 +48,13 @@ const Menu = () => {
   return (
     <>
       <ClickZone
-        display={burgerWindow === "open" ? "block" : "none"}
+        display={
+          burgerWindow === "open" && platform !== `simi` ? "block" : "none"
+        }
         onClick={() => dispatch(triggerBurgerWindow("closed"))}
       ></ClickZone>
       <Navbar platform={platform} display={burgerWindow}>
-        {spitOutMenuItems()}
+        {spitOutMenuItems(platform)}
       </Navbar>
     </>
   )

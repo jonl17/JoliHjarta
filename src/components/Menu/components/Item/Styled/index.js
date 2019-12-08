@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const ContainerStyle = css`
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100%;
   display: grid;
   color: white;
@@ -45,7 +45,18 @@ export const Container = styled.div`
   ${props =>
     props.platform === `simi` &&
     css`
+      display: none;
+      overflow: visible;
       padding: 0;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "title"
+        "content";
+      ${props =>
+        props.nafn === `Jól í hjarta` &&
+        css`
+          display: block;
+        `}
     `}
 `
 /** línk container */
@@ -62,6 +73,11 @@ export const EmailContainer = styled.a`
 
 export const Text = styled.p`
   font-size: 16px;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      font-size: 45px;
+    `}
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   margin-top: 28px;

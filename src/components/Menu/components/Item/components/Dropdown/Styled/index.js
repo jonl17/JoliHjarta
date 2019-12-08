@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import { layer, colors } from "../../../../../../../constants"
 
-export const Box = styled.div`
+const BoxStyle = css`
   position: absolute;
   background: transparent;
   display: grid;
@@ -12,6 +12,33 @@ export const Box = styled.div`
   overflow: hidden;
   padding-bottom: 15px;
   box-sizing: border-box;
+`
+
+/** mobile version */
+export const MobileBox = styled.div`
+  ${BoxStyle};
+  width: auto;
+  padding: 0 15px 0 15px;
+  height: 0;
+  ${props =>
+    props.height === `100%` &&
+    css`
+      height: 100%;
+      overflow: visible;
+    `}
+  position: absolute;
+  grid-area: content;
+  left: 0;
+  top: 0;
+  background: white;
+  transition: 0.2s ease-in-out;
+  opacity: ${props => props.opacity};
+`
+
+/** browser version */
+
+export const Box = styled.div`
+  ${BoxStyle};
   ${props =>
     props.nafn === `Hlekkir` &&
     css`
@@ -43,4 +70,13 @@ export const Texti = styled.p`
   font-weight: 800;
   line-height: 1.5;
   padding-right: 15px;
+`
+export const TextContainer = styled.div`
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      background: white;
+      color: ${colors.lightgray};
+      padding-left: 50px;
+    `}
 `

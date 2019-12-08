@@ -12,7 +12,13 @@ export const Navbar = styled.div`
   /** flexer */
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  ${props =>
+    props.platform === `simi` &&
+    css`
+      justify-content: start;
+      flex-direction: column;
+    `}
+
   /** display status controlled by prop display */
   height: 0;
   overflow: hidden;
@@ -27,6 +33,8 @@ export const Navbar = styled.div`
         css`
           height: 100%;
           flex-direction: column;
+          justify-content: start;
+          padding-top: 100px;
         `}
     `}
 `
