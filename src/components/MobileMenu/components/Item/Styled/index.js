@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import { colors, sizes } from "../../../../../constants"
+import { colors } from "../../../../../constants"
 
 const ContainerStyle = css`
   width: 100%;
