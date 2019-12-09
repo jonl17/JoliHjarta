@@ -31,6 +31,12 @@ export const Container = styled.div`
           display: flex;
         `}
     `}
+  ${props =>
+    props.burgerPos === "true" &&
+    css`
+      top: 10px;
+      right: 19px;
+    `}
 `
 export const Line = styled.span`
   position: absolute;

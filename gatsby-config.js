@@ -21,6 +21,25 @@ module.exports = {
       },
       { name: ``, type: `burg` }, // this is so we get equal space for the x btn
     ],
+    mobileMenuItems: [
+      { name: `Jól í hjarta`, type: `burg` },
+      { name: `Um okkur`, type: `link`, to: `/um-okkur` },
+      { name: `Viðburðir`, type: `link`, to: `desember` },
+      {
+        name: `Hlekkir`,
+        type: `list`,
+        links: [
+          { name: "Reykjavík", url: "https://reykjavik.is/" },
+          { name: "Miðborgin", url: "https://midborgin.is/" },
+          { name: "Tjarnarbíó", url: "https://tjarnarbio.is/" },
+          {
+            name: "Allir viðburðir í Reykjavík",
+            url: "https://reykjavik.is/vidburdir",
+          },
+          { name: "Jólavættir", url: "https://jolavaettir.safnadu.is/" },
+        ],
+      },
+    ],
   },
   plugins: [
     {

@@ -10,6 +10,7 @@ const ExitBTN = ({
   platform,
   type,
   slug,
+  burgerPos,
 }) => {
   return type !== "link" ? (
     <Container
@@ -17,6 +18,7 @@ const ExitBTN = ({
       videofullscreen={videoFullscreen}
       tight={tight ? "true" : "false"}
       onClick={() => click()}
+      burgerPos={burgerPos ? "true" : "false"}
     >
       <Line platform={platform} relativetovideo={relativeToVideo}></Line>
       <Line platform={platform} relativetovideo={relativeToVideo} second></Line>
