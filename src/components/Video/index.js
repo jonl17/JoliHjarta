@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import { triggerVideoFullscreen } from "../../state/action"
 import ExitBTN from "../ExitBTN"
 import Vimeo from "@vimeo/player"
+import "./index.css"
 
 class Video extends React.Component {
   componentDidUpdate() {
