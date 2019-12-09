@@ -5,5 +5,6 @@ vidjo:
   vidjotitill: |-
 
     Jól með Láru og Birgittu Haukdal
+  vidjourl: 'https://player.vimeo.com/video/378238076'
 ---
 
