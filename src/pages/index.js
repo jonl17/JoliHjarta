@@ -8,6 +8,7 @@ import Mani from "../components/Mani"
 import { graphql } from "gatsby"
 import { getAllDaysInfo } from "../state/action"
 import Menu from "../components/Menu"
+import MobileMenu from "../components/MobileMenu"
 
 class index extends React.Component {
   componentDidMount() {
@@ -22,13 +23,17 @@ class index extends React.Component {
   }
 
   render() {
-    const { weather } = this.props
+    const { weather, platform } = this.props
     if (weather.lysing !== undefined) {
       console.log(weather.lysing)
     }
     return (
       <>
-        <Menu></Menu>
+        {platform === `simi` || platform === `tablet` ? (
+          <MobileMenu></MobileMenu>
+        ) : (
+          <Menu></Menu>
+        )}
         <Burger></Burger>
         <Mani></Mani>
         <Snjokoma></Snjokoma>
