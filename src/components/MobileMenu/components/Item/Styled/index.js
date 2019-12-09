@@ -18,7 +18,7 @@ export const Container = styled.div`
   ${props =>
     props.list === "true" &&
     css`
-      padding-top: 50px;
+      padding-top: 10px;
     `}
   ${props =>
     props.first === "yes" &&
@@ -29,6 +29,7 @@ export const Container = styled.div`
 export const LinkContainer = styled(Link)`
   ${ContainerStyle};
   background: white;
+  height: 75px;
 `
 
 /** other items */
@@ -57,6 +58,7 @@ export const ListItem = styled.a`
   background: white;
   display: block;
   margin-left: -50px;
+  min-height: 75px;
 `
 export const ListItemText = styled.p`
   margin: 0;
@@ -64,4 +66,5 @@ export const ListItemText = styled.p`
   font-weight: 800;
   color: ${colors.lightgray};
   padding-left: 50px;
+  padding-top: 15px;
 `
