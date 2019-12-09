@@ -43,20 +43,9 @@ const ContainerStyle = css`
 export const Container = styled.div`
   ${ContainerStyle};
   ${props =>
-    props.platform === `simi` &&
+    props.nafn === `Um okkur` &&
     css`
-      display: none;
-      overflow: visible;
-      padding: 0;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-        "title"
-        "content";
-      ${props =>
-        props.nafn === `Jól í hjarta` &&
-        css`
-          display: block;
-        `}
+      padding-bottom: 50px;
     `}
 `
 /** línk container */
@@ -73,11 +62,6 @@ export const EmailContainer = styled.a`
 
 export const Text = styled.p`
   font-size: 16px;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      font-size: 45px;
-    `}
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   margin-top: 28px;
@@ -88,10 +72,4 @@ export const Text = styled.p`
       margin-top: 24px;
     `}
   text-align: center;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      text-align: left;
-      padding-left: 50px;
-    `}
 `

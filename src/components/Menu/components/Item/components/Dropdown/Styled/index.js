@@ -72,11 +72,5 @@ export const Texti = styled.p`
   padding-right: 15px;
 `
 export const TextContainer = styled.div`
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      background: white;
-      color: ${colors.lightgray};
-      padding-left: 50px;
-    `}
+  margin-bottom: 100px;
 `

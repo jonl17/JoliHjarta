@@ -12,12 +12,6 @@ export const Navbar = styled.div`
   /** flexer */
   display: flex;
   align-content: center;
-  ${props =>
-    props.platform === `simi` &&
-    css`
-      justify-content: start;
-      flex-direction: column;
-    `}
 
   /** display status controlled by prop display */
   height: 0;
@@ -28,14 +22,6 @@ export const Navbar = styled.div`
     css`
       height: 75px;
       overflow: visible;
-      ${props =>
-        props.platform === `simi` &&
-        css`
-          height: 100%;
-          flex-direction: column;
-          justify-content: start;
-          padding-top: 100px;
-        `}
     `}
 `
 export const ClickZone = styled.div`
