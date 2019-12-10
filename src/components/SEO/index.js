@@ -1,32 +1,47 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Favicon from "./mani.png"
+import { graphql, StaticQuery } from "gatsby"
 
-const SEO = () => {
+const SEO = ({
+  data: {
+    site: {
+      siteMetadata: { nafn: title, about: description, url, image, favicon },
+    },
+  },
+}) => {
   return (
-    <Helmet title={"Jól í hjarta"}>
-      {"Jól í hjarta" && <meta name="title" content="Jón í hjarta"></meta>}
-      <meta
-        name="description"
-        content={"Jóladagatal í miðborg Reykjavíkur"}
-      ></meta>
-      {"Jól í hjarta" && <meta property="og:title" content={"Jól í hjarta"} />}
-      {"Jóladagatal í miðborg Reykjavíkur" && (
-        <meta
-          property="og:description"
-          content={"Jóladagatal í miðborg Reykjavíkur"}
-        />
-      )}
-      {Favicon && <meta property="og:image" content={Favicon} />}
-      {"Jól, jóladagatal, Reykjavík" && (
-        <meta
-          name="keywords"
-          content={"Jól í hjarta, jóladagatal, Reykjavík"}
-        />
-      )}
-      <link sizes="32x32" href={Favicon} rel="icon" type="image/png"></link>
-    </Helmet>
+    <>
+      <Helmet title={title}>
+        <meta name="title" content={title}></meta>
+        <meta name="description" content={description} />
+        <meta name="image" content={image} />
+        {url && <meta property="og:url" content={url} />}
+        {title && <meta property="og:title" content={title} />}
+        {description && (
+          <meta property="og:description" content={description} />
+        )}
+        {image && <meta property="og:image" content={image} />}
+        <link sizes="32x32" href={favicon} rel="icon" type="image/png"></link>
+      </Helmet>
+    </>
   )
 }
 
-export default SEO
+export default props => (
+  <StaticQuery
+    query={graphql`
+      {
+        site {
+          siteMetadata {
+            nafn
+            about
+            url
+            image
+            favicon
+          }
+        }
+      }
+    `}
+    render={data => <SEO data={data} {...props}></SEO>}
+  ></StaticQuery>
+)
