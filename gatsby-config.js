@@ -8,6 +8,9 @@ module.exports = {
   siteMetadata: {
     nafn: `Jól í hjarta`,
     about: `Jóladagatal í miðborg Reykjavík.`,
+    url: `https://www.jolihjarta.is`,
+    image: `/myndir/share.png`,
+    favicon: `/myndir/mani.png`,
     umOkkur: [
       `Jól í hjarta er jóladagatal fyrir alla fjölskylduna og fjallar um
     hugmyndaríka og skemmtilega þrjá krakka, Stellu, Stebba og Valdísi
@@ -117,6 +120,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     //`gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
