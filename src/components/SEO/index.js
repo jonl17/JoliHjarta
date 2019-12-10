@@ -17,6 +17,7 @@ const SEO = () => {
           content={"Jóladagatal í miðborg Reykjavíkur"}
         />
       )}
+      {Favicon && <meta property="og:image" content={Favicon} />}
       {"Jól, jóladagatal, Reykjavík" && (
         <meta
           name="keywords"
