@@ -1,6 +1,6 @@
 ---
 title: Jólamarkaður í Hjartagarðinum
-hvenaer: 12/14
+hvenaer: 12/15
 klukkan: 13 - 22
 hvar: Hjartagarðurinn
 mynd: /myndir/hjartagarðurinn.jpg
