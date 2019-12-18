@@ -2,7 +2,7 @@
 title: 12. desember
 dagsetning: 12/12
 vidjo:
-  vidjotitill: 12. desember
+  vidjotitill: Jólasveinarnir og Grýla í Þjóðminjasafninu
   vidjourl: 'https://player.vimeo.com/video/378981639'
 ---
 
