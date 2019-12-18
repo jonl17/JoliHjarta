@@ -1,10 +1,8 @@
 ---
-title: Jólagaman í Tjarnarbíó
-hvenaer: 12/22
-klukkan: '14 - 14:30'
-hvar: Tjarnarbíó
-mynd: /myndir/79079387_2589566147798865_3133281850496122880_n.jpg
+title: Jólasveinar í Þjóðminjasafni
+hvenaer: 12/16
+klukkan: '11 - 11:30'
+hvar: Þjóðminjasafn Íslands
+mynd: /myndir/pottask_gryla_badstofa.jpg
 ---
-Stebbi , Stella og Valdís verða í Tjarnarbíó og taka á móti öllum börnum og fullorðnum í jólaglens og gaman.
-
-Sjáumst
+Jólasveinarnir skemmta börnum í Þjóðminjasafninu daglega eins og venjulega frá því þeir fara að koma til byggða. Skemmtunin stendur yfir frá kl. 11 - 11.30.
