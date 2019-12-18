@@ -2,7 +2,7 @@
 title: 13. desember
 dagsetning: 12/13
 vidjo:
-  vidjotitill: 13. desember
+  vidjotitill: Jólaskógurinn í Ráðhúsinu í Reykjavík
   vidjourl: 'https://player.vimeo.com/video/378982535'
 ---
 
