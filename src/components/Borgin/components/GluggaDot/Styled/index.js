@@ -8,6 +8,7 @@ import HoppSVG from "../../../../../../static/myndir/svgs/hopp.svg"
 import MusSVG from "../../../../../../static/myndir/svgs/mus.svg"
 import HjolSVG from "../../../../../../static/myndir/svgs/hjol.svg"
 import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-nytt.svg"
+import VelkominSVG from "../../../../../../static/myndir/svgs/velkomin.svg"
 import { layer } from "../../../../../constants"
 
 const SVGstyle = css`
@@ -40,6 +41,11 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
   left: 85%;
   z-index: ${props => props.zindex};
   transition: 0.5s;
+  ${props =>
+    props.device === `mobile` &&
+    css`
+      top: 30%;
+    `}
 `
 
 // Glugga hlutir
