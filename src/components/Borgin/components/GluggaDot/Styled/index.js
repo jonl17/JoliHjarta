@@ -8,6 +8,7 @@ import HoppSVG from "../../../../../../static/myndir/svgs/hopp.svg"
 import MusSVG from "../../../../../../static/myndir/svgs/mus.svg"
 import HjolSVG from "../../../../../../static/myndir/svgs/hjol.svg"
 import SnjorSVG from "../../../../../../static/myndir/svgs/snjor-nytt.svg"
+import VelkominSVG from "../../../../../../static/myndir/svgs/velkomin.svg"
 import { layer } from "../../../../../constants"
 
 const SVGstyle = css`

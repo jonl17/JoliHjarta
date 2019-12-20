@@ -1,9 +1,14 @@
 import React from "react"
-import { HusSVG } from "./Styled"
+import { HusSVG, Velkomin } from "./Styled"
 import { connect } from "react-redux"
 
 const HusarodBak = ({ device }) => {
-  return <HusSVG device={device}></HusSVG>
+  return (
+    <>
+      <Velkomin device={device}></Velkomin>
+      <HusSVG device={device}></HusSVG>
+    </>
+  )
 }
 
 const mapStateToProps = state => ({
