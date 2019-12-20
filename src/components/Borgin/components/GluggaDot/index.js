@@ -52,6 +52,7 @@ class GluggaDot extends React.Component {
     }
   }
   render() {
+    const { device } = this.props
     return (
       <>
         <Snjor zindex={layer.one}></Snjor>
@@ -59,7 +60,7 @@ class GluggaDot extends React.Component {
         <Mavur zindex={layer.hus}></Mavur>
         <Hopp zindex={layer.zero}></Hopp>
         <Mus zindex={layer.zero}></Mus>
-        <Stekkjastaur zindex={layer.borg}></Stekkjastaur>
+        <Stekkjastaur device={device} zindex={layer.borg}></Stekkjastaur>
         <Hjol zindex={layer.zero}></Hjol>
       </>
     )
@@ -67,7 +68,7 @@ class GluggaDot extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  birdState: state.animationReducer.birdState,
+  device: state.reducer.device,
 })
 
 export default connect(mapStateToProps)(GluggaDot)

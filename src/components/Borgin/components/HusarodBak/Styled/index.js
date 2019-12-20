@@ -22,7 +22,7 @@ export const Velkomin = styled(VelkominSVG)`
   position: absolute;
   height: 65%;
   max-width: 350px;
-  left: 500px;
+  left: 300px;
   z-index: ${props => props.zindex};
   /* perspective effect */
   ${props =>

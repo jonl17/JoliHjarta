@@ -41,6 +41,11 @@ export const Stekkjastaur = styled(StekkjastaurSVG)`
   left: 85%;
   z-index: ${props => props.zindex};
   transition: 0.5s;
+  ${props =>
+    props.device === `mobile` &&
+    css`
+      top: 30%;
+    `}
 `
 
 // Glugga hlutir
