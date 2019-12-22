@@ -29,7 +29,7 @@ class Item extends React.Component {
       name === `Viðburðir` ? (
         <LinkContainer
           onClick={() => dispatch(selectCalenderDay(todaysCalenderDay))}
-          to={"/" + name === `Viðburðir` ? todaysCalenderDay + to : to}
+          to={name === `Viðburðir` ? "/" + todaysCalenderDay + to : "/" + to}
           nohover={nohover}
         >
           <Text platform={platform}>{name}</Text>
