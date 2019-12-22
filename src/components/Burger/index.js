@@ -10,7 +10,6 @@ const dispatches = dispatch => {
 }
 
 const Burger = ({ burgerWindow, dispatch }) => {
-  console.log(burgerWindow)
   return burgerWindow === "closed" ? (
     <Container onClick={() => dispatches(dispatch)}>
       <Line one></Line>

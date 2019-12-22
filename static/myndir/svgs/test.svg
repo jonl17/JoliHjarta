@@ -62,7 +62,7 @@
 <path class="st2" d="M2685.4,843.5v-94.2c0-25.2,20.4-45.6,45.6-45.6l0,0c25.2,0,45.6,20.4,45.6,45.6V844"/>
 <g>
 	
-		<ellipse transform="matrix(0.8081 -0.589 0.589 0.8081 389.8761 2260.176)" class="st5" cx="3664" cy="531.7" rx="49.6" ry="49.6"/>
+		<ellipse id="dagur24" class="gluggi" transform="matrix(0.8081 -0.589 0.589 0.8081 389.8761 2260.176)" class="st5" cx="3664" cy="531.7" rx="49.6" ry="49.6"/>
 </g>
 <rect x="2904" y="672.5" class="st4" width="467.9" height="231.8"/>
 <polygon class="st1" points="468.7,688 91.2,688 169.3,493.8 490,493.8 "/>

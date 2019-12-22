@@ -19,7 +19,7 @@ const Item = ({ item: { name, type, to, links } }) => {
     /** link to another page */
     <LinkContainer
       onClick={() => dispatch(selectCalenderDay(todaysCalenderDay))}
-      to={name === `Viðburðir` ? todaysCalenderDay + to : to}
+      to={"/" + name === `Viðburðir` ? todaysCalenderDay + to : to}
     >
       <Text link>{name}</Text>
     </LinkContainer>

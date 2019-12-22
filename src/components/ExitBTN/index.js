@@ -24,11 +24,7 @@ const ExitBTN = ({
       <Line platform={platform} relativetovideo={relativeToVideo} second></Line>
     </Container>
   ) : (
-    <LinkContainer
-      onMouseOver={() => console.log("OEOEO")}
-      tight={tight ? "true" : "false"}
-      to={slug}
-    >
+    <LinkContainer tight={tight ? "true" : "false"} to={"/" + slug}>
       <Line platform={platform}></Line>
       <Line platform={platform} second></Line>
     </LinkContainer>
