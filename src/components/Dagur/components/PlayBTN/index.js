@@ -53,7 +53,6 @@ const GetThumbnail = () => (
 )
 
 const PlayBTN = ({ dispatch, selectedDay: { vidjo } }) => {
-  console.log(vidjo)
   return (
     <Container onClick={() => dispatch(triggerVideoFullscreen())}>
       {vidjo.thumbnail !== null ? ( // tries to get special thumbnails

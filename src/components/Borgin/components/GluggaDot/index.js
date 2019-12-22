@@ -13,6 +13,7 @@ import {
   Mus,
   Hjol,
   Snjor,
+  Stjarna,
 } from "./Styled"
 
 class GluggaDot extends React.Component {
@@ -53,6 +54,7 @@ class GluggaDot extends React.Component {
   }
   render() {
     const { device } = this.props
+    let d = new Date()
     return (
       <>
         <Snjor zindex={layer.one}></Snjor>
@@ -62,6 +64,10 @@ class GluggaDot extends React.Component {
         <Mus zindex={layer.zero}></Mus>
         <Stekkjastaur device={device} zindex={layer.borg}></Stekkjastaur>
         <Hjol zindex={layer.zero}></Hjol>
+        <Stjarna /** aðfangadagur */
+          display={d.getDate() === 24 ? "block" : "none"}
+          zindex={layer.zero}
+        ></Stjarna>
       </>
     )
   }
