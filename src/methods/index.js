@@ -53,7 +53,7 @@ export const countdown = () => {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
   // við viljum eingöngu klst mín sek
-  return { hours: days * 24, minutes: minutes, seconds: seconds }
+  return { hours: days * 24 + 7, minutes: minutes, seconds: seconds }
 }
 
 // automatically open windows and make em clickable
