@@ -35,7 +35,7 @@ class index extends React.Component {
           <Menu></Menu>
         )}
         <Burger></Burger>
-        <Mani></Mani>
+        {/* <Mani></Mani> */}
         <Snjokoma></Snjokoma>
         <Borgin></Borgin>
         <Dagur></Dagur>
