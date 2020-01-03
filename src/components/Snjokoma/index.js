@@ -22,14 +22,14 @@ class Snjokoma extends React.Component {
         if (serverLysing.includes("snjó")) {
           this.props.dispatch(makeItSnow("true"))
         } else {
-          this.props.dispatch(makeItSnow("false"))
+          this.props.dispatch(makeItSnow("true"))
         }
       }
     }
   }
   render() {
     return (
-      <Container display={this.props.snowing === "true" ? 1 : 0}>
+      <Container display={this.props.snowing === "true" ? 1 : 1}>
         <Snow one image={SnowImg}></Snow>
       </Container>
     )

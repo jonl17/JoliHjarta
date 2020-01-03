@@ -39,10 +39,6 @@
   animation: look-left-animate 8s ease 2s infinite;
 }
 
-.des {
-  display: none;
-}
-
 .opinn-gluggi {
   display: block;
 }
