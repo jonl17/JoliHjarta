@@ -29,7 +29,7 @@ class Snjokoma extends React.Component {
   }
   render() {
     return (
-      <Container display={this.props.snowing === "true" ? 0 : 0}>
+      <Container display={this.props.snowing === "true" ? 1 : 0.6}>
         <Snow one image={SnowImg}></Snow>
       </Container>
     )
