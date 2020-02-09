@@ -22,7 +22,7 @@ class Snjokoma extends React.Component {
         if (serverLysing.includes("snjó")) {
           this.props.dispatch(makeItSnow("true"))
         } else {
-          this.props.dispatch(makeItSnow("true"))
+          this.props.dispatch(makeItSnow("false"))
         }
       }
     }
